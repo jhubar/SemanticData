@@ -1,6 +1,6 @@
 # Toursime
 
-[Toursine a namur] (https://www.province.namur.be/tourisme)
+[Toursine a namur](https://www.province.namur.be/tourisme)
 
 # SemanticData
 [Rapport](https://www.overleaf.com/1761331128kfcgtpxwtnbz)
