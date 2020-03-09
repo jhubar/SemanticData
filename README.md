@@ -1,11 +1,12 @@
 # Toursime
-
-[Toursime a namur](https://www.province.namur.be/tourisme)
-
-[tourisme au luxembourg](http://www.province.luxembourg.be/fr/tourisme.html?IDC=3541#.XmZNii17RhE)
-
-* Liege 
-[wikipedia](https://fr.wikipedia.org/wiki/Province_de_Liège)
+  * Namur
+    [Toursime a namur](https://www.province.namur.be/tourisme)
+  * Luxembourg
+    [tourisme au luxembourg](http://www.province.luxembourg.be/fr/tourisme.html?IDC=3541#.XmZNii17RhE)
+  * Liege 
+    [wikipedia](https://fr.wikipedia.org/wiki/Province_de_Liège)
+  * Hainaut 
+  * Brabantwallon
 
 
 # SemanticData
