@@ -391,6 +391,12 @@
                     :Liege .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Camping_Eden_à_Aywaille
+:Camping_Eden_à_Aywaille rdf:type owl:NamedIndividual ,
+                                  :Camping_et_camping-car ;
+                         :isLocated :Aywaille .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Cerfontaine
 :Cerfontaine rdf:type owl:NamedIndividual ,
                       :Provinde_de_Namur .
