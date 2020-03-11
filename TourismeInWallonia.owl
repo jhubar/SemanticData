@@ -56,9 +56,18 @@
              rdfs:comment "Un age minimun est requit pour certainnes activité" .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#isEcolabelled
+:isEcolabelled rdf:type owl:DatatypeProperty .
+
+
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Auberges_et_centre_de_vacances
+:Auberges_et_centre_de_vacances rdf:type owl:Class ;
+                                rdfs:subClassOf :Logement .
+
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Balade_et_visite_guidée
 :Balade_et_visite_guidée rdf:type owl:Class ;
@@ -73,6 +82,11 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Brocante
 :Brocante rdf:type owl:Class ;
           rdfs:subClassOf :Evenement .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Camping_et_camping-car
+:Camping_et_camping-car rdf:type owl:Class ;
+                        rdfs:subClassOf :Logement .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Compétition
@@ -114,14 +128,28 @@
                        rdfs:subClassOf :Evenement .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Gites_et_maisons_de_vacances
+:Gites_et_maisons_de_vacances rdf:type owl:Class ;
+                              rdfs:subClassOf :Logement .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hainaut
 :Hainaut rdf:type owl:Class ;
          rdfs:subClassOf :Province .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hotel
+:Hotel rdf:type owl:Class ;
+       rdfs:subClassOf :Logement .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Liege
 :Liege rdf:type owl:Class ;
        rdfs:subClassOf :Province .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Logement
+:Logement rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Luxembourg
@@ -156,6 +184,16 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Théatre
 :Théatre rdf:type owl:Class ;
          rdfs:subClassOf :Evenement .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Village_de_vacances
+:Village_de_vacances rdf:type owl:Class ;
+                     rdfs:subClassOf :Logement .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Maison_d'hotes
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Maison_d'hotes> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf :Logement .
 
 
 #################################################################
@@ -387,6 +425,14 @@
                 :Provinde_de_Namur .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ciney_Puces_et_Antiquités
+:Ciney_Puces_et_Antiquités rdf:type owl:NamedIndividual ,
+                                    :Brocante ;
+                           :isLocated :Ciney ;
+                           :StartDate "10 avril 2020" ;
+                           :endsDate "11 octobre 2020" .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Clavier
 :Clavier rdf:type owl:NamedIndividual ,
                   :Liege .
@@ -514,19 +560,23 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_Théatre_au_Vert_de_Thoricourt
 :Festival_Théatre_au_Vert_de_Thoricourt rdf:type owl:NamedIndividual ,
                                                  :Théatre ;
-                                        :isLocated :Silly .
+                                        :isLocated :Silly ;
+                                        :StartDate "Aout 2020" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_Universatil_Théatre_et_art_de_la_scène_a_LLN
 :Festival_Universatil_Théatre_et_art_de_la_scène_a_LLN rdf:type owl:NamedIndividual ,
                                                                 :Théatre ;
-                                                       :isLocated :Ottignies-Louvian-la-Neuve .
+                                                       :isLocated :Ottignies-Louvian-la-Neuve ;
+                                                       :StartDate "02 mars 2020" ;
+                                                       :endsDate "12 mars 2020" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festivale_de_théatre_de_rue_de_Herve
 :Festivale_de_théatre_de_rue_de_Herve rdf:type owl:NamedIndividual ,
                                                :Théatre ;
-                                      :isLocated :Herve .
+                                      :isLocated :Herve ;
+                                      :StartDate "Aout 2020" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fexhe-le-Haut-Clocher
@@ -537,7 +587,8 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Flammes_2019_Balade_théatrale_à_Bomal
 :Flammes_2019_Balade_théatrale_à_Bomal rdf:type owl:NamedIndividual ,
                                                 :Théatre ;
-                                       :isLocated :Durbuy .
+                                       :isLocated :Durbuy ;
+                                       :StartDate "Aout 2020" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fleurus
@@ -608,7 +659,8 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Haaste__töne-_Festival_international_de_Théatree_de_rue
 :Haaste__töne-_Festival_international_de_Théatree_de_rue rdf:type owl:NamedIndividual ,
                                                                   :Théatre ;
-                                                         :isLocated :Eupen .
+                                                         :isLocated :Eupen ;
+                                                         :StartDate "Aout 2020" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Habay
@@ -1266,6 +1318,13 @@
                   :Brabant_Wallon .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#ANtica_Namur,_Salon_d'antiquités_de_Namur
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#ANtica_Namur,_Salon_d'antiquités_de_Namur> rdf:type owl:NamedIndividual ,
+                                                                                                                                  :Brocante ;
+                                                                                                                         :isLocated :Namur ;
+                                                                                                                         :StartDate "Novembre 2020" .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Braine-l'Alleud
 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Braine-l'Alleud> rdf:type owl:NamedIndividual ,
                                                                                                         :Brabant_Wallon .
@@ -1274,7 +1333,8 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_vacances_théatre_à_l'abbaye_de_Stavelot
 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_vacances_théatre_à_l'abbaye_de_Stavelot> rdf:type owl:NamedIndividual ,
                                                                                                                                          :Théatre ;
-                                                                                                                                :isLocated :Stavelot .
+                                                                                                                                :isLocated :Stavelot ;
+                                                                                                                                :StartDate "Juillet 2020" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fontaine-l'Eveque
@@ -1285,7 +1345,8 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Les_Tilleuleries:_Festival_des_Arts_de_la_Rue
 :Les_Tilleuleries:_Festival_des_Arts_de_la_Rue rdf:type owl:NamedIndividual ,
                                                         :Théatre ;
-                                               :isLocated :Nassogne .
+                                               :isLocated :Nassogne ;
+                                               :StartDate "Juillet 2020" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Les_journée_wollonnes_de_l'eau
@@ -1301,7 +1362,244 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Soiron_sur_Scène:_La_fête_dans_l'un_des_beaux_villages_de_wallonie
 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Soiron_sur_Scène:_La_fête_dans_l'un_des_beaux_villages_de_wallonie> rdf:type owl:NamedIndividual ,
                                                                                                                                                            :Théatre ;
-                                                                                                                                                  :isLocated :Pepinster .
+                                                                                                                                                  :isLocated :Pepinster ;
+                                                                                                                                                  :StartDate "Aout 2020" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Amay
+                        :Amel
+                        :Andenne
+                        :Anhée
+                        :Ans
+                        :Anthisnes
+                        :Antoing
+                        :Arlon
+                        :Assesse
+                        :Ath
+                        :Attert
+                        :Aubange
+                        :Aubel
+                        :Awans
+                        :Aywaille
+                        :Baelen
+                        :Bassenge
+                        :Bastogne
+                        :Beaumont
+                        :Beauraing
+                        :Beauvechain
+                        :Berloz
+                        :Bertogne
+                        :Bertrix
+                        :Beyne-Heusay
+                        :Binche
+                        :Bièvre
+                        :Blegny
+                        :Boullion
+                        :Braine-le-Château
+                        :Braine-le-Comte
+                        :Braives
+                        :Burdinne
+                        :Burg-Reuland
+                        :Butgenbach
+                        :Büllingen
+                        :Cerfontaine
+                        :Charleroi
+                        :Chastre
+                        :Chaumont-Gistoux
+                        :Chimay
+                        :Chiny
+                        :Chièvres
+                        :Châtelet
+                        :Ciney
+                        :Clavier
+                        :Comblain-au-Pont
+                        :Comines-Warneton
+                        :Court-Saint-Etienne
+                        :Couvin
+                        :Crisnée
+                        :Dalhem
+                        :Daverdisse
+                        :Dinant
+                        :Dison
+                        :DjangoFoLLLies
+                        :Doische
+                        :Donceel
+                        :Durbuy
+                        :Eghezée
+                        :Enghien
+                        :Engis
+                        :Erezee
+                        :Esneux
+                        :Etalle
+                        :Eupen
+                        :Faimes
+                        :Fauvillers
+                        :Fernelmont
+                        :Ferrières
+                        :Festival_Théatre_au_Vert_de_Thoricourt
+                        :Festival_Universatil_Théatre_et_art_de_la_scène_a_LLN
+                        :Festivale_de_théatre_de_rue_de_Herve
+                        :Fexhe-le-Haut-Clocher
+                        :Flammes_2019_Balade_théatrale_à_Bomal
+                        :Fleurus
+                        :Florennes
+                        :Flémalle
+                        :Fléron
+                        :Fosse-la-Ville
+                        :Gedinne
+                        :Geer
+                        :Gembloux
+                        :Genappe
+                        :Gesves
+                        :Gouvy
+                        :Grez-Doiceau
+                        :Grâce-Hollogne
+                        :Haaste__töne-_Festival_international_de_Théatree_de_rue
+                        :Habay
+                        :Halloween_à_Pairi_Daiza
+                        :Hamoir
+                        :Hamois
+                        :Hannut
+                        :Hastière
+                        :Hatton
+                        :Havelange
+                        :Herbeumont
+                        :Herstal
+                        :Herve
+                        :Houffalize
+                        :Houyet
+                        :Huy
+                        :Hélécine
+                        :Héron
+                        :Incourt
+                        :Ittre
+                        :Jalhay
+                        :Jemeppe-sur-Sambre
+                        :Jodoigne
+                        :Juprelle
+                        :Kelmis
+                        :La_Hulpe
+                        :La_Louvière
+                        :La_Roche-en-Ardenne
+                        :La_bruyère
+                        :La_caravane_du_court
+                        :Lasne
+                        :Le_Roeulx
+                        :Lessines
+                        :Leuze-en-Hainaut
+                        :Libin
+                        :Libramont-Chevigné
+                        :Lierneux
+                        :Limbourg
+                        :Lincent
+                        :Lontzen
+                        :Léglise
+                        :Malmedy
+                        :Manhay
+                        :Marche-en-Flamenne
+                        :Marchin
+                        :Martelange
+                        :Mattet
+                        :Modave
+                        :Mons
+                        :Mont-Saint-Guibert
+                        :Mouscron
+                        :Musson
+                        :Mystery_Forest
+                        :Namur
+                        :Nandrin
+                        :Nassogne
+                        :Neufchateau
+                        :Neupré
+                        :Nivelles
+                        :Ohey
+                        :Olne
+                        :Ombre_et_Lumières_du_Moyen_Age
+                        :Onhaye
+                        :Oreye
+                        :Orp-Jauche
+                        :Ottignies-Louvian-la-Neuve
+                        :Ouffet
+                        :Oupeye
+                        :Paliseul
+                        :Pepinster
+                        :Perwez
+                        :Philippeville
+                        :Plombières
+                        :Pronfondeville
+                        :Péruwelz
+                        :Raeren
+                        :Ramilles
+                        :Rebecq
+                        :Remicourt
+                        :Rendeux
+                        :Riwensart
+                        :Rochefort
+                        :Rouvroy
+                        :Saint-Georges-sur-Meuse
+                        :Saint-Ghislain
+                        :Saint-Léger
+                        :Saint-Nicolas
+                        :Saint-Ode
+                        :Saint_Hubert
+                        :Sambreville
+                        :Sankt-Vith
+                        :Seraing
+                        :Silly
+                        :Soignies
+                        :Sombreville
+                        :Somme-Leuze
+                        :Soumagne
+                        :Spa
+                        :Sprimont
+                        :Stavelot
+                        :Stoumont
+                        :Tellin
+                        :Tenneville
+                        :Theux
+                        :Thimister-Clermont
+                        :Thuin
+                        :Tinlot
+                        :Tintigny
+                        :Tournai
+                        :Trois-Ponts
+                        :Trooz
+                        :Tubize
+                        :Vaux-sur-Sure
+                        :Verlaine
+                        :Verviers
+                        :Vielslam
+                        :Villers-la-Ville
+                        :Villers-le-Bouillet
+                        :Viroinval
+                        :Virton
+                        :Visé
+                        :Vresse-sur-Semois
+                        :Waimes
+                        :Walcourt
+                        :Wanze
+                        :Waremme
+                        :Wasseiges
+                        :Waterloo
+                        :Wavre
+                        :Welkenraedt
+                        :Wellin
+                        :Yvoir
+                        :walhain
+                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Braine-l'Alleud>
+                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_vacances_théatre_à_l'abbaye_de_Stavelot>
+                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fontaine-l'Eveque>
+                        :Les_Tilleuleries:_Festival_des_Arts_de_la_Rue
+                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Les_journée_wollonnes_de_l'eau>
+                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Les_nuits_du_Cirques_à_l'Abbaye_de_Villers-la-Ville>
+                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Soiron_sur_Scène:_La_fête_dans_l'un_des_beaux_villages_de_wallonie>
+                      )
+] .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
