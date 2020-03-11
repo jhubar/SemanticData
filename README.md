@@ -1,3 +1,7 @@
+Dans TOOLS on trouve un example d'un fichier java  qui permet de faire des requetes sur le fichier OWL. Il faut l'adpaté a notre fichier OWL. 
+
+Le Fichier Owl est cassi finit il faut ajouter des data propertie et des object propreties pour le rendre plus robuste mais dna sl'ensemble il est assez finit. 
+
 # Toursime
   * [Tourisme en wallonie site](http://walloniebelgiquetourisme.be/fr-be/content/bienvenue-en-belgique-sur-le-site-officiel-du-tourisme-en-wallonie)
   * Namur
