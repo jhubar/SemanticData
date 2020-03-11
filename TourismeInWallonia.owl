@@ -9,152 +9,60 @@
 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2> rdf:type owl:Ontology .
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#isLocated
+:isLocated rdf:type owl:ObjectProperty ;
+           rdfs:domain :Evenement ;
+           rdfs:range :Province ;
+           rdfs:comment "An event is in a province" .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#partOf
+:partOf rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Cost
+:Cost rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Evenement .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#NeedEquipment
+:NeedEquipment rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Evenement .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#StartDate
+:StartDate rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#endsDate
+:endsDate rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#hasMinimunSize
+:hasMinimunSize rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Evenement .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#hasRangeAge
+:hasRangeAge rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Evenement ;
+             rdfs:comment "Un age minimun est requit pour certainnes activité" .
+
+
+#################################################################
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Amay
-:Amay rdf:type owl:Class ;
-      rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Amel
-:Amel rdf:type owl:Class ;
-      rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Andenne
-:Andenne rdf:type owl:Class ;
-         rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Anhée
-:Anhée rdf:type owl:Class ;
-       rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ans
-:Ans rdf:type owl:Class ;
-     rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Anthisnes
-:Anthisnes rdf:type owl:Class ;
-           rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Antoing
-:Antoing rdf:type owl:Class ;
-         rdfs:subClassOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Arlon
-:Arlon rdf:type owl:Class ;
-       rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Assesse
-:Assesse rdf:type owl:Class ;
-         rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ath
-:Ath rdf:type owl:Class ;
-     rdfs:subClassOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Attert
-:Attert rdf:type owl:Class ;
-        rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Aubange
-:Aubange rdf:type owl:Class ;
-         rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Aubel
-:Aubel rdf:type owl:Class ;
-       rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Awans
-:Awans rdf:type owl:Class ;
-       rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Aywaille
-:Aywaille rdf:type owl:Class ;
-          rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Baelen
-:Baelen rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Bassenge
-:Bassenge rdf:type owl:Class ;
-          rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Bastogne
-:Bastogne rdf:type owl:Class ;
-          rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Beaumont
-:Beaumont rdf:type owl:Class ;
-          rdfs:subClassOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Beauraing
-:Beauraing rdf:type owl:Class ;
-           rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Beauvechain
-:Beauvechain rdf:type owl:Class ;
-             rdfs:subClassOf :Brabant_Wallon .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Berloz
-:Berloz rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Bertogne
-:Bertogne rdf:type owl:Class ;
-          rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Bertrix
-:Bertrix rdf:type owl:Class ;
-         rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Beyne-Heusay
-:Beyne-Heusay rdf:type owl:Class ;
-              rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Binche
-:Binche rdf:type owl:Class ;
-        rdfs:subClassOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Bièvre
-:Bièvre rdf:type owl:Class ;
-        rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Blegny
-:Blegny rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Boullion
-:Boullion rdf:type owl:Class ;
-          rdfs:subClassOf :Luxembourg .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Balade_et_visite_guidée
+:Balade_et_visite_guidée rdf:type owl:Class ;
+                         rdfs:subClassOf :Evenement .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Brabant_Wallon
@@ -162,284 +70,48 @@
                 rdfs:subClassOf :Province .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Braine-le-Château
-:Braine-le-Château rdf:type owl:Class ;
-                   rdfs:subClassOf :Brabant_Wallon .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Brocante
+:Brocante rdf:type owl:Class ;
+          rdfs:subClassOf :Evenement .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Braine-le-Comte
-:Braine-le-Comte rdf:type owl:Class ;
-                 rdfs:subClassOf :Hainaut .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Compétition
+:Compétition rdf:type owl:Class ;
+             rdfs:subClassOf :Evenement .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Braives
-:Braives rdf:type owl:Class ;
-         rdfs:subClassOf :Liege .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Concert
+:Concert rdf:type owl:Class ;
+         rdfs:subClassOf :Evenement .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Burdinne
-:Burdinne rdf:type owl:Class ;
-          rdfs:subClassOf :Liege .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Croisière
+:Croisière rdf:type owl:Class ;
+           rdfs:subClassOf :Evenement .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Burg-Reuland
-:Burg-Reuland rdf:type owl:Class ;
-              rdfs:subClassOf :Liege .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Evenement
+:Evenement rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Büllingen
-:Büllingen rdf:type owl:Class ;
-           rdfs:subClassOf :Liege .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Exposition
+:Exposition rdf:type owl:Class ;
+            rdfs:subClassOf :Evenement .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Bütgenbach
-:Bütgenbach rdf:type owl:Class ;
-            rdfs:subClassOf :Liege .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival
+:Festival rdf:type owl:Class ;
+          rdfs:subClassOf :Evenement .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Cerfontaine
-:Cerfontaine rdf:type owl:Class ;
-             rdfs:subClassOf :Provinde_de_Namur .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Foire_et_salon
+:Foire_et_salon rdf:type owl:Class ;
+                rdfs:subClassOf :Evenement .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Charleroi
-:Charleroi rdf:type owl:Class ;
-           rdfs:subClassOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Chastre
-:Chastre rdf:type owl:Class ;
-         rdfs:subClassOf :Brabant_Wallon .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Chaumont-Gistoux
-:Chaumont-Gistoux rdf:type owl:Class ;
-                  rdfs:subClassOf :Brabant_Wallon .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Chimay
-:Chimay rdf:type owl:Class ;
-        rdfs:subClassOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Chiny
-:Chiny rdf:type owl:Class ;
-       rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Chièvres
-:Chièvres rdf:type owl:Class ;
-          rdfs:subClassOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Châtelet
-:Châtelet rdf:type owl:Class ;
-          rdfs:subClassOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ciney
-:Ciney rdf:type owl:Class ;
-       rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Clavier
-:Clavier rdf:type owl:Class ;
-         rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Comblain-au-Pont
-:Comblain-au-Pont rdf:type owl:Class ;
-                  rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Comines-Warneton
-:Comines-Warneton rdf:type owl:Class ;
-                  rdfs:subClassOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Court-Saint-Étienne
-:Court-Saint-Étienne rdf:type owl:Class ;
-                     rdfs:subClassOf :Brabant_Wallon .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Couvin
-:Couvin rdf:type owl:Class ;
-        rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Crisnée
-:Crisnée rdf:type owl:Class ;
-         rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Dalhem
-:Dalhem rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Daverdisse
-:Daverdisse rdf:type owl:Class ;
-            rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Dinant
-:Dinant rdf:type owl:Class ;
-        rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Dison
-:Dison rdf:type owl:Class ;
-       rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Doische
-:Doische rdf:type owl:Class ;
-         rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Donceel
-:Donceel rdf:type owl:Class ;
-         rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Durbuy
-:Durbuy rdf:type owl:Class ;
-        rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Eghezée
-:Eghezée rdf:type owl:Class ;
-         rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Enghien
-:Enghien rdf:type owl:Class ;
-         rdfs:subClassOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Engis
-:Engis rdf:type owl:Class ;
-       rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Erezee
-:Erezee rdf:type owl:Class ;
-        rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Esneux
-:Esneux rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Etalle
-:Etalle rdf:type owl:Class ;
-        rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Eupen
-:Eupen rdf:type owl:Class ;
-       rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Faimes
-:Faimes rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fauvillers
-:Fauvillers rdf:type owl:Class ;
-            rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fernelmont
-:Fernelmont rdf:type owl:Class ;
-            rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ferrières
-:Ferrières rdf:type owl:Class ;
-           rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fexhe-le-Haut-Clocher
-:Fexhe-le-Haut-Clocher rdf:type owl:Class ;
-                       rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fleurus
-:Fleurus rdf:type owl:Class ;
-         rdfs:subClassOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Floreffe
-:Floreffe rdf:type owl:Class ;
-          rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Florennes
-:Florennes rdf:type owl:Class ;
-           rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Flémalle
-:Flémalle rdf:type owl:Class ;
-          rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fléron
-:Fléron rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fosse-la-Ville
-:Fosse-la-Ville rdf:type owl:Class ;
-                rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Gedinne
-:Gedinne rdf:type owl:Class ;
-         rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Geer
-:Geer rdf:type owl:Class ;
-      rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Gembloux
-:Gembloux rdf:type owl:Class ;
-          rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Genappe
-:Genappe rdf:type owl:Class ;
-         rdfs:subClassOf :Brabant_Wallon .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Gesves
-:Gesves rdf:type owl:Class ;
-        rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Gouvy
-:Gouvy rdf:type owl:Class ;
-       rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Grez-Doiceau
-:Grez-Doiceau rdf:type owl:Class ;
-              rdfs:subClassOf :Brabant_Wallon .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Grâce-Hollogne
-:Grâce-Hollogne rdf:type owl:Class ;
-                rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Habay
-:Habay rdf:type owl:Class ;
-       rdfs:subClassOf :Luxembourg .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Folklore_et_tradition
+:Folklore_et_tradition rdf:type owl:Class ;
+                       rdfs:subClassOf :Evenement .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hainaut
@@ -447,184 +119,9 @@
          rdfs:subClassOf :Province .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hamoir
-:Hamoir rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hamois
-:Hamois rdf:type owl:Class ;
-        rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hannut
-:Hannut rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hastière
-:Hastière rdf:type owl:Class ;
-          rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hatton
-:Hatton rdf:type owl:Class ;
-        rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Havelange
-:Havelange rdf:type owl:Class ;
-           rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Herbeumont
-:Herbeumont rdf:type owl:Class ;
-            rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Herstal
-:Herstal rdf:type owl:Class ;
-         rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Herve
-:Herve rdf:type owl:Class ;
-       rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Houffalize
-:Houffalize rdf:type owl:Class ;
-            rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Houyet
-:Houyet rdf:type owl:Class ;
-        rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Huy
-:Huy rdf:type owl:Class ;
-     rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hélécine
-:Hélécine rdf:type owl:Class ;
-          rdfs:subClassOf :Brabant_Wallon .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Héron
-:Héron rdf:type owl:Class ;
-       rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Incourt
-:Incourt rdf:type owl:Class ;
-         rdfs:subClassOf :Brabant_Wallon .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ittre
-:Ittre rdf:type owl:Class ;
-       rdfs:subClassOf :Brabant_Wallon .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Jalhay
-:Jalhay rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Jemeppe-sur-Sambre
-:Jemeppe-sur-Sambre rdf:type owl:Class ;
-                    rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Jodoigne
-:Jodoigne rdf:type owl:Class ;
-          rdfs:subClassOf :Brabant_Wallon .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Juprelle
-:Juprelle rdf:type owl:Class ;
-          rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Kelmis
-:Kelmis rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#La_Hulpe
-:La_Hulpe rdf:type owl:Class ;
-          rdfs:subClassOf :Brabant_Wallon .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#La_Louvière
-:La_Louvière rdf:type owl:Class ;
-             rdfs:subClassOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#La_Roche-en-Ardenne
-:La_Roche-en-Ardenne rdf:type owl:Class ;
-                     rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#La_bruyère
-:La_bruyère rdf:type owl:Class ;
-            rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Lasne
-:Lasne rdf:type owl:Class ;
-       rdfs:subClassOf :Brabant_Wallon .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Le_Roeulx
-:Le_Roeulx rdf:type owl:Class ;
-           rdfs:subClassOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Lessines
-:Lessines rdf:type owl:Class ;
-          rdfs:subClassOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Leuze-en-Hainaut
-:Leuze-en-Hainaut rdf:type owl:Class ;
-                  rdfs:subClassOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Libin
-:Libin rdf:type owl:Class ;
-       rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Libramont-Chevigny
-:Libramont-Chevigny rdf:type owl:Class ;
-                    rdfs:subClassOf :Luxembourg .
-
-
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Liege
 :Liege rdf:type owl:Class ;
        rdfs:subClassOf :Province .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Lierneux
-:Lierneux rdf:type owl:Class ;
-          rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Limbroug
-:Limbroug rdf:type owl:Class ;
-          rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Lincent
-:Lincent rdf:type owl:Class ;
-         rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Lontzen
-:Lontzen rdf:type owl:Class ;
-         rdfs:subClassOf :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Luxembourg
@@ -632,174 +129,14 @@
             rdfs:subClassOf :Province .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Léglise
-:Léglise rdf:type owl:Class ;
-         rdfs:subClassOf :Luxembourg .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Marché
+:Marché rdf:type owl:Class ;
+        rdfs:subClassOf :Evenement .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Malmedy
-:Malmedy rdf:type owl:Class ;
-         rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Manhay
-:Manhay rdf:type owl:Class ;
-        rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Marche-en-Famenne
-:Marche-en-Famenne rdf:type owl:Class ;
-                   rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Marchin
-:Marchin rdf:type owl:Class ;
-         rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Martelange
-:Martelange rdf:type owl:Class ;
-            rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Meix-devant-Virton
-:Meix-devant-Virton rdf:type owl:Class ;
-                    rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Messancy
-:Messancy rdf:type owl:Class ;
-          rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Mettet
-:Mettet rdf:type owl:Class ;
-        rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Modave
-:Modave rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Mons
-:Mons rdf:type owl:Class ;
-      rdfs:subClassOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Mont-Saint-Guibert
-:Mont-Saint-Guibert rdf:type owl:Class ;
-                    rdfs:subClassOf :Brabant_Wallon .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Mouscron
-:Mouscron rdf:type owl:Class ;
-          rdfs:subClassOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Musson
-:Musson rdf:type owl:Class ;
-        rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Namur
-:Namur rdf:type owl:Class ;
-       rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Nandrin
-:Nandrin rdf:type owl:Class ;
-         rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Nassogne
-:Nassogne rdf:type owl:Class ;
-          rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Neufchateau
-:Neufchateau rdf:type owl:Class ;
-             rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Neupré
-:Neupré rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Nivelles
-:Nivelles rdf:type owl:Class ;
-          rdfs:subClassOf :Brabant_Wallon .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ohey
-:Ohey rdf:type owl:Class ;
-      rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Olne
-:Olne rdf:type owl:Class ;
-      rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Onhaye
-:Onhaye rdf:type owl:Class ;
-        rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Oreye
-:Oreye rdf:type owl:Class ;
-       rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Orp-Jauche
-:Orp-Jauche rdf:type owl:Class ;
-            rdfs:subClassOf :Brabant_Wallon .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ottignies-Louvain-la-Neuve
-:Ottignies-Louvain-la-Neuve rdf:type owl:Class ;
-                            rdfs:subClassOf :Brabant_Wallon .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ouffet
-:Ouffet rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Oupeye
-:Oupeye rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Paliseul
-:Paliseul rdf:type owl:Class ;
-          rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Pepinster
-:Pepinster rdf:type owl:Class ;
-           rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Perwez
-:Perwez rdf:type owl:Class ;
-        rdfs:subClassOf :Brabant_Wallon .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Philippeville
-:Philippeville rdf:type owl:Class ;
-               rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Plombières
-:Plombières rdf:type owl:Class ;
-            rdfs:subClassOf :Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Profondeville
-:Profondeville rdf:type owl:Class ;
-               rdfs:subClassOf :Provinde_de_Namur .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Marché_de_noel
+:Marché_de_noel rdf:type owl:Class ;
+                rdfs:subClassOf :Evenement .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Province
@@ -811,304 +148,1160 @@
                    rdfs:subClassOf :Province .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Spectacle
+:Spectacle rdf:type owl:Class ;
+           rdfs:subClassOf :Evenement .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Théatre
+:Théatre rdf:type owl:Class ;
+         rdfs:subClassOf :Evenement .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Amay
+:Amay rdf:type owl:NamedIndividual ,
+               :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Amel
+:Amel rdf:type owl:NamedIndividual ,
+               :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Andenne
+:Andenne rdf:type owl:NamedIndividual ,
+                  :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Anhée
+:Anhée rdf:type owl:NamedIndividual ,
+                :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ans
+:Ans rdf:type owl:NamedIndividual ,
+              :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Anthisnes
+:Anthisnes rdf:type owl:NamedIndividual ,
+                    :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Antoing
+:Antoing rdf:type owl:NamedIndividual ,
+                  :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Arlon
+:Arlon rdf:type owl:NamedIndividual ,
+                :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Assesse
+:Assesse rdf:type owl:NamedIndividual ,
+                  :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ath
+:Ath rdf:type owl:NamedIndividual ,
+              :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Attert
+:Attert rdf:type owl:NamedIndividual ,
+                 :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Aubange
+:Aubange rdf:type owl:NamedIndividual ,
+                  :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Aubel
+:Aubel rdf:type owl:NamedIndividual ,
+                :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Awans
+:Awans rdf:type owl:NamedIndividual ,
+                :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Aywaille
+:Aywaille rdf:type owl:NamedIndividual ,
+                   :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Baelen
+:Baelen rdf:type owl:NamedIndividual ,
+                 :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Bassenge
+:Bassenge rdf:type owl:NamedIndividual ,
+                   :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Bastogne
+:Bastogne rdf:type owl:NamedIndividual ,
+                   :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Beaumont
+:Beaumont rdf:type owl:NamedIndividual ,
+                   :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Beauraing
+:Beauraing rdf:type owl:NamedIndividual ,
+                    :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Beauvechain
+:Beauvechain rdf:type owl:NamedIndividual ,
+                      :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Berloz
+:Berloz rdf:type owl:NamedIndividual ,
+                 :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Bertogne
+:Bertogne rdf:type owl:NamedIndividual ,
+                   :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Bertrix
+:Bertrix rdf:type owl:NamedIndividual ,
+                  :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Beyne-Heusay
+:Beyne-Heusay rdf:type owl:NamedIndividual ,
+                       :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Binche
+:Binche rdf:type owl:NamedIndividual ,
+                 :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Bièvre
+:Bièvre rdf:type owl:NamedIndividual ,
+                 :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Blegny
+:Blegny rdf:type owl:NamedIndividual ,
+                 :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Boullion
+:Boullion rdf:type owl:NamedIndividual ,
+                   :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Braine-le-Château
+:Braine-le-Château rdf:type owl:NamedIndividual ,
+                            :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Braine-le-Comte
+:Braine-le-Comte rdf:type owl:NamedIndividual ,
+                          :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Braives
+:Braives rdf:type owl:NamedIndividual ,
+                  :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Burdinne
+:Burdinne rdf:type owl:NamedIndividual ,
+                   :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Burg-Reuland
+:Burg-Reuland rdf:type owl:NamedIndividual ,
+                       :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Butgenbach
+:Butgenbach rdf:type owl:NamedIndividual ,
+                     :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Büllingen
+:Büllingen rdf:type owl:NamedIndividual ,
+                    :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Cerfontaine
+:Cerfontaine rdf:type owl:NamedIndividual ,
+                      :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Charleroi
+:Charleroi rdf:type owl:NamedIndividual ,
+                    :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Chastre
+:Chastre rdf:type owl:NamedIndividual ,
+                  :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Chaumont-Gistoux
+:Chaumont-Gistoux rdf:type owl:NamedIndividual ,
+                           :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Chimay
+:Chimay rdf:type owl:NamedIndividual ,
+                 :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Chiny
+:Chiny rdf:type owl:NamedIndividual ,
+                :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Chièvres
+:Chièvres rdf:type owl:NamedIndividual ,
+                   :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Châtelet
+:Châtelet rdf:type owl:NamedIndividual ,
+                   :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ciney
+:Ciney rdf:type owl:NamedIndividual ,
+                :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Clavier
+:Clavier rdf:type owl:NamedIndividual ,
+                  :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Comblain-au-Pont
+:Comblain-au-Pont rdf:type owl:NamedIndividual ,
+                           :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Comines-Warneton
+:Comines-Warneton rdf:type owl:NamedIndividual ,
+                           :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Court-Saint-Etienne
+:Court-Saint-Etienne rdf:type owl:NamedIndividual ,
+                              :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Couvin
+:Couvin rdf:type owl:NamedIndividual ,
+                 :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Crisnée
+:Crisnée rdf:type owl:NamedIndividual ,
+                  :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Dalhem
+:Dalhem rdf:type owl:NamedIndividual ,
+                 :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Daverdisse
+:Daverdisse rdf:type owl:NamedIndividual ,
+                     :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Dinant
+:Dinant rdf:type owl:NamedIndividual ,
+                 :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Dison
+:Dison rdf:type owl:NamedIndividual ,
+                :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#DjangoFoLLLies
+:DjangoFoLLLies rdf:type owl:NamedIndividual ,
+                         :Spectacle .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Doische
+:Doische rdf:type owl:NamedIndividual ,
+                  :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Donceel
+:Donceel rdf:type owl:NamedIndividual ,
+                  :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Durbuy
+:Durbuy rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Eghezée
+:Eghezée rdf:type owl:NamedIndividual ,
+                  :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Enghien
+:Enghien rdf:type owl:NamedIndividual ,
+                  :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Engis
+:Engis rdf:type owl:NamedIndividual ,
+                :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Erezee
+:Erezee rdf:type owl:NamedIndividual ,
+                 :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Esneux
+:Esneux rdf:type owl:NamedIndividual ,
+                 :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Etalle
+:Etalle rdf:type owl:NamedIndividual ,
+                 :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Eupen
+:Eupen rdf:type owl:NamedIndividual ,
+                :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Faimes
+:Faimes rdf:type owl:NamedIndividual ,
+                 :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fauvillers
+:Fauvillers rdf:type owl:NamedIndividual ,
+                     :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fernelmont
+:Fernelmont rdf:type owl:NamedIndividual ,
+                     :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ferrières
+:Ferrières rdf:type owl:NamedIndividual ,
+                    :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_Théatre_au_Vert_de_Thoricourt
+:Festival_Théatre_au_Vert_de_Thoricourt rdf:type owl:NamedIndividual ,
+                                                 :Théatre ;
+                                        :isLocated :Silly .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_Universatil_Théatre_et_art_de_la_scène_a_LLN
+:Festival_Universatil_Théatre_et_art_de_la_scène_a_LLN rdf:type owl:NamedIndividual ,
+                                                                :Théatre ;
+                                                       :isLocated :Ottignies-Louvian-la-Neuve .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festivale_de_théatre_de_rue_de_Herve
+:Festivale_de_théatre_de_rue_de_Herve rdf:type owl:NamedIndividual ,
+                                               :Théatre ;
+                                      :isLocated :Herve .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fexhe-le-Haut-Clocher
+:Fexhe-le-Haut-Clocher rdf:type owl:NamedIndividual ,
+                                :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Flammes_2019_Balade_théatrale_à_Bomal
+:Flammes_2019_Balade_théatrale_à_Bomal rdf:type owl:NamedIndividual ,
+                                                :Théatre ;
+                                       :isLocated :Durbuy .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fleurus
+:Fleurus rdf:type owl:NamedIndividual ,
+                  :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Florennes
+:Florennes rdf:type owl:NamedIndividual ,
+                    :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Flémalle
+:Flémalle rdf:type owl:NamedIndividual ,
+                   :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fléron
+:Fléron rdf:type owl:NamedIndividual ,
+                 :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fosse-la-Ville
+:Fosse-la-Ville rdf:type owl:NamedIndividual ,
+                         :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Gedinne
+:Gedinne rdf:type owl:NamedIndividual ,
+                  :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Geer
+:Geer rdf:type owl:NamedIndividual ,
+               :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Gembloux
+:Gembloux rdf:type owl:NamedIndividual ,
+                   :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Genappe
+:Genappe rdf:type owl:NamedIndividual ,
+                  :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Gesves
+:Gesves rdf:type owl:NamedIndividual ,
+                 :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Gouvy
+:Gouvy rdf:type owl:NamedIndividual ,
+                :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Grez-Doiceau
+:Grez-Doiceau rdf:type owl:NamedIndividual ,
+                       :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Grâce-Hollogne
+:Grâce-Hollogne rdf:type owl:NamedIndividual ,
+                         :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Haaste__töne-_Festival_international_de_Théatree_de_rue
+:Haaste__töne-_Festival_international_de_Théatree_de_rue rdf:type owl:NamedIndividual ,
+                                                                  :Théatre ;
+                                                         :isLocated :Eupen .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Habay
+:Habay rdf:type owl:NamedIndividual ,
+                :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Halloween_à_Pairi_Daiza
+:Halloween_à_Pairi_Daiza rdf:type owl:NamedIndividual ,
+                                  :Spectacle .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hamoir
+:Hamoir rdf:type owl:NamedIndividual ,
+                 :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hamois
+:Hamois rdf:type owl:NamedIndividual ,
+                 :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hannut
+:Hannut rdf:type owl:NamedIndividual ,
+                 :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hastière
+:Hastière rdf:type owl:NamedIndividual ,
+                   :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hatton
+:Hatton rdf:type owl:NamedIndividual ,
+                 :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Havelange
+:Havelange rdf:type owl:NamedIndividual ,
+                    :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Herbeumont
+:Herbeumont rdf:type owl:NamedIndividual ,
+                     :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Herstal
+:Herstal rdf:type owl:NamedIndividual ,
+                  :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Herve
+:Herve rdf:type owl:NamedIndividual ,
+                :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Houffalize
+:Houffalize rdf:type owl:NamedIndividual ,
+                     :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Houyet
+:Houyet rdf:type owl:NamedIndividual ,
+                 :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Huy
+:Huy rdf:type owl:NamedIndividual ,
+              :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hélécine
+:Hélécine rdf:type owl:NamedIndividual ,
+                   :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Héron
+:Héron rdf:type owl:NamedIndividual ,
+                :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Incourt
+:Incourt rdf:type owl:NamedIndividual ,
+                  :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ittre
+:Ittre rdf:type owl:NamedIndividual ,
+                :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Jalhay
+:Jalhay rdf:type owl:NamedIndividual ,
+                 :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Jemeppe-sur-Sambre
+:Jemeppe-sur-Sambre rdf:type owl:NamedIndividual ,
+                             :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Jodoigne
+:Jodoigne rdf:type owl:NamedIndividual ,
+                   :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Juprelle
+:Juprelle rdf:type owl:NamedIndividual ,
+                   :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Kelmis
+:Kelmis rdf:type owl:NamedIndividual ,
+                 :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#La_Hulpe
+:La_Hulpe rdf:type owl:NamedIndividual ,
+                   :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#La_Louvière
+:La_Louvière rdf:type owl:NamedIndividual ,
+                      :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#La_Roche-en-Ardenne
+:La_Roche-en-Ardenne rdf:type owl:NamedIndividual ,
+                              :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#La_bruyère
+:La_bruyère rdf:type owl:NamedIndividual ,
+                     :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#La_caravane_du_court
+:La_caravane_du_court rdf:type owl:NamedIndividual ,
+                               :Spectacle .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Lasne
+:Lasne rdf:type owl:NamedIndividual ,
+                :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Le_Roeulx
+:Le_Roeulx rdf:type owl:NamedIndividual ,
+                    :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Lessines
+:Lessines rdf:type owl:NamedIndividual ,
+                   :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Leuze-en-Hainaut
+:Leuze-en-Hainaut rdf:type owl:NamedIndividual ,
+                           :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Libin
+:Libin rdf:type owl:NamedIndividual ,
+                :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Libramont-Chevigné
+:Libramont-Chevigné rdf:type owl:NamedIndividual ,
+                             :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Lierneux
+:Lierneux rdf:type owl:NamedIndividual ,
+                   :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Limbourg
+:Limbourg rdf:type owl:NamedIndividual ,
+                   :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Lincent
+:Lincent rdf:type owl:NamedIndividual ,
+                  :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Lontzen
+:Lontzen rdf:type owl:NamedIndividual ,
+                  :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Léglise
+:Léglise rdf:type owl:NamedIndividual ,
+                  :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Malmedy
+:Malmedy rdf:type owl:NamedIndividual ,
+                  :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Manhay
+:Manhay rdf:type owl:NamedIndividual ,
+                 :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Marche-en-Flamenne
+:Marche-en-Flamenne rdf:type owl:NamedIndividual ,
+                             :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Marchin
+:Marchin rdf:type owl:NamedIndividual ,
+                  :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Martelange
+:Martelange rdf:type owl:NamedIndividual ,
+                     :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Mattet
+:Mattet rdf:type owl:NamedIndividual ,
+                 :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Modave
+:Modave rdf:type owl:NamedIndividual ,
+                 :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Mons
+:Mons rdf:type owl:NamedIndividual ,
+               :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Mont-Saint-Guibert
+:Mont-Saint-Guibert rdf:type owl:NamedIndividual ,
+                             :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Mouscron
+:Mouscron rdf:type owl:NamedIndividual ,
+                   :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Musson
+:Musson rdf:type owl:NamedIndividual ,
+                 :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Mystery_Forest
+:Mystery_Forest rdf:type owl:NamedIndividual ,
+                         :Spectacle .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Namur
+:Namur rdf:type owl:NamedIndividual ,
+                :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Nandrin
+:Nandrin rdf:type owl:NamedIndividual ,
+                  :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Nassogne
+:Nassogne rdf:type owl:NamedIndividual ,
+                   :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Neufchateau
+:Neufchateau rdf:type owl:NamedIndividual ,
+                      :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Neupré
+:Neupré rdf:type owl:NamedIndividual ,
+                 :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Nivelles
+:Nivelles rdf:type owl:NamedIndividual ,
+                   :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ohey
+:Ohey rdf:type owl:NamedIndividual ,
+               :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Olne
+:Olne rdf:type owl:NamedIndividual ,
+               :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ombre_et_Lumières_du_Moyen_Age
+:Ombre_et_Lumières_du_Moyen_Age rdf:type owl:NamedIndividual ,
+                                         :Spectacle .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Onhaye
+:Onhaye rdf:type owl:NamedIndividual ,
+                 :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Oreye
+:Oreye rdf:type owl:NamedIndividual ,
+                :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Orp-Jauche
+:Orp-Jauche rdf:type owl:NamedIndividual ,
+                     :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ottignies-Louvian-la-Neuve
+:Ottignies-Louvian-la-Neuve rdf:type owl:NamedIndividual ,
+                                     :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ouffet
+:Ouffet rdf:type owl:NamedIndividual ,
+                 :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Oupeye
+:Oupeye rdf:type owl:NamedIndividual ,
+                 :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Paliseul
+:Paliseul rdf:type owl:NamedIndividual ,
+                   :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Pepinster
+:Pepinster rdf:type owl:NamedIndividual ,
+                    :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Perwez
+:Perwez rdf:type owl:NamedIndividual ,
+                 :Brabant_Wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Philippeville
+:Philippeville rdf:type owl:NamedIndividual ,
+                        :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Plombières
+:Plombières rdf:type owl:NamedIndividual ,
+                     :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Pronfondeville
+:Pronfondeville rdf:type owl:NamedIndividual ,
+                         :Provinde_de_Namur .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Péruwelz
-:Péruwelz rdf:type owl:Class ;
-          rdfs:subClassOf :Hainaut .
+:Péruwelz rdf:type owl:NamedIndividual ,
+                   :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Raeren
-:Raeren rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
+:Raeren rdf:type owl:NamedIndividual ,
+                 :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ramilles
-:Ramilles rdf:type owl:Class ;
-          rdfs:subClassOf :Brabant_Wallon .
+:Ramilles rdf:type owl:NamedIndividual ,
+                   :Brabant_Wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Rebecq
-:Rebecq rdf:type owl:Class ;
-        rdfs:subClassOf :Brabant_Wallon .
+:Rebecq rdf:type owl:NamedIndividual ,
+                 :Brabant_Wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Remicourt
-:Remicourt rdf:type owl:Class ;
-           rdfs:subClassOf :Liege .
+:Remicourt rdf:type owl:NamedIndividual ,
+                    :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Rendeux
-:Rendeux rdf:type owl:Class ;
-         rdfs:subClassOf :Luxembourg .
+:Rendeux rdf:type owl:NamedIndividual ,
+                  :Luxembourg .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Rixensart
-:Rixensart rdf:type owl:Class ;
-           rdfs:subClassOf :Brabant_Wallon .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Riwensart
+:Riwensart rdf:type owl:NamedIndividual ,
+                    :Brabant_Wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Rochefort
-:Rochefort rdf:type owl:Class ;
-           rdfs:subClassOf :Provinde_de_Namur .
+:Rochefort rdf:type owl:NamedIndividual ,
+                    :Provinde_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Rouvroy
-:Rouvroy rdf:type owl:Class ;
-         rdfs:subClassOf :Luxembourg .
+:Rouvroy rdf:type owl:NamedIndividual ,
+                  :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Saint-Georges-sur-Meuse
-:Saint-Georges-sur-Meuse rdf:type owl:Class ;
-                         rdfs:subClassOf :Liege .
+:Saint-Georges-sur-Meuse rdf:type owl:NamedIndividual ,
+                                  :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Saint-Ghislain
+:Saint-Ghislain rdf:type owl:NamedIndividual ,
+                         :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Saint-Léger
-:Saint-Léger rdf:type owl:Class ;
-             rdfs:subClassOf :Luxembourg .
+:Saint-Léger rdf:type owl:NamedIndividual ,
+                      :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Saint-Nicolas
-:Saint-Nicolas rdf:type owl:Class ;
-               rdfs:subClassOf :Liege .
+:Saint-Nicolas rdf:type owl:NamedIndividual ,
+                        :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Saint-Ode
+:Saint-Ode rdf:type owl:NamedIndividual ,
+                    :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Saint_Hubert
-:Saint_Hubert rdf:type owl:Class ;
-              rdfs:subClassOf :Luxembourg .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Sainte-Ode
-:Sainte-Ode rdf:type owl:Class ;
-            rdfs:subClassOf :Luxembourg .
+:Saint_Hubert rdf:type owl:NamedIndividual ,
+                       :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Sambreville
-:Sambreville rdf:type owl:Class ;
-             rdfs:subClassOf :Provinde_de_Namur .
+:Sambreville rdf:type owl:NamedIndividual ,
+                      :Provinde_de_Namur .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Sankt_Vith
-:Sankt_Vith rdf:type owl:Class ;
-            rdfs:subClassOf :Liege .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Sankt-Vith
+:Sankt-Vith rdf:type owl:NamedIndividual ,
+                     :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Seraing
-:Seraing rdf:type owl:Class ;
-         rdfs:subClassOf :Liege .
+:Seraing rdf:type owl:NamedIndividual ,
+                  :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Silly
+:Silly rdf:type owl:NamedIndividual ,
+                :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Soignies
-:Soignies rdf:type owl:Class ;
-          rdfs:subClassOf :Hainaut .
+:Soignies rdf:type owl:NamedIndividual ,
+                   :Hainaut .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Sombreffe
-:Sombreffe rdf:type owl:Class ;
-           rdfs:subClassOf :Provinde_de_Namur .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Sombreville
+:Sombreville rdf:type owl:NamedIndividual ,
+                      :Provinde_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Somme-Leuze
-:Somme-Leuze rdf:type owl:Class ;
-             rdfs:subClassOf :Provinde_de_Namur .
+:Somme-Leuze rdf:type owl:NamedIndividual ,
+                      :Provinde_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Soumagne
-:Soumagne rdf:type owl:Class ;
-          rdfs:subClassOf :Liege .
+:Soumagne rdf:type owl:NamedIndividual ,
+                   :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Spa
-:Spa rdf:type owl:Class ;
-     rdfs:subClassOf :Liege .
+:Spa rdf:type owl:NamedIndividual ,
+              :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Sprimont
-:Sprimont rdf:type owl:Class ;
-          rdfs:subClassOf :Liege .
+:Sprimont rdf:type owl:NamedIndividual ,
+                   :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Stavelot
-:Stavelot rdf:type owl:Class ;
-          rdfs:subClassOf :Liege .
+:Stavelot rdf:type owl:NamedIndividual ,
+                   :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Stoumont
-:Stoumont rdf:type owl:Class ;
-          rdfs:subClassOf :Liege .
+:Stoumont rdf:type owl:NamedIndividual ,
+                   :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Tellin
-:Tellin rdf:type owl:Class ;
-        rdfs:subClassOf :Luxembourg .
+:Tellin rdf:type owl:NamedIndividual ,
+                 :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Tenneville
-:Tenneville rdf:type owl:Class ;
-            rdfs:subClassOf :Luxembourg .
+:Tenneville rdf:type owl:NamedIndividual ,
+                     :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Theux
-:Theux rdf:type owl:Class ;
-       rdfs:subClassOf :Liege .
+:Theux rdf:type owl:NamedIndividual ,
+                :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Thimister-Clermont
-:Thimister-Clermont rdf:type owl:Class ;
-                    rdfs:subClassOf :Liege .
+:Thimister-Clermont rdf:type owl:NamedIndividual ,
+                             :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Thuin
-:Thuin rdf:type owl:Class ;
-       rdfs:subClassOf :Hainaut .
+:Thuin rdf:type owl:NamedIndividual ,
+                :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Tinlot
-:Tinlot rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
+:Tinlot rdf:type owl:NamedIndividual ,
+                 :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Tintigny
-:Tintigny rdf:type owl:Class ;
-          rdfs:subClassOf :Luxembourg .
+:Tintigny rdf:type owl:NamedIndividual ,
+                   :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Tournai
-:Tournai rdf:type owl:Class ;
-         rdfs:subClassOf :Hainaut .
+:Tournai rdf:type owl:NamedIndividual ,
+                  :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Trois-Ponts
-:Trois-Ponts rdf:type owl:Class ;
-             rdfs:subClassOf :Liege .
+:Trois-Ponts rdf:type owl:NamedIndividual ,
+                      :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Trooz
-:Trooz rdf:type owl:Class ;
-       rdfs:subClassOf :Liege .
+:Trooz rdf:type owl:NamedIndividual ,
+                :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Tubize
-:Tubize rdf:type owl:Class ;
-        rdfs:subClassOf :Brabant_Wallon .
+:Tubize rdf:type owl:NamedIndividual ,
+                 :Brabant_Wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Vaux-sur-Sure
-:Vaux-sur-Sure rdf:type owl:Class ;
-               rdfs:subClassOf :Luxembourg .
+:Vaux-sur-Sure rdf:type owl:NamedIndividual ,
+                        :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Verlaine
-:Verlaine rdf:type owl:Class ;
-          rdfs:subClassOf :Liege .
+:Verlaine rdf:type owl:NamedIndividual ,
+                   :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Verviers
-:Verviers rdf:type owl:Class ;
-          rdfs:subClassOf :Liege .
+:Verviers rdf:type owl:NamedIndividual ,
+                   :Liege .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Vielsalm
-:Vielsalm rdf:type owl:Class ;
-          rdfs:subClassOf :Luxembourg .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Vielslam
+:Vielslam rdf:type owl:NamedIndividual ,
+                   :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Villers-la-Ville
-:Villers-la-Ville rdf:type owl:Class ;
-                  rdfs:subClassOf :Brabant_Wallon .
+:Villers-la-Ville rdf:type owl:NamedIndividual ,
+                           :Brabant_Wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Villers-le-Bouillet
-:Villers-le-Bouillet rdf:type owl:Class ;
-                     rdfs:subClassOf :Liege .
+:Villers-le-Bouillet rdf:type owl:NamedIndividual ,
+                              :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Viroinval
-:Viroinval rdf:type owl:Class ;
-           rdfs:subClassOf :Provinde_de_Namur .
+:Viroinval rdf:type owl:NamedIndividual ,
+                    :Provinde_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Virton
-:Virton rdf:type owl:Class ;
-        rdfs:subClassOf :Luxembourg .
+:Virton rdf:type owl:NamedIndividual ,
+                 :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Visé
-:Visé rdf:type owl:Class ;
-      rdfs:subClassOf :Liege .
+:Visé rdf:type owl:NamedIndividual ,
+               :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Vresse-sur-Semois
-:Vresse-sur-Semois rdf:type owl:Class ;
-                   rdfs:subClassOf :Provinde_de_Namur .
+:Vresse-sur-Semois rdf:type owl:NamedIndividual ,
+                            :Provinde_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Waimes
-:Waimes rdf:type owl:Class ;
-        rdfs:subClassOf :Liege .
+:Waimes rdf:type owl:NamedIndividual ,
+                 :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Walcourt
-:Walcourt rdf:type owl:Class ;
-          rdfs:subClassOf :Provinde_de_Namur .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Walhain
-:Walhain rdf:type owl:Class ;
-         rdfs:subClassOf :Brabant_Wallon .
+:Walcourt rdf:type owl:NamedIndividual ,
+                   :Provinde_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Wanze
-:Wanze rdf:type owl:Class ;
-       rdfs:subClassOf :Liege .
+:Wanze rdf:type owl:NamedIndividual ,
+                :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Waremme
-:Waremme rdf:type owl:Class ;
-         rdfs:subClassOf :Liege .
+:Waremme rdf:type owl:NamedIndividual ,
+                  :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Wasseiges
-:Wasseiges rdf:type owl:Class ;
-           rdfs:subClassOf :Liege .
+:Wasseiges rdf:type owl:NamedIndividual ,
+                    :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Waterloo
-:Waterloo rdf:type owl:Class ;
-          rdfs:subClassOf :Brabant_Wallon .
+:Waterloo rdf:type owl:NamedIndividual ,
+                   :Brabant_Wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Wavre
-:Wavre rdf:type owl:Class ;
-       rdfs:subClassOf :Brabant_Wallon .
+:Wavre rdf:type owl:NamedIndividual ,
+                :Brabant_Wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Welkenraedt
-:Welkenraedt rdf:type owl:Class ;
-             rdfs:subClassOf :Liege .
+:Welkenraedt rdf:type owl:NamedIndividual ,
+                      :Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Wellin
-:Wellin rdf:type owl:Class ;
-        rdfs:subClassOf :Luxembourg .
+:Wellin rdf:type owl:NamedIndividual ,
+                 :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Yvoir
-:Yvoir rdf:type owl:Class ;
-       rdfs:subClassOf :Provinde_de_Namur .
+:Yvoir rdf:type owl:NamedIndividual ,
+                :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#walhain
+:walhain rdf:type owl:NamedIndividual ,
+                  :Brabant_Wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Braine-l'Alleud
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Braine-l'Alleud> rdf:type owl:Class ;
-                                                                                               rdfs:subClassOf :Brabant_Wallon .
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Braine-l'Alleud> rdf:type owl:NamedIndividual ,
+                                                                                                        :Brabant_Wallon .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fontaine-l'Evêque
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fontaine-l'Evêque> rdf:type owl:Class ;
-                                                                                                 rdfs:subClassOf :Hainaut .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_vacances_théatre_à_l'abbaye_de_Stavelot
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_vacances_théatre_à_l'abbaye_de_Stavelot> rdf:type owl:NamedIndividual ,
+                                                                                                                                         :Théatre ;
+                                                                                                                                :isLocated :Stavelot .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Saint-Ghislain‎
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Saint-Ghislain‎> rdf:type owl:Class ;
-                                                                                               rdfs:subClassOf :Hainaut .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fontaine-l'Eveque
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fontaine-l'Eveque> rdf:type owl:NamedIndividual ,
+                                                                                                          :Hainaut .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Les_Tilleuleries:_Festival_des_Arts_de_la_Rue
+:Les_Tilleuleries:_Festival_des_Arts_de_la_Rue rdf:type owl:NamedIndividual ,
+                                                        :Théatre ;
+                                               :isLocated :Nassogne .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Les_journée_wollonnes_de_l'eau
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Les_journée_wollonnes_de_l'eau> rdf:type owl:NamedIndividual ,
+                                                                                                                       :Spectacle .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Les_nuits_du_Cirques_à_l'Abbaye_de_Villers-la-Ville
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Les_nuits_du_Cirques_à_l'Abbaye_de_Villers-la-Ville> rdf:type owl:NamedIndividual ,
+                                                                                                                                            :Spectacle .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Soiron_sur_Scène:_La_fête_dans_l'un_des_beaux_villages_de_wallonie
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Soiron_sur_Scène:_La_fête_dans_l'un_des_beaux_villages_de_wallonie> rdf:type owl:NamedIndividual ,
+                                                                                                                                                           :Théatre ;
+                                                                                                                                                  :isLocated :Pepinster .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
