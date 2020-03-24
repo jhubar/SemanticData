@@ -19,6 +19,18 @@
          rdfs:comment "Ce logemnt vous permet de faire une activité" .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#goToAnEvent
+:goToAnEvent rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#hasParticipant
+:hasParticipant rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#isHostOf
+:isHostOf rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#isLocated
 :isLocated rdf:type owl:ObjectProperty ;
            rdfs:domain :Evenement ;
@@ -111,7 +123,11 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Evenement
-:Evenement rdf:type owl:Class .
+:Evenement rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasParticipant ;
+                             owl:someValuesFrom :Personne
+                           ] .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Exposition
@@ -173,8 +189,24 @@
                 rdfs:subClassOf :Evenement .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Personne
+:Personne rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :goToAnEvent ;
+                            owl:someValuesFrom :Evenement
+                          ] .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Province
-:Province rdf:type owl:Class .
+:Province rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :isHostOf ;
+                            owl:someValuesFrom :Evenement
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :isHostOf ;
+                            owl:someValuesFrom :Logement
+                          ] .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Provinde_de_Namur
@@ -788,6 +820,11 @@
                 :Brabant_Wallon .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Jacques
+:Jacques rdf:type owl:NamedIndividual ,
+                  :Personne .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Jalhay
 :Jalhay rdf:type owl:NamedIndividual ,
                  :Liege .
@@ -1078,6 +1115,11 @@
                    :Luxembourg .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Paul
+:Paul rdf:type owl:NamedIndividual ,
+               :Personne .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Pepinster
 :Pepinster rdf:type owl:NamedIndividual ,
                     :Liege .
@@ -1091,6 +1133,11 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Philippeville
 :Philippeville rdf:type owl:NamedIndividual ,
                         :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Pierre
+:Pierre rdf:type owl:NamedIndividual ,
+                 :Personne .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Plombières
@@ -1521,6 +1568,45 @@
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Balade_et_visite_guidée
+                :Brocante
+                :Compétition
+                :Concert
+                :Croisière
+                :Exposition
+                :Festival
+                :Foire_et_salon
+                :Folklore_et_tradition
+                :Marché
+                :Marché_de_noel
+                :Spectacle
+                :Sport
+                :Théatre
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Brabant_Wallon
+                :Hainaut
+                :Liege
+                :Luxembourg
+                :Provinde_de_Namur
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Camping_et_camping-car
+                :Gites_et_maisons_de_vacances
+                :Hotel
+                :Village_de_vacances
+                <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Maison_d'hotes>
+              )
+] .
+
 
 [ rdf:type owl:AllDifferent ;
   owl:distinctMembers ( :Amay
