@@ -12,6 +12,10 @@
 #    Object Properties
 #################################################################
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#SaleIn
+:SaleIn rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#WeCanDo
 :WeCanDo rdf:type owl:ObjectProperty ;
          rdfs:domain :Logement ;
@@ -107,6 +111,14 @@
                         rdfs:subClassOf :Logement .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Client-Touriste-visiteur
+:Client-Touriste-visiteur rdf:type owl:Class ;
+                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty :goToAnEvent ;
+                                            owl:someValuesFrom :Evenement
+                                          ] .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Compétition
 :Compétition rdf:type owl:Class ;
              rdfs:subClassOf :Evenement .
@@ -126,7 +138,7 @@
 :Evenement rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :hasParticipant ;
-                             owl:someValuesFrom :Personne
+                             owl:someValuesFrom :Client-Touriste-visiteur
                            ] .
 
 
@@ -181,20 +193,16 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Marché
 :Marché rdf:type owl:Class ;
-        rdfs:subClassOf :Evenement .
+        rdfs:subClassOf :Evenement ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :SaleIn ;
+                          owl:someValuesFrom :Vendeur-propriétaire
+                        ] .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Marché_de_noel
 :Marché_de_noel rdf:type owl:Class ;
                 rdfs:subClassOf :Evenement .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Personne
-:Personne rdf:type owl:Class ;
-          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty :goToAnEvent ;
-                            owl:someValuesFrom :Evenement
-                          ] .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Province
@@ -227,6 +235,10 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Théatre
 :Théatre rdf:type owl:Class ;
          rdfs:subClassOf :Evenement .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Vendeur-propriétaire
+:Vendeur-propriétaire rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Village_de_vacances
@@ -655,6 +667,11 @@
                     :Provinde_de_Namur .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Florent
+:Florent rdf:type owl:NamedIndividual ,
+                  :Client-Touriste-visiteur .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Flémalle
 :Flémalle rdf:type owl:NamedIndividual ,
                    :Liege .
@@ -822,7 +839,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Jacques
 :Jacques rdf:type owl:NamedIndividual ,
-                  :Personne .
+                  :Vendeur-propriétaire .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Jalhay
@@ -961,6 +978,11 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Lontzen
 :Lontzen rdf:type owl:NamedIndividual ,
                   :Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Louis
+:Louis rdf:type owl:NamedIndividual ,
+                :Client-Touriste-visiteur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Léglise
@@ -1117,7 +1139,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Paul
 :Paul rdf:type owl:NamedIndividual ,
-               :Personne .
+               :Vendeur-propriétaire .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Pepinster
@@ -1137,7 +1159,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Pierre
 :Pierre rdf:type owl:NamedIndividual ,
-                 :Personne .
+                 :Vendeur-propriétaire .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Plombières
@@ -1469,6 +1491,11 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Yvoir
 :Yvoir rdf:type owl:NamedIndividual ,
                 :Provinde_de_Namur .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#laura
+:laura rdf:type owl:NamedIndividual ,
+                :Client-Touriste-visiteur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#walhain
