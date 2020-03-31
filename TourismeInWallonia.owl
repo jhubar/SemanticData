@@ -24,15 +24,18 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#goToAnEvent
-:goToAnEvent rdf:type owl:ObjectProperty .
+:goToAnEvent rdf:type owl:ObjectProperty ;
+             rdfs:domain :Client-Touriste-visiteur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#hasParticipant
-:hasParticipant rdf:type owl:ObjectProperty .
+:hasParticipant rdf:type owl:ObjectProperty ;
+                rdfs:domain :Evenement .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#isHostOf
-:isHostOf rdf:type owl:ObjectProperty .
+:isHostOf rdf:type owl:ObjectProperty ;
+          rdfs:domain :Client-Touriste-visiteur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#isLocated
@@ -40,6 +43,11 @@
            rdfs:domain :Evenement ;
            rdfs:range :Province ;
            rdfs:comment "An event is in a province" .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#isProposedBy
+:isProposedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain :Logement .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#partOf
@@ -136,6 +144,10 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Evenement
 :Evenement rdf:type owl:Class ;
+           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isProposedBy ;
+                                 owl:allValuesFrom :Province
+                               ] ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :hasParticipant ;
                              owl:someValuesFrom :Client-Touriste-visiteur
@@ -183,7 +195,11 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Logement
-:Logement rdf:type owl:Class .
+:Logement rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty :isProposedBy ;
+                                owl:someValuesFrom :Vendeur-propriétaire
+                              ] .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Luxembourg
