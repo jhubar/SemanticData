@@ -1,0 +1,9 @@
+PREFIX : <http://www.semanticweb.org/antoinelouis/ontologies/2019/4/olympic-games#>
+
+
+SELECT ?athlete WHERE
+{
+ ?sportcompetition :hasHost :London2012 .
+ ?sportcompetition :hasSport :Tennis_Singles.
+ ?sportcompetition :hasAwardedFirstPlaceTo ?athlete .
+}

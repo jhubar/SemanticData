@@ -1,0 +1,40 @@
+- OlympycGame
+	- WinterGame
+	- SummerGame
+
+
+- SportCompetition
+	- Round
+	- Multi-round Competition
+	- Multi-discipline Competition
+	- Multi-stage Competition
+	- UnitCompetition
+
+
+- Sport
+	- BallSport
+		- Tennis
+		- Football
+		- Volleyball
+	- CombatSport
+		- Boxing
+		- Judo
+		- Taekwondo
+	- MultiSport
+		- Biathlon
+		- Triathlon
+	- WaterSport
+		- Diving
+		- Swimming
+		- Waterpolo
+	- AthleticsSport
+		- 100mRacing
+		- HamerThrow
+		- HighJump
+
+
+- Athtlete
+
+
+
+
