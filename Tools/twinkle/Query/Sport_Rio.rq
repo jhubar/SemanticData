@@ -1,0 +1,8 @@
+PREFIX : <http://www.semanticweb.org/antoinelouis/ontologies/2019/4/olympic-games#>
+
+
+SELECT DISTINCT ?sport WHERE 
+{
+ ?sportCompetiton :hasSport ?sport.
+ ?sportCompetition :hasHost :RioDeJaneiro2016
+}
