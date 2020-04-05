@@ -569,15 +569,11 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Cité_de_la_Bière
 :Cité_de_la_Bière rdf:type owl:NamedIndividual ,
-<<<<<<< HEAD
                            :Festival ,
-                           :Ville .
-=======
-                           :Festival ;
+                           :Ville ;
                   :cost "6.0"^^xsd:double ;
                   :endDate "2020-04-19T19:00:00+01:00"^^xsd:dateTime ;
                   :startDate "2020-04-17T16:00:00+01:00"^^xsd:dateTime .
->>>>>>> 9ba9c79a2c0d027bb8049ef471656192e1b4abcc
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Clavier
@@ -641,13 +637,9 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#DjangoFoLLLies
-<<<<<<< HEAD
 :DjangoFoLLLies rdf:type owl:NamedIndividual ,
                          :Spectacle ,
                          :Ville .
-=======
-:DjangoFoLLLies rdf:type owl:NamedIndividual .
->>>>>>> 9ba9c79a2c0d027bb8049ef471656192e1b4abcc
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Doische
