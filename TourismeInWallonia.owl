@@ -699,20 +699,6 @@ owl:topDataProperty rdfs:domain :Evenement ;
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_Théatre_au_Vert_de_Thoricourt
-<<<<<<< HEAD
-:Festival_Théatre_au_Vert_de_Thoricourt rdf:type owl:NamedIndividual ;
-                                        :isLocated :Silly .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_Universatil_Théatre_et_art_de_la_scène_a_LLN
-:Festival_Universatil_Théatre_et_art_de_la_scène_a_LLN rdf:type owl:NamedIndividual ;
-                                                       :isLocated :Ottignies-Louvian-la-Neuve .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festivale_de_théatre_de_rue_de_Herve
-:Festivale_de_théatre_de_rue_de_Herve rdf:type owl:NamedIndividual ;
-                                      :isLocated :Herve .
-=======
 :Festival_Théatre_au_Vert_de_Thoricourt rdf:type owl:NamedIndividual ,
                                                  :Théatre ;
                                         :isLocated :Silly ;
@@ -724,7 +710,6 @@ owl:topDataProperty rdfs:domain :Evenement ;
 :Festival_Universatil_Théatre_et_art_de_la_scène_a_LLN rdf:type owl:NamedIndividual ,
                                                                 :Festival ;
                                                        :needEquipment "false"^^xsd:boolean .
->>>>>>> 21aaac416099189841191fb81c825237c84e7c06
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fexhe-le-Haut-Clocher
@@ -733,14 +718,6 @@ owl:topDataProperty rdfs:domain :Evenement ;
                        :partOf :Province_de_Liege .
 
 
-<<<<<<< HEAD
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Flammes_2019_Balade_théatrale_à_Bomal
-:Flammes_2019_Balade_théatrale_à_Bomal rdf:type owl:NamedIndividual ;
-                                       :isLocated :Durbuy .
-
-
-=======
->>>>>>> 21aaac416099189841191fb81c825237c84e7c06
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fleurus
 :Fleurus rdf:type owl:NamedIndividual ,
                   :Ville ;
@@ -830,14 +807,6 @@ owl:topDataProperty rdfs:domain :Evenement ;
                                                  :isLocated :Boullion .
 
 
-<<<<<<< HEAD
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Haaste__töne-_Festival_international_de_Théatree_de_rue
-:Haaste__töne-_Festival_international_de_Théatree_de_rue rdf:type owl:NamedIndividual ;
-                                                         :isLocated :Eupen .
-
-
-=======
->>>>>>> 21aaac416099189841191fb81c825237c84e7c06
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Habay
 :Habay rdf:type owl:NamedIndividual ,
                 :Ville ;
@@ -851,13 +820,8 @@ owl:topDataProperty rdfs:domain :Evenement ;
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Halloween_à_Pairi_Daiza
-<<<<<<< HEAD
-:Halloween_à_Pairi_Daiza rdf:type owl:NamedIndividual ;
-                         :isLocated :Hainaut .
-=======
 :Halloween_à_Pairi_Daiza rdf:type owl:NamedIndividual ,
                                   :Spectacle .
->>>>>>> 21aaac416099189841191fb81c825237c84e7c06
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hamoir
@@ -1765,14 +1729,6 @@ owl:topDataProperty rdfs:domain :Evenement ;
                                                                                                                           :startDate "2019-10-12T10:00:00+01:00"^^xsd:dateTime .
 
 
-<<<<<<< HEAD
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_vacances_théatre_à_l'abbaye_de_Stavelot
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_vacances_théatre_à_l'abbaye_de_Stavelot> rdf:type owl:NamedIndividual ;
-                                                                                                                                :isLocated :Stavelot .
-
-
-=======
->>>>>>> 21aaac416099189841191fb81c825237c84e7c06
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fontaine-l'Eveque
 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fontaine-l'Eveque> rdf:type owl:NamedIndividual ,
                                                                                                           :Ville ;
