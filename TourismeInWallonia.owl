@@ -57,38 +57,49 @@
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Speking
-:Speking rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#hasNumberOfVisitors
+:hasNumberOfVisitors rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Evenement ;
+                     rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#hasNumbersOfRooms
+:hasNumbersOfRooms rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Logement ;
+                   rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#needEquipment
+:needEquipment rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Evenement ;
+               rdfs:range xsd:boolean ;
+               rdfs:comment "Is equipment necessary for the activity" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#cost
 :cost rdf:type owl:DatatypeProperty ;
-      rdfs:domain :Evenement .
+      rdfs:domain :Evenement ;
+      rdfs:range xsd:double ;
+      rdfs:comment "Total cost of event" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#endDate
 :endDate rdf:type owl:DatatypeProperty ;
-         rdfs:domain :Evenement .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#hasMinimunSize
-:hasMinimunSize rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Evenement .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#hasRangeAge
-:hasRangeAge rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Evenement ;
-             rdfs:comment "Un age minimun est requit pour certainnes activité" .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#isEcoLabelled
-:isEcoLabelled rdf:type owl:DatatypeProperty .
+         rdfs:domain :Evenement ;
+         rdfs:range xsd:dateTime ;
+         rdfs:comment "Ending date of event" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#startDate
 :startDate rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Evenement .
+           rdfs:domain :Evenement ;
+           rdfs:range xsd:dateTime ;
+           rdfs:comment "starting date of event" .
+
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:domain :Evenement ;
+                    rdfs:range xsd:boolean .
 
 
 #################################################################
@@ -233,6 +244,12 @@
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Silly
+:Silly rdf:type owl:NamedIndividual ,
+                :Ville ;
+       :partOf :Hainaut .
+
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Amay
 :Amay rdf:type owl:NamedIndividual ,
@@ -679,25 +696,23 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_Théatre_au_Vert_de_Thoricourt
-:Festival_Théatre_au_Vert_de_Thoricourt rdf:type owl:NamedIndividual .
+:Festival_Théatre_au_Vert_de_Thoricourt rdf:type owl:NamedIndividual ,
+                                                 :Théatre ;
+                                        :isLocated :Silly ;
+                                        :needEquipment "false"^^xsd:boolean ;
+                                        :startDate "2020-08-01T18:00:00+01:00"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_Universatil_Théatre_et_art_de_la_scène_a_LLN
-:Festival_Universatil_Théatre_et_art_de_la_scène_a_LLN rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festivale_de_théatre_de_rue_de_Herve
-:Festivale_de_théatre_de_rue_de_Herve rdf:type owl:NamedIndividual .
+:Festival_Universatil_Théatre_et_art_de_la_scène_a_LLN rdf:type owl:NamedIndividual ,
+                                                                :Festival ;
+                                                       :needEquipment "false"^^xsd:boolean .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fexhe-le-Haut-Clocher
 :Fexhe-le-Haut-Clocher rdf:type owl:NamedIndividual ,
                                 :Ville ;
                        :partOf :Province_de_Liege .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Flammes_2019_Balade_théatrale_à_Bomal
-:Flammes_2019_Balade_théatrale_à_Bomal rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fleurus
@@ -789,10 +804,6 @@
                                                  :isLocated :Boullion .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Haaste__töne-_Festival_international_de_Théatree_de_rue
-:Haaste__töne-_Festival_international_de_Théatree_de_rue rdf:type owl:NamedIndividual .
-
-
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Habay
 :Habay rdf:type owl:NamedIndividual ,
                 :Ville ;
@@ -806,7 +817,8 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Halloween_à_Pairi_Daiza
-:Halloween_à_Pairi_Daiza rdf:type owl:NamedIndividual .
+:Halloween_à_Pairi_Daiza rdf:type owl:NamedIndividual ,
+                                  :Spectacle .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hamoir
@@ -985,11 +997,7 @@
 :Le_val_de_Poix_à_Saint_Hubaert rdf:type owl:NamedIndividual ,
                                          :Hotel ;
                                 :WeCanDo :Velo ;
-                                :isLocated :Saint_Hubert ;
-                                :Speking "Allemand" ,
-                                         "Anglais" ,
-                                         "Français" ,
-                                         "Néerlandais" .
+                                :isLocated :Saint_Hubert .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Lessines
@@ -1570,6 +1578,7 @@
 :Visites_nocturnes_aux_flambeaux rdf:type owl:NamedIndividual ,
                                           :Balade_et_visite_guidée ;
                                  :isLocated :Boullion ;
+                                 :needEquipment "false"^^xsd:boolean ;
                                  :cost "11.0"^^xsd:double ;
                                  :endDate "2020-11-07T20:30:00+01:00"^^xsd:dateTime ;
                                  :startDate "2020-11-06T18:30:00+01:00"^^xsd:dateTime .
@@ -1669,6 +1678,7 @@
 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#20e_nuit_des_Choeurs> rdf:type owl:NamedIndividual ,
                                                                                                              :Concert ;
                                                                                                     :isLocated :Villers-la-Ville ;
+                                                                                                    :needEquipment "false"^^xsd:boolean ;
                                                                                                     :cost "31.0"^^xsd:double ;
                                                                                                     :endDate "2020-04-29T23:59:00+01:00"^^xsd:dateTime ;
                                                                                                     :startDate "2020-04-28T18:30:00+01:00"^^xsd:dateTime .
@@ -1678,6 +1688,7 @@
 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#ANtica_Namur,_Salon_d'antiquités_de_Namur> rdf:type owl:NamedIndividual ,
                                                                                                                                   :Brocante ;
                                                                                                                          :isLocated :Namur ;
+                                                                                                                         :needEquipment "false"^^xsd:boolean ;
                                                                                                                          :cost "21.5"^^xsd:double ;
                                                                                                                          :endDate "2020-11-22T19:00:00+01:00"^^xsd:dateTime ;
                                                                                                                          :startDate "2020-11-14T11:00:00+01:00"^^xsd:dateTime .
@@ -1708,13 +1719,10 @@
 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Expo_Jean-Claude_Servais,_au-delà_du_trait> rdf:type owl:NamedIndividual ,
                                                                                                                                    :Exposition ;
                                                                                                                           :isLocated :Bastogne ;
+                                                                                                                          :needEquipment "false"^^xsd:boolean ;
                                                                                                                           :cost "6.0"^^xsd:double ;
                                                                                                                           :endDate "2020-09-27T18:00:00+01:00"^^xsd:dateTime ;
                                                                                                                           :startDate "2019-10-12T10:00:00+01:00"^^xsd:dateTime .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_vacances_théatre_à_l'abbaye_de_Stavelot
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_vacances_théatre_à_l'abbaye_de_Stavelot> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fontaine-l'Eveque
