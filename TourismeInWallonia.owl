@@ -25,7 +25,8 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#goToAnEvent
 :goToAnEvent rdf:type owl:ObjectProperty ;
-             rdfs:domain :Client-Touriste-visiteur .
+             rdfs:domain :Client-Touriste-visiteur ;
+             rdfs:comment "Client-Touriste-Visiteur goToAnEvent Evenement" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#hasParticipant
@@ -35,7 +36,8 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#isHostOf
 :isHostOf rdf:type owl:ObjectProperty ;
-          rdfs:domain :Client-Touriste-visiteur .
+          rdfs:domain :Client-Touriste-visiteur ;
+          rdfs:comment "Client-Touriste-Visiteur isHostOf Vendeur-Propriétaire" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#isLocated
@@ -46,7 +48,8 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#isProposedBy
 :isProposedBy rdf:type owl:ObjectProperty ;
-              rdfs:domain :Logement .
+              rdfs:domain :Logement ;
+              rdfs:comment "Logement isProposedBy Vendeur-Propriétaire" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#partOf
@@ -679,15 +682,18 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_Théatre_au_Vert_de_Thoricourt
-:Festival_Théatre_au_Vert_de_Thoricourt rdf:type owl:NamedIndividual .
+:Festival_Théatre_au_Vert_de_Thoricourt rdf:type owl:NamedIndividual ;
+                                        :isLocated :Silly .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_Universatil_Théatre_et_art_de_la_scène_a_LLN
-:Festival_Universatil_Théatre_et_art_de_la_scène_a_LLN rdf:type owl:NamedIndividual .
+:Festival_Universatil_Théatre_et_art_de_la_scène_a_LLN rdf:type owl:NamedIndividual ;
+                                                       :isLocated :Ottignies-Louvian-la-Neuve .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festivale_de_théatre_de_rue_de_Herve
-:Festivale_de_théatre_de_rue_de_Herve rdf:type owl:NamedIndividual .
+:Festivale_de_théatre_de_rue_de_Herve rdf:type owl:NamedIndividual ;
+                                      :isLocated :Herve .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fexhe-le-Haut-Clocher
@@ -697,7 +703,8 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Flammes_2019_Balade_théatrale_à_Bomal
-:Flammes_2019_Balade_théatrale_à_Bomal rdf:type owl:NamedIndividual .
+:Flammes_2019_Balade_théatrale_à_Bomal rdf:type owl:NamedIndividual ;
+                                       :isLocated :Durbuy .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fleurus
@@ -790,7 +797,8 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Haaste__töne-_Festival_international_de_Théatree_de_rue
-:Haaste__töne-_Festival_international_de_Théatree_de_rue rdf:type owl:NamedIndividual .
+:Haaste__töne-_Festival_international_de_Théatree_de_rue rdf:type owl:NamedIndividual ;
+                                                         :isLocated :Eupen .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Habay
@@ -806,7 +814,8 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Halloween_à_Pairi_Daiza
-:Halloween_à_Pairi_Daiza rdf:type owl:NamedIndividual .
+:Halloween_à_Pairi_Daiza rdf:type owl:NamedIndividual ;
+                         :isLocated :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Hamoir
@@ -1186,6 +1195,7 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Ombre_et_Lumières_du_Moyen_Age
 :Ombre_et_Lumières_du_Moyen_Age rdf:type owl:NamedIndividual ,
                                          :Spectacle ;
+                                :isLocated :Villers-la-Ville ;
                                 :cost "15.0"^^xsd:double ;
                                 :endDate "2020-09-20T18:00:00+01:00"^^xsd:dateTime ;
                                 :startDate "2020-09-18T17:30:00+01:00"^^xsd:dateTime .
@@ -1714,7 +1724,8 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_vacances_théatre_à_l'abbaye_de_Stavelot
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_vacances_théatre_à_l'abbaye_de_Stavelot> rdf:type owl:NamedIndividual .
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Festival_vacances_théatre_à_l'abbaye_de_Stavelot> rdf:type owl:NamedIndividual ;
+                                                                                                                                :isLocated :Stavelot .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fontaine-l'Eveque
@@ -1739,6 +1750,7 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Les_nuits_du_Cirques_à_l'Abbaye_de_Villers-la-Ville
 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Les_nuits_du_Cirques_à_l'Abbaye_de_Villers-la-Ville> rdf:type owl:NamedIndividual ,
                                                                                                                                             :Spectacle ;
+                                                                                                                                   :isLocated :Villers-la-Ville ;
                                                                                                                                    :cost "29.0"^^xsd:double ;
                                                                                                                                    :endDate "2020-05-30T23:00:00+01:00"^^xsd:dateTime ;
                                                                                                                                    :startDate "2020-05-30T16:00:00+01:00"^^xsd:dateTime .
