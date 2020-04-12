@@ -60,33 +60,21 @@
 #    Data properties
 #################################################################
 
-<<<<<<< HEAD
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#cost
-=======
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#cost
->>>>>>> 69da23f88ee30f7b0379c963a814f3a7b7fd59e0
 :cost rdf:type owl:DatatypeProperty ;
       rdfs:domain :Evenement ;
       rdfs:range xsd:double ;
       rdfs:comment "Total cost of event" .
 
 
-<<<<<<< HEAD
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#endDate
-=======
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#endDate
->>>>>>> 69da23f88ee30f7b0379c963a814f3a7b7fd59e0
 :endDate rdf:type owl:DatatypeProperty ;
          rdfs:domain :Evenement ;
          rdfs:range xsd:dateTime ;
          rdfs:comment "Ending date of event" .
 
 
-<<<<<<< HEAD
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#hasNumberOfVisitors
-=======
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#hasNumberOfVisitors
->>>>>>> 69da23f88ee30f7b0379c963a814f3a7b7fd59e0
 :hasNumberOfVisitors rdf:type owl:DatatypeProperty ;
                      rdfs:domain :Evenement ;
                      rdfs:range xsd:int .
@@ -105,11 +93,7 @@
                rdfs:comment "Is equipment necessary for the activity" .
 
 
-<<<<<<< HEAD
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#startDate
-=======
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#startDate
->>>>>>> 69da23f88ee30f7b0379c963a814f3a7b7fd59e0
 :startDate rdf:type owl:DatatypeProperty ;
            rdfs:domain :Evenement ;
            rdfs:range xsd:dateTime ;
@@ -259,11 +243,7 @@
 #    Individuals
 #################################################################
 
-<<<<<<< HEAD
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Amay
-=======
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Amay
->>>>>>> 69da23f88ee30f7b0379c963a814f3a7b7fd59e0
 :Amay rdf:type owl:NamedIndividual ,
                :Ville ;
       :partOf :Liege .
@@ -1714,19 +1694,12 @@
                                                                                                :partOf :Brabant_wallon .
 
 
-<<<<<<< HEAD
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Chambre_d'hôtes_le_Pré_de_Caroline_à_Huy
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Chambre_d'hôtes_le_Pré_de_Caroline_à_Huy> rdf:type owl:NamedIndividual ,
-                                                                                                                                 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Maison_d'hotes> ;
-                                                                                                                        :isLocated :Huy ;
-                                                                                                                        :cost "46"^^xsd:int ;
-                                                                                                                        :hasNumbersOfRooms "4"^^xsd:int .
-=======
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chambre_d'hôtes_le_Pré_de_Caroline_à_Huy
 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chambre_d'hôtes_le_Pré_de_Caroline_à_Huy> rdf:type owl:NamedIndividual ,
                                                                                                                                  <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Maison_d'hotes> ;
-                                                                                                                        :isLocated :Huy .
->>>>>>> 69da23f88ee30f7b0379c963a814f3a7b7fd59e0
+                                                                                                                        :isLocated :Huy ;
+                                                                                                                        :cost "46"^^xsd:int ;
+                                                                                                                        :hasNumbersOfRooms "4"^^xsd:int .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Croisières_gourmandes_d'été_à_bord_du_bateau_Pays_de_Liège
@@ -2056,20 +2029,6 @@
                         :Yvoir
                         :laura
                         :walhain
-<<<<<<< HEAD
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#20e_nuit_des_Choeurs>
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#ANtica_Namur,_Salon_d'antiquités_de_Namur>
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Braine-l'Alleud>
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Chambre_d'hôtes_le_Pré_de_Caroline_à_Huy>
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Croisières_gourmandes_d'été_à_bord_du_bateau_Pays_de_Liège>
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Expo_Jean-Claude_Servais,_au-delà_du_trait>
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Fontaine-l'Eveque>
-                        :Les_Tilleuleries:_Festival_des_Arts_de_la_Rue
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Les_journée_wollonnes_de_l'eau>
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Les_nuits_du_Cirques_à_l'Abbaye_de_Villers-la-Ville>
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Soiron_sur_Scène:_La_fête_dans_l'un_des_beaux_villages_de_wallonie>
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/untitled-ontology-2#Village_de_vacances_Domaine_du_Val_d'Adrimont_à_Malmedy>
-=======
                         <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#20e_nuit_des_Choeurs>
                         <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#ANtica_Namur,_Salon_d'antiquités_de_Namur>
                         <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braine-l'Alleud>
@@ -2082,7 +2041,6 @@
                         <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_nuits_du_Cirques_à_l'Abbaye_de_Villers-la-Ville>
                         <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Soiron_sur_Scène:_La_fête_dans_l'un_des_beaux_villages_de_wallonie>
                         <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Village_de_vacances_Domaine_du_Val_d'Adrimont_à_Malmedy>
->>>>>>> 69da23f88ee30f7b0379c963a814f3a7b7fd59e0
                       )
 ] .
 
