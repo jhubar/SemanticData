@@ -52,6 +52,14 @@
               rdfs:comment "Logement isProposedBy Vendeur-Propriétaire" .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#liveIn
+:liveIn rdf:type owl:ObjectProperty ;
+        rdfs:domain [ rdf:type owl:Restriction ;
+                      owl:onProperty :liveIn ;
+                      owl:allValuesFrom :Ville
+                    ] .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#partOf
 :partOf rdf:type owl:ObjectProperty .
 
@@ -726,7 +734,8 @@
 :Florent rdf:type owl:NamedIndividual ,
                   :Client-Touriste-visiteur ;
          :goToAnEvent :Ombre_et_Lumières_du_Moyen_Age ,
-                      :Les_Tilleuleries:_Festival_des_Arts_de_la_Rue .
+                      :Les_Tilleuleries:_Festival_des_Arts_de_la_Rue ;
+         :liveIn :Wavre .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Flémalle
@@ -1055,7 +1064,8 @@
 :Louis rdf:type owl:NamedIndividual ,
                 :Client-Touriste-visiteur ,
                 :Ville ;
-       :goToAnEvent :Wallonie_Equestre_Event .
+       :goToAnEvent :Wallonie_Equestre_Event ;
+       :liveIn :Mons .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg
@@ -1666,7 +1676,8 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#laura
 :laura rdf:type owl:NamedIndividual ,
                 :Client-Touriste-visiteur ;
-       :goToAnEvent :Visites_nocturnes_aux_flambeaux .
+       :goToAnEvent :Visites_nocturnes_aux_flambeaux ;
+       :liveIn :Boullion .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#walhain
