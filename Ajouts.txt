@@ -1,0 +1,34 @@
+* Client:
+    -> Classe : Client-Touriste-Visiteur
+      Instance : Albert
+
+    -> Albert: - Type : Client-Touriste-Visiteur
+               - Diff. individual : . Ville
+                                    . Evenement
+                                    . Logement
+                                    . Province
+
+* Evenement:
+    -> subClasse : Marché_de_noel
+       Instance : Marché_de_noel_Liège
+
+    -> Marché_de_noel_Liège : - Type : Marché_de_noel
+                              - Diff. individual : . Ville
+                                                   . Logement
+                                                   . Province
+                                                   . Client-Touriste-Visiteur
+                              - Obj prop assertion : - isLocated Liege
+                              - Data property : - startDate "2020-11-27"
+                                                - endDate "2021-01-04"
+
+* Logement :
+    -> subClasse : Hotel
+       Instance : la_balade_des_gnomes
+
+    -> la_balade_des_gnomes : - Type : Hotel
+                              - Diff. individual : . Ville
+                                                   . Evenement
+                                                   . Province
+                                                   . Client-Touriste-Visiteur
+                              - Obj prop assertion : - isLocated Durbuy
+                              - Data property : hasNumberOfRooms "11"
