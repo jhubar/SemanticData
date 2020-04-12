@@ -724,7 +724,9 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Florent
 :Florent rdf:type owl:NamedIndividual ,
-                  :Client-Touriste-visiteur .
+                  :Client-Touriste-visiteur ;
+         :goToAnEvent :Ombre_et_Lumières_du_Moyen_Age ,
+                      :Les_Tilleuleries:_Festival_des_Arts_de_la_Rue .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Flémalle
@@ -1052,7 +1054,8 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Louis
 :Louis rdf:type owl:NamedIndividual ,
                 :Client-Touriste-visiteur ,
-                :Ville .
+                :Ville ;
+       :goToAnEvent :Wallonie_Equestre_Event .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg
@@ -1186,6 +1189,7 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ombre_et_Lumières_du_Moyen_Age
 :Ombre_et_Lumières_du_Moyen_Age rdf:type owl:NamedIndividual ,
                                          :Spectacle ;
+                                :hasParticipant :Florent ;
                                 :isLocated :Villers-la-Ville ;
                                 :cost "15.0"^^xsd:double ;
                                 :endDate "2020-09-20T18:00:00+01:00"^^xsd:dateTime ;
@@ -1571,6 +1575,7 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Visites_nocturnes_aux_flambeaux
 :Visites_nocturnes_aux_flambeaux rdf:type owl:NamedIndividual ,
                                           :Balade_et_visite_guidée ;
+                                 :hasParticipant :laura ;
                                  :isLocated :Boullion ;
                                  :cost "11.0"^^xsd:double ;
                                  :endDate "2020-11-07T20:30:00+01:00"^^xsd:dateTime ;
@@ -1605,6 +1610,7 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wallonie_Equestre_Event
 :Wallonie_Equestre_Event rdf:type owl:NamedIndividual ,
                                   :Foire_et_salon ;
+                         :hasParticipant :Louis ;
                          :isLocated :Libramont-Chevigné ;
                          :cost "25.0"^^xsd:double ;
                          :endDate "2020-11-15T18:30:00+01:00"^^xsd:dateTime ;
@@ -1659,7 +1665,8 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#laura
 :laura rdf:type owl:NamedIndividual ,
-                :Client-Touriste-visiteur .
+                :Client-Touriste-visiteur ;
+       :goToAnEvent :Visites_nocturnes_aux_flambeaux .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#walhain
@@ -1730,6 +1737,7 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_Tilleuleries:_Festival_des_Arts_de_la_Rue
 :Les_Tilleuleries:_Festival_des_Arts_de_la_Rue rdf:type owl:NamedIndividual ,
                                                         :Théatre ;
+                                               :hasParticipant :Florent ;
                                                :isLocated :Nassogne ;
                                                :cost "10.0"^^xsd:double ;
                                                :endDate "2020-07-12T20:00:00+01:00"^^xsd:dateTime ;
