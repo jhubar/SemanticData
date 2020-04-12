@@ -7,6 +7,7 @@
                                     . Evenement
                                     . Logement
                                     . Province
+               - Object property : - liveIn Liège
 
 * Evenement:
     -> subClasse : Marché_de_noel
