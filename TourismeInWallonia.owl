@@ -254,7 +254,7 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Amay
 :Amay rdf:type owl:NamedIndividual ,
                :Ville ;
-      :partOf :Liege .
+      :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Amel
