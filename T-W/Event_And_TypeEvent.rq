@@ -1,0 +1,14 @@
+PREFIX t:<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT * WHERE
+{
+ ?event rdf:type ?typeEvent .
+ ?typeEvent rdfs:subClassOf t:Evenement .
+
+
+
+}

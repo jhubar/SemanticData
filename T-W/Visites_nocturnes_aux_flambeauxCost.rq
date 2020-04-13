@@ -1,4 +1,4 @@
-PREFIX: <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#> .
+PREFIX: <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#> 
 
 SELECT ?hasCost WHERE
 {
