@@ -548,6 +548,7 @@
 :Cité_de_la_Bière rdf:type owl:NamedIndividual ,
                            :Festival ,
                            :Ville ;
+                  :isLocated :Liege ;
                   :cost "6.0"^^xsd:double ;
                   :endDate "2020-04-19T19:00:00+01:00"^^xsd:dateTime ;
                   :startDate "2020-04-17T16:00:00+01:00"^^xsd:dateTime .
@@ -824,7 +825,8 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Halloween_à_Pairi_Daiza
 :Halloween_à_Pairi_Daiza rdf:type owl:NamedIndividual ,
-                                  :Spectacle .
+                                  :Spectacle ;
+                         :isLocated :Ath .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hamoir
@@ -926,7 +928,8 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jacques
 :Jacques rdf:type owl:NamedIndividual ,
                   :Vendeur-propriétaire ,
-                  :Ville .
+                  :Ville ;
+         :liveIn :Houyet .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jalhay
@@ -984,7 +987,11 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#La_caravane_du_court
-:La_caravane_du_court rdf:type owl:NamedIndividual .
+:La_caravane_du_court rdf:type owl:NamedIndividual ,
+                               :Théatre ;
+                      :isLocated :Liege ,
+                                 :Luxembourg ,
+                                 :Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lasne
@@ -1145,7 +1152,9 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Mystery_Forest
-:Mystery_Forest rdf:type owl:NamedIndividual .
+:Mystery_Forest rdf:type owl:NamedIndividual ,
+                         :Spectacle ;
+                :isLocated :Durbuy .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Namur
@@ -1250,7 +1259,8 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Paul
 :Paul rdf:type owl:NamedIndividual ,
                :Vendeur-propriétaire ,
-               :Ville .
+               :Ville ;
+      :liveIn :Libramont-Chevigné .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Pepinster
@@ -1274,7 +1284,8 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Pierre
 :Pierre rdf:type owl:NamedIndividual ,
                  :Vendeur-propriétaire ,
-                 :Ville .
+                 :Ville ;
+        :liveIn :Wavre .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Plombières
@@ -1756,7 +1767,9 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_journée_wollonnes_de_l'eau
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_journée_wollonnes_de_l'eau> rdf:type owl:NamedIndividual .
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_journée_wollonnes_de_l'eau> rdf:type owl:NamedIndividual ,
+                                                                                                                      :Balade_et_visite_guidée ;
+                                                                                                             :isLocated :Libramont-Chevigné .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_nuits_du_Cirques_à_l'Abbaye_de_Villers-la-Ville
@@ -1769,7 +1782,9 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Soiron_sur_Scène:_La_fête_dans_l'un_des_beaux_villages_de_wallonie
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Soiron_sur_Scène:_La_fête_dans_l'un_des_beaux_villages_de_wallonie> rdf:type owl:NamedIndividual .
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Soiron_sur_Scène:_La_fête_dans_l'un_des_beaux_villages_de_wallonie> rdf:type owl:NamedIndividual ,
+                                                                                                                                                          :Spectacle ;
+                                                                                                                                                 :isLocated :Pepinster .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Village_de_vacances_Domaine_du_Val_d'Adrimont_à_Malmedy
