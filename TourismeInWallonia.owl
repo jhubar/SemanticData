@@ -13,7 +13,9 @@
 #################################################################
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#SaleIn
-:SaleIn rdf:type owl:ObjectProperty .
+:SaleIn rdf:type owl:ObjectProperty ;
+        rdfs:domain :Brocante ,
+                    :Marché .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#WeCanDo
@@ -25,7 +27,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#goToAnEvent
 :goToAnEvent rdf:type owl:ObjectProperty ;
-             rdfs:domain :Client-Touriste-visiteur ;
+             rdfs:domain :Visiteur ;
              rdfs:comment "Client-Touriste-Visiteur goToAnEvent Evenement" .
 
 
@@ -36,7 +38,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#isHostOf
 :isHostOf rdf:type owl:ObjectProperty ;
-          rdfs:domain :Client-Touriste-visiteur ;
+          rdfs:domain :Visiteur ;
           rdfs:comment "Client-Touriste-Visiteur isHostOf Vendeur-Propriétaire" .
 
 
@@ -60,8 +62,19 @@
                     ] .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#owns
+:owns rdf:type owl:ObjectProperty ;
+      rdfs:domain :Logement .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#partOf
-:partOf rdf:type owl:ObjectProperty .
+:partOf rdf:type owl:ObjectProperty ;
+        rdfs:domain :Province .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#sleepIn
+:sleepIn rdf:type owl:ObjectProperty ;
+         rdfs:domain :Logement .
 
 
 #################################################################
@@ -129,12 +142,9 @@
                         rdfs:subClassOf :Logement .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Client-Touriste-visiteur
-:Client-Touriste-visiteur rdf:type owl:Class ;
-                          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                            owl:onProperty :goToAnEvent ;
-                                            owl:someValuesFrom :Evenement
-                                          ] .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Client
+:Client rdf:type owl:Class ;
+        rdfs:subClassOf :Personne .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Compétition
@@ -156,7 +166,7 @@
 :Evenement rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :hasParticipant ;
-                             owl:someValuesFrom :Client-Touriste-visiteur
+                             owl:someValuesFrom :Visiteur
                            ] .
 
 
@@ -194,7 +204,7 @@
 :Logement rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty :isProposedBy ;
-                            owl:someValuesFrom :Vendeur-propriétaire
+                            owl:someValuesFrom :Propriétaire
                           ] .
 
 
@@ -205,11 +215,16 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Marché
 :Marché rdf:type owl:Class ;
-        rdfs:subClassOf :Evenement ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :SaleIn ;
-                          owl:someValuesFrom :Vendeur-propriétaire
-                        ] .
+        rdfs:subClassOf :Evenement .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Personne
+:Personne rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Propriétaire
+:Propriétaire rdf:type owl:Class ;
+              rdfs:subClassOf :Personne .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province
@@ -231,8 +246,9 @@
          rdfs:subClassOf :Evenement .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Vendeur-propriétaire
-:Vendeur-propriétaire rdf:type owl:Class .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Vendeur
+:Vendeur rdf:type owl:Class ;
+         rdfs:subClassOf :Personne .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Village_de_vacances
@@ -246,6 +262,15 @@
                          owl:onProperty :partOf ;
                          owl:someValuesFrom :Province
                        ] .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Visiteur
+:Visiteur rdf:type owl:Class ;
+          rdfs:subClassOf :Personne ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :goToAnEvent ;
+                            owl:someValuesFrom :Evenement
+                          ] .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Maison_d'hotes
@@ -551,8 +576,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cité_de_la_Bière
 :Cité_de_la_Bière rdf:type owl:NamedIndividual ,
-                           :Festival ,
-                           :Ville ;
+                           :Festival ;
                   :isLocated :Liege ;
                   :cost "6.0"^^xsd:double ;
                   :endDate "2020-04-19T19:00:00+01:00"^^xsd:dateTime ;
@@ -738,7 +762,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Florent
 :Florent rdf:type owl:NamedIndividual ,
-                  :Client-Touriste-visiteur ;
+                  :Visiteur ;
          :goToAnEvent :Ombre_et_Lumières_du_Moyen_Age ,
                       :Les_Tilleuleries:_Festival_des_Arts_de_la_Rue ;
          :liveIn :Wavre .
@@ -931,9 +955,9 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jacques
 :Jacques rdf:type owl:NamedIndividual ,
-                  :Vendeur-propriétaire ,
-                  :Ville ;
-         :liveIn :Houyet .
+                  :Propriétaire ;
+         :liveIn :Houyet ;
+         :owns :Camping_Eden_à_Aywaille .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jalhay
@@ -1014,7 +1038,8 @@
 :Le_val_de_Poix_à_Saint_Hubaert rdf:type owl:NamedIndividual ,
                                          :Hotel ;
                                 :WeCanDo :Velo ;
-                                :isLocated :Saint_Hubert .
+                                :isLocated :Saint_Hubert ;
+                                :owns <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Village_de_vacances_Domaine_du_Val_d'Adrimont_à_Malmedy> .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lessines
@@ -1073,8 +1098,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Louis
 :Louis rdf:type owl:NamedIndividual ,
-                :Client-Touriste-visiteur ,
-                :Ville ;
+                :Visiteur ;
        :goToAnEvent :Wallonie_Equestre_Event ;
        :liveIn :Mons .
 
@@ -1103,7 +1127,8 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Marche-en-Famenne
-:Marche-en-Famenne rdf:type owl:NamedIndividual ;
+:Marche-en-Famenne rdf:type owl:NamedIndividual ,
+                            :Ville ;
                    :partOf :Luxembourg .
 
 
@@ -1238,7 +1263,8 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ottignies-Louvian-la-Neuve
-:Ottignies-Louvian-la-Neuve rdf:type owl:NamedIndividual ;
+:Ottignies-Louvian-la-Neuve rdf:type owl:NamedIndividual ,
+                                     :Ville ;
                             :partOf :Brabant_wallon .
 
 
@@ -1262,9 +1288,9 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Paul
 :Paul rdf:type owl:NamedIndividual ,
-               :Vendeur-propriétaire ,
-               :Ville ;
-      :liveIn :Libramont-Chevigné .
+               :Propriétaire ;
+      :liveIn :Libramont-Chevigné ;
+      :owns :Gîte_rural_Les_Tilleuls_Coté_Vallée_à_Rochehaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Pepinster
@@ -1287,9 +1313,10 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Pierre
 :Pierre rdf:type owl:NamedIndividual ,
-                 :Vendeur-propriétaire ,
-                 :Ville ;
-        :liveIn :Wavre .
+                 :Propriétaire ;
+        :liveIn :Wavre ;
+        :owns :Le_val_de_Poix_à_Saint_Hubaert ,
+              <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chambre_d'hôtes_le_Pré_de_Caroline_à_Huy> .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Plombières
@@ -1690,9 +1717,13 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#laura
 :laura rdf:type owl:NamedIndividual ,
-                :Client-Touriste-visiteur ;
+                :Client ,
+                :Vendeur ,
+                :Visiteur ;
+       :SaleIn :Ciney_Puces_et_Antiquités ;
        :goToAnEvent :Visites_nocturnes_aux_flambeaux ;
-       :liveIn :Boullion .
+       :liveIn :Boullion ;
+       :sleepIn :Le_val_de_Poix_à_Saint_Hubaert .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#walhain
