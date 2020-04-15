@@ -70,7 +70,8 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#cost
 :cost rdf:type owl:DatatypeProperty ;
-      rdfs:domain :Evenement ;
+      rdfs:domain :Evenement ,
+                  :Logement ;
       rdfs:range xsd:double ;
       rdfs:comment "Total cost of event" .
 
@@ -96,7 +97,8 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#needEquipment
 :needEquipment rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Evenement ;
+               rdfs:domain :Evenement ,
+                           :Logement ;
                rdfs:range xsd:boolean ;
                rdfs:comment "Is equipment necessary for the activity" .
 
@@ -190,10 +192,10 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Logement
 :Logement rdf:type owl:Class ;
-          owl:equivalentClass [ rdf:type owl:Restriction ;
-                                owl:onProperty :isProposedBy ;
-                                owl:someValuesFrom :Vendeur-propriétaire
-                              ] .
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :isProposedBy ;
+                            owl:someValuesFrom :Vendeur-propriétaire
+                          ] .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Marché
@@ -239,7 +241,11 @@
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ville
-:Ville rdf:type owl:Class .
+:Ville rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :partOf ;
+                         owl:someValuesFrom :Province
+                       ] .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Maison_d'hotes
@@ -427,8 +433,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon
 :Brabant_wallon rdf:type owl:NamedIndividual ,
-                         :Province ,
-                         :Ville .
+                         :Province .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braine-le-Château
@@ -819,8 +824,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut
 :Hainaut rdf:type owl:NamedIndividual ,
-                  :Province ,
-                  :Ville .
+                  :Province .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Halloween_à_Pairi_Daiza

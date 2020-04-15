@@ -12,5 +12,4 @@ SELECT * WHERE
  ?event rdf:type ?typeEvent .
  ?typeEvent rdfs:subClassOf t:Evenement .
 
-
 }
