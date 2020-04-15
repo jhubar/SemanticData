@@ -14,8 +14,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#SaleIn
 :SaleIn rdf:type owl:ObjectProperty ;
-        rdfs:domain :Brocante ,
-                    :Marché .
+        rdfs:domain :Brocante .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#WeCanDo
@@ -266,11 +265,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Visiteur
 :Visiteur rdf:type owl:Class ;
-          rdfs:subClassOf :Personne ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :goToAnEvent ;
-                            owl:someValuesFrom :Evenement
-                          ] .
+          rdfs:subClassOf :Personne .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Maison_d'hotes
