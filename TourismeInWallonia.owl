@@ -196,6 +196,11 @@
                               ] .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Marche_de_noel
+:Marche_de_noel rdf:type owl:Class ;
+                rdfs:subClassOf :Evenement .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Marché
 :Marché rdf:type owl:Class ;
         rdfs:subClassOf :Evenement ,
@@ -203,11 +208,6 @@
                           owl:onProperty :SaleIn ;
                           owl:someValuesFrom :Vendeur-propriétaire
                         ] .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Marché_de_noel
-:Marché_de_noel rdf:type owl:Class ;
-                rdfs:subClassOf :Evenement .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province
@@ -1807,8 +1807,8 @@
                 :Festival
                 :Foire_et_salon
                 :Folklore_et_tradition
+                :Marche_de_noel
                 :Marché
-                :Marché_de_noel
                 :Spectacle
                 :Sport
                 :Théatre
