@@ -14,7 +14,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#SaleIn
 :SaleIn rdf:type owl:ObjectProperty ;
-        rdfs:domain :Brocante .
+        rdfs:range :Brocante .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#WeCanDo
@@ -24,15 +24,17 @@
          rdfs:comment "Ce logemnt vous permet de faire une activité" .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#goToAnEvent
-:goToAnEvent rdf:type owl:ObjectProperty ;
-             rdfs:domain :Visiteur ;
-             rdfs:comment "Client-Touriste-Visiteur goToAnEvent Evenement" .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#goTo
+:goTo rdf:type owl:ObjectProperty ;
+      rdfs:domain :Visiteur ;
+      rdfs:range :Evenement ;
+      rdfs:comment "Client-Touriste-Visiteur goToAnEvent Evenement" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#hasParticipant
 :hasParticipant rdf:type owl:ObjectProperty ;
-                rdfs:domain :Evenement .
+                rdfs:domain :Personne ;
+                rdfs:range :Evenement .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#isHostOf
@@ -63,7 +65,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#owns
 :owns rdf:type owl:ObjectProperty ;
-      rdfs:domain :Logement .
+      rdfs:range :Logement .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#partOf
@@ -73,7 +75,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#sleepIn
 :sleepIn rdf:type owl:ObjectProperty ;
-         rdfs:domain :Logement .
+         rdfs:range :Logement .
 
 
 #################################################################
@@ -758,8 +760,8 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Florent
 :Florent rdf:type owl:NamedIndividual ,
                   :Visiteur ;
-         :goToAnEvent :Ombre_et_Lumières_du_Moyen_Age ,
-                      :Les_Tilleuleries:_Festival_des_Arts_de_la_Rue ;
+         :goTo :Ombre_et_Lumières_du_Moyen_Age ,
+               :Les_Tilleuleries:_Festival_des_Arts_de_la_Rue ;
          :liveIn :Wavre .
 
 
@@ -1094,7 +1096,7 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Louis
 :Louis rdf:type owl:NamedIndividual ,
                 :Visiteur ;
-       :goToAnEvent :Wallonie_Equestre_Event ;
+       :goTo :Wallonie_Equestre_Event ;
        :liveIn :Mons .
 
 
@@ -1716,7 +1718,7 @@
                 :Vendeur ,
                 :Visiteur ;
        :SaleIn :Ciney_Puces_et_Antiquités ;
-       :goToAnEvent :Visites_nocturnes_aux_flambeaux ;
+       :goTo :Visites_nocturnes_aux_flambeaux ;
        :liveIn :Boullion ;
        :sleepIn :Le_val_de_Poix_à_Saint_Hubaert .
 
