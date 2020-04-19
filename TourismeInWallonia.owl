@@ -14,70 +14,70 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#SaleIn
 :SaleIn rdf:type owl:ObjectProperty ;
-        rdfs:domain :Personne ;
+        rdfs:domain :Poeple ;
         rdfs:range :Brocante .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#goTo
 :goTo rdf:type owl:ObjectProperty ;
-      rdfs:domain :Personne ;
-      rdfs:range :Evenement ;
+      rdfs:domain :Poeple ;
+      rdfs:range :Event ;
       rdfs:comment "Client-Touriste-Visiteur goToAnEvent Evenement" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#hasParticipant
 :hasParticipant rdf:type owl:ObjectProperty ;
-                rdfs:domain :Evenement ;
-                rdfs:range :Personne .
+                rdfs:domain :Event ;
+                rdfs:range :Poeple .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#isHostOf
 :isHostOf rdf:type owl:ObjectProperty ;
-          rdfs:domain :Ville ;
-          rdfs:range :Evenement ;
+          rdfs:domain :Town ;
+          rdfs:range :Event ;
           rdfs:comment "Client-Touriste-Visiteur isHostOf Vendeur-Propriétaire" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#isLocated
 :isLocated rdf:type owl:ObjectProperty ;
            rdfs:domain [ rdf:type owl:Class ;
-                         owl:unionOf ( :Evenement
-                                       :Logement
+                         owl:unionOf ( :Event
+                                       :Housing
                                      )
                        ] ;
-           rdfs:range :Ville ;
+           rdfs:range :Town ;
            rdfs:comment "An event is in a province" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#isProposedBy
 :isProposedBy rdf:type owl:ObjectProperty ;
-              rdfs:domain :Logement ;
-              rdfs:range :Personne ;
+              rdfs:domain :Housing ;
+              rdfs:range :Poeple ;
               rdfs:comment "Logement isProposedBy Vendeur-Propriétaire" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#liveIn
 :liveIn rdf:type owl:ObjectProperty ;
-        rdfs:domain :Personne ;
-        rdfs:range :Ville .
+        rdfs:domain :Poeple ;
+        rdfs:range :Town .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#owns
 :owns rdf:type owl:ObjectProperty ;
-      rdfs:domain :Personne ;
-      rdfs:range :Logement .
+      rdfs:domain :Poeple ;
+      rdfs:range :Housing .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#partOf
 :partOf rdf:type owl:ObjectProperty ;
-        rdfs:domain :Ville ;
+        rdfs:domain :Town ;
         rdfs:range :Province .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#sleepIn
 :sleepIn rdf:type owl:ObjectProperty ;
-         rdfs:domain :Personne ;
-         rdfs:range :Logement .
+         rdfs:domain :Poeple ;
+         rdfs:range :Housing .
 
 
 #################################################################
@@ -87,8 +87,8 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#cost
 :cost rdf:type owl:DatatypeProperty ;
       rdfs:domain [ rdf:type owl:Class ;
-                    owl:unionOf ( :Evenement
-                                  :Logement
+                    owl:unionOf ( :Event
+                                  :Housing
                                 )
                   ] ;
       rdfs:range xsd:double ;
@@ -97,33 +97,33 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#endDate
 :endDate rdf:type owl:DatatypeProperty ;
-         rdfs:domain :Evenement ;
+         rdfs:domain :Event ;
          rdfs:range xsd:dateTime ;
          rdfs:comment "Ending date of event" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#hasNumberOfVisitors
 :hasNumberOfVisitors rdf:type owl:DatatypeProperty ;
-                     rdfs:domain :Evenement ;
+                     rdfs:domain :Event ;
                      rdfs:range xsd:int .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#hasNumbersOfRooms
 :hasNumbersOfRooms rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :Logement ;
+                   rdfs:domain :Housing ;
                    rdfs:range xsd:int .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#needEquipment
 :needEquipment rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Evenement ;
+               rdfs:domain :Event ;
                rdfs:range xsd:boolean ;
                rdfs:comment "Is equipment necessary for the activity" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#startDate
 :startDate rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Evenement ;
+           rdfs:domain :Event ;
            rdfs:range xsd:dateTime ;
            rdfs:comment "starting date of event" .
 
@@ -134,102 +134,102 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Balade_et_visite_guidée
 :Balade_et_visite_guidée rdf:type owl:Class ;
-                         rdfs:subClassOf :Evenement .
+                         rdfs:subClassOf :Event .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brocante
 :Brocante rdf:type owl:Class ;
-          rdfs:subClassOf :Evenement .
+          rdfs:subClassOf :Event .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Camping_et_camping-car
 :Camping_et_camping-car rdf:type owl:Class ;
-                        rdfs:subClassOf :Logement .
+                        rdfs:subClassOf :Housing .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Client
 :Client rdf:type owl:Class ;
-        rdfs:subClassOf :Personne .
+        rdfs:subClassOf :Poeple .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Compétition
 :Compétition rdf:type owl:Class ;
-             rdfs:subClassOf :Evenement .
+             rdfs:subClassOf :Event .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Concert
 :Concert rdf:type owl:Class ;
-         rdfs:subClassOf :Evenement .
+         rdfs:subClassOf :Event .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Croisière
 :Croisière rdf:type owl:Class ;
-           rdfs:subClassOf :Evenement .
+           rdfs:subClassOf :Event .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Evenement
-:Evenement rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty :hasParticipant ;
-                             owl:someValuesFrom :Visiteur
-                           ] .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasParticipant ;
+                         owl:someValuesFrom :Visiteur
+                       ] .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Exposition
 :Exposition rdf:type owl:Class ;
-            rdfs:subClassOf :Evenement .
+            rdfs:subClassOf :Event .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Festival
 :Festival rdf:type owl:Class ;
-          rdfs:subClassOf :Evenement .
+          rdfs:subClassOf :Event .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Foire_et_salon
 :Foire_et_salon rdf:type owl:Class ;
-                rdfs:subClassOf :Evenement .
+                rdfs:subClassOf :Event .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Folklore_et_tradition
 :Folklore_et_tradition rdf:type owl:Class ;
-                       rdfs:subClassOf :Evenement .
+                       rdfs:subClassOf :Event .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Gites_et_maisons_de_vacances
 :Gites_et_maisons_de_vacances rdf:type owl:Class ;
-                              rdfs:subClassOf :Logement .
+                              rdfs:subClassOf :Housing .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hotel
 :Hotel rdf:type owl:Class ;
-       rdfs:subClassOf :Logement .
+       rdfs:subClassOf :Housing .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Logement
-:Logement rdf:type owl:Class ;
-          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty :isProposedBy ;
-                            owl:someValuesFrom :Propriétaire
-                          ] .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Housing
+:Housing rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :isProposedBy ;
+                           owl:someValuesFrom :Propriétaire
+                         ] .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Marche_de_noel
 :Marche_de_noel rdf:type owl:Class ;
-                rdfs:subClassOf :Evenement .
+                rdfs:subClassOf :Event .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Marché
 :Marché rdf:type owl:Class ;
-        rdfs:subClassOf :Evenement .
+        rdfs:subClassOf :Event .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Personne
-:Personne rdf:type owl:Class .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Poeple
+:Poeple rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Propriétaire
 :Propriétaire rdf:type owl:Class ;
-              rdfs:subClassOf :Personne .
+              rdfs:subClassOf :Poeple .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province
@@ -238,45 +238,45 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Spectacle
 :Spectacle rdf:type owl:Class ;
-           rdfs:subClassOf :Evenement .
+           rdfs:subClassOf :Event .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sport
 :Sport rdf:type owl:Class ;
-       rdfs:subClassOf :Evenement .
+       rdfs:subClassOf :Event .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Théatre
 :Théatre rdf:type owl:Class ;
-         rdfs:subClassOf :Evenement .
+         rdfs:subClassOf :Event .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town
+:Town rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :partOf ;
+                        owl:someValuesFrom :Province
+                      ] .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Vendeur
 :Vendeur rdf:type owl:Class ;
-         rdfs:subClassOf :Personne .
+         rdfs:subClassOf :Poeple .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Village_de_vacances
 :Village_de_vacances rdf:type owl:Class ;
-                     rdfs:subClassOf :Logement .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ville
-:Ville rdf:type owl:Class ;
-       rdfs:subClassOf [ rdf:type owl:Restriction ;
-                         owl:onProperty :partOf ;
-                         owl:someValuesFrom :Province
-                       ] .
+                     rdfs:subClassOf :Housing .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Visiteur
 :Visiteur rdf:type owl:Class ;
-          rdfs:subClassOf :Personne .
+          rdfs:subClassOf :Poeple .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Maison_d'hotes
 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Maison_d'hotes> rdf:type owl:Class ;
-                                                                                             rdfs:subClassOf :Logement .
+                                                                                             rdfs:subClassOf :Housing .
 
 
 #################################################################
@@ -285,175 +285,175 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Amay
 :Amay rdf:type owl:NamedIndividual ,
-               :Ville ;
+               :Town ;
       :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Amel
 :Amel rdf:type owl:NamedIndividual ,
-               :Ville ;
+               :Town ;
       :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Andenne
 :Andenne rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Anhée
 :Anhée rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ans
 :Ans rdf:type owl:NamedIndividual ,
-              :Ville ;
+              :Town ;
      :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Anthisnes
 :Anthisnes rdf:type owl:NamedIndividual ,
-                    :Ville ;
+                    :Town ;
            :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Antoing
 :Antoing rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Arlon
 :Arlon rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Assesse
 :Assesse rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ath
 :Ath rdf:type owl:NamedIndividual ,
-              :Ville ;
+              :Town ;
      :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Attert
 :Attert rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Aubange
 :Aubange rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Aubel
 :Aubel rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Awans
 :Awans rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Aywaille
 :Aywaille rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Baelen
 :Baelen rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bassenge
 :Bassenge rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bastogne
 :Bastogne rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Beaumont
 :Beaumont rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Beauraing
 :Beauraing rdf:type owl:NamedIndividual ,
-                    :Ville ;
+                    :Town ;
            :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Beauvechain
 :Beauvechain rdf:type owl:NamedIndividual ,
-                      :Ville ;
+                      :Town ;
              :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Berloz
 :Berloz rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bertogne
 :Bertogne rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bertrix
 :Bertrix rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Beyne-Heusay
 :Beyne-Heusay rdf:type owl:NamedIndividual ,
-                       :Ville ;
+                       :Town ;
               :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Binche
 :Binche rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bièvre
 :Bièvre rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Blegny
 :Blegny rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Boullion
 :Boullion rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Luxembourg .
 
 
@@ -464,43 +464,43 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braine-le-Château
 :Braine-le-Château rdf:type owl:NamedIndividual ,
-                            :Ville ;
+                            :Town ;
                    :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braine-le-Comte
 :Braine-le-Comte rdf:type owl:NamedIndividual ,
-                          :Ville ;
+                          :Town ;
                  :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braives
 :Braives rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Burdinne
 :Burdinne rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Burg-Reuland
 :Burg-Reuland rdf:type owl:NamedIndividual ,
-                       :Ville ;
+                       :Town ;
               :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Butgenbach
 :Butgenbach rdf:type owl:NamedIndividual ,
-                     :Ville ;
+                     :Town ;
             :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Büllingen
 :Büllingen rdf:type owl:NamedIndividual ,
-                    :Ville ;
+                    :Town ;
            :partOf :Province_de_Liege .
 
 
@@ -514,55 +514,55 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cerfontaine
 :Cerfontaine rdf:type owl:NamedIndividual ,
-                      :Ville ;
+                      :Town ;
              :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Charleroi
 :Charleroi rdf:type owl:NamedIndividual ,
-                    :Ville ;
+                    :Town ;
            :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chastre
 :Chastre rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chaumont-Gistoux
 :Chaumont-Gistoux rdf:type owl:NamedIndividual ,
-                           :Ville ;
+                           :Town ;
                   :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chimay
 :Chimay rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chiny
 :Chiny rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chièvres
 :Chièvres rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Châtelet
 :Châtelet rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ciney
 :Ciney rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Province_de_Namur .
 
 
@@ -586,145 +586,145 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Clavier
 :Clavier rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Comblain-au-Pont
 :Comblain-au-Pont rdf:type owl:NamedIndividual ,
-                           :Ville ;
+                           :Town ;
                   :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Comines-Warneton
 :Comines-Warneton rdf:type owl:NamedIndividual ,
-                           :Ville ;
+                           :Town ;
                   :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Court-Saint-Etienne
 :Court-Saint-Etienne rdf:type owl:NamedIndividual ,
-                              :Ville ;
+                              :Town ;
                      :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Couvin
 :Couvin rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Crisnée
 :Crisnée rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Dalhem
 :Dalhem rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Daverdisse
 :Daverdisse rdf:type owl:NamedIndividual ,
-                     :Ville ;
+                     :Town ;
             :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Dinant
 :Dinant rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Dison
 :Dison rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Doische
 :Doische rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Donceel
 :Donceel rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Durbuy
 :Durbuy rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Eghezée
 :Eghezée rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Enghien
 :Enghien rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Engis
 :Engis rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Erezee
 :Erezee rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Esneux
 :Esneux rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Etalle
 :Etalle rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Eupen
 :Eupen rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Faimes
 :Faimes rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fauvillers
 :Fauvillers rdf:type owl:NamedIndividual ,
-                     :Ville ;
+                     :Town ;
             :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fernelmont
 :Fernelmont rdf:type owl:NamedIndividual ,
-                     :Ville ;
+                     :Town ;
             :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ferrières
 :Ferrières rdf:type owl:NamedIndividual ,
-                    :Ville ;
+                    :Town ;
            :partOf :Province_de_Liege .
 
 
@@ -745,19 +745,19 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fexhe-le-Haut-Clocher
 :Fexhe-le-Haut-Clocher rdf:type owl:NamedIndividual ,
-                                :Ville ;
+                                :Town ;
                        :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fleurus
 :Fleurus rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Florennes
 :Florennes rdf:type owl:NamedIndividual ,
-                    :Ville ;
+                    :Town ;
            :partOf :Province_de_Namur .
 
 
@@ -771,67 +771,67 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Flémalle
 :Flémalle rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fléron
 :Fléron rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fosse-la-Ville
 :Fosse-la-Ville rdf:type owl:NamedIndividual ,
-                         :Ville ;
+                         :Town ;
                 :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Gedinne
 :Gedinne rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Geer
 :Geer rdf:type owl:NamedIndividual ,
-               :Ville ;
+               :Town ;
       :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Gembloux
 :Gembloux rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Genappe
 :Genappe rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Gesves
 :Gesves rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Gouvy
 :Gouvy rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Grez-Doiceau
 :Grez-Doiceau rdf:type owl:NamedIndividual ,
-                       :Ville ;
+                       :Town ;
               :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Grâce-Hollogne
 :Grâce-Hollogne rdf:type owl:NamedIndividual ,
-                         :Ville ;
+                         :Town ;
                 :partOf :Province_de_Liege .
 
 
@@ -843,7 +843,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Habay
 :Habay rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Luxembourg .
 
 
@@ -860,97 +860,97 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hamoir
 :Hamoir rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hamois
 :Hamois rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hannut
 :Hannut rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hastière
 :Hastière rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hatton
 :Hatton rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Havelange
 :Havelange rdf:type owl:NamedIndividual ,
-                    :Ville ;
+                    :Town ;
            :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Herbeumont
 :Herbeumont rdf:type owl:NamedIndividual ,
-                     :Ville ;
+                     :Town ;
             :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Herstal
 :Herstal rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Herve
 :Herve rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Houffalize
 :Houffalize rdf:type owl:NamedIndividual ,
-                     :Ville ;
+                     :Town ;
             :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Houyet
 :Houyet rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Huy
 :Huy rdf:type owl:NamedIndividual ,
-              :Ville ;
+              :Town ;
      :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hélécine
 :Hélécine rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Héron
 :Héron rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Incourt
 :Incourt rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ittre
 :Ittre rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Brabant_wallon .
 
 
@@ -963,55 +963,55 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jalhay
 :Jalhay rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jemeppe-sur-Sambre
 :Jemeppe-sur-Sambre rdf:type owl:NamedIndividual ,
-                             :Ville ;
+                             :Town ;
                     :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jodoigne
 :Jodoigne rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Juprelle
 :Juprelle rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Kelmis
 :Kelmis rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#La_Hulpe
 :La_Hulpe rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#La_Louvière
 :La_Louvière rdf:type owl:NamedIndividual ,
-                      :Ville ;
+                      :Town ;
              :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#La_Roche-en-Ardenne
 :La_Roche-en-Ardenne rdf:type owl:NamedIndividual ,
-                              :Ville ;
+                              :Town ;
                      :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#La_bruyère
 :La_bruyère rdf:type owl:NamedIndividual ,
-                     :Ville ;
+                     :Town ;
             :partOf :Province_de_Namur .
 
 
@@ -1027,13 +1027,13 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lasne
 :Lasne rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Le_Roeulx
 :Le_Roeulx rdf:type owl:NamedIndividual ,
-                    :Ville ;
+                    :Town ;
            :partOf :Hainaut .
 
 
@@ -1045,55 +1045,55 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lessines
 :Lessines rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Leuze-en-Hainaut
 :Leuze-en-Hainaut rdf:type owl:NamedIndividual ,
-                           :Ville ;
+                           :Town ;
                   :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Libin
 :Libin rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Libramont-Chevigné
 :Libramont-Chevigné rdf:type owl:NamedIndividual ,
-                             :Ville ;
+                             :Town ;
                     :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Liege
 :Liege rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lierneux
 :Lierneux rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Limbourg
 :Limbourg rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lincent
 :Lincent rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lontzen
 :Lontzen rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Province_de_Liege .
 
 
@@ -1111,73 +1111,73 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Léglise
 :Léglise rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Malmedy
 :Malmedy rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Manhay
 :Manhay rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Marche-en-Famenne
 :Marche-en-Famenne rdf:type owl:NamedIndividual ,
-                            :Ville ;
+                            :Town ;
                    :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Marchin
 :Marchin rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Martelange
 :Martelange rdf:type owl:NamedIndividual ,
-                     :Ville ;
+                     :Town ;
             :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Mattet
 :Mattet rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Modave
 :Modave rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Mons
 :Mons rdf:type owl:NamedIndividual ,
-               :Ville ;
+               :Town ;
       :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Mont-Saint-Guibert
 :Mont-Saint-Guibert rdf:type owl:NamedIndividual ,
-                             :Ville ;
+                             :Town ;
                     :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Mouscron
 :Mouscron rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Musson
 :Musson rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Luxembourg .
 
 
@@ -1189,49 +1189,49 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Namur
 :Namur rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Nandrin
 :Nandrin rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Nassogne
 :Nassogne rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Neufchateau
 :Neufchateau rdf:type owl:NamedIndividual ,
-                      :Ville ;
+                      :Town ;
              :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Neupré
 :Neupré rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Nivelles
 :Nivelles rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ohey
 :Ohey rdf:type owl:NamedIndividual ,
-               :Ville ;
+               :Town ;
       :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Olne
 :Olne rdf:type owl:NamedIndividual ,
-               :Ville ;
+               :Town ;
       :partOf :Province_de_Liege .
 
 
@@ -1247,43 +1247,43 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Onhaye
 :Onhaye rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Oreye
 :Oreye rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Orp-Jauche
 :Orp-Jauche rdf:type owl:NamedIndividual ,
-                     :Ville ;
+                     :Town ;
             :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ottignies-Louvian-la-Neuve
 :Ottignies-Louvian-la-Neuve rdf:type owl:NamedIndividual ,
-                                     :Ville ;
+                                     :Town ;
                             :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ouffet
 :Ouffet rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Oupeye
 :Oupeye rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Paliseul
 :Paliseul rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Luxembourg .
 
 
@@ -1296,19 +1296,19 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Pepinster
 :Pepinster rdf:type owl:NamedIndividual ,
-                    :Ville ;
+                    :Town ;
            :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Perwez
 :Perwez rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Philippeville
 :Philippeville rdf:type owl:NamedIndividual ,
-                        :Ville ;
+                        :Town ;
                :partOf :Province_de_Namur .
 
 
@@ -1322,13 +1322,13 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Plombières
 :Plombières rdf:type owl:NamedIndividual ,
-                     :Ville ;
+                     :Town ;
             :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Pronfondeville
 :Pronfondeville rdf:type owl:NamedIndividual ,
-                         :Ville ;
+                         :Town ;
                 :partOf :Province_de_Namur .
 
 
@@ -1345,235 +1345,235 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Péruwelz
 :Péruwelz rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Raeren
 :Raeren rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ramilles
 :Ramilles rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Rebecq
 :Rebecq rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Remicourt
 :Remicourt rdf:type owl:NamedIndividual ,
-                    :Ville ;
+                    :Town ;
            :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Rendeux
 :Rendeux rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Riwensart
 :Riwensart rdf:type owl:NamedIndividual ,
-                    :Ville ;
+                    :Town ;
            :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Rochefort
 :Rochefort rdf:type owl:NamedIndividual ,
-                    :Ville ;
+                    :Town ;
            :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Rouvroy
 :Rouvroy rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint-Georges-sur-Meuse
 :Saint-Georges-sur-Meuse rdf:type owl:NamedIndividual ,
-                                  :Ville ;
+                                  :Town ;
                          :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint-Ghislain
 :Saint-Ghislain rdf:type owl:NamedIndividual ,
-                         :Ville ;
+                         :Town ;
                 :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint-Léger
 :Saint-Léger rdf:type owl:NamedIndividual ,
-                      :Ville ;
+                      :Town ;
              :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint-Nicolas
 :Saint-Nicolas rdf:type owl:NamedIndividual ,
-                        :Ville ;
+                        :Town ;
                :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint-Ode
 :Saint-Ode rdf:type owl:NamedIndividual ,
-                    :Ville ;
+                    :Town ;
            :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint_Hubert
 :Saint_Hubert rdf:type owl:NamedIndividual ,
-                       :Ville ;
+                       :Town ;
               :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sambreville
 :Sambreville rdf:type owl:NamedIndividual ,
-                      :Ville ;
+                      :Town ;
              :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sankt-Vith
 :Sankt-Vith rdf:type owl:NamedIndividual ,
-                     :Ville ;
+                     :Town ;
             :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Seraing
 :Seraing rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Silly
 :Silly rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Soignies
 :Soignies rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sombreville
 :Sombreville rdf:type owl:NamedIndividual ,
-                      :Ville ;
+                      :Town ;
              :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Somme-Leuze
 :Somme-Leuze rdf:type owl:NamedIndividual ,
-                      :Ville ;
+                      :Town ;
              :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Soumagne
 :Soumagne rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Spa
 :Spa rdf:type owl:NamedIndividual ,
-              :Ville ;
+              :Town ;
      :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sprimont
 :Sprimont rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stavelot
 :Stavelot rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stoumont
 :Stoumont rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tellin
 :Tellin rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tenneville
 :Tenneville rdf:type owl:NamedIndividual ,
-                     :Ville ;
+                     :Town ;
             :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Theux
 :Theux rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Thimister-Clermont
 :Thimister-Clermont rdf:type owl:NamedIndividual ,
-                             :Ville ;
+                             :Town ;
                     :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Thuin
 :Thuin rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tinlot
 :Tinlot rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tintigny
 :Tintigny rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tournai
 :Tournai rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Hainaut .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Trois-Ponts
 :Trois-Ponts rdf:type owl:NamedIndividual ,
-                      :Ville ;
+                      :Town ;
              :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Trooz
 :Trooz rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tubize
 :Tubize rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Vaux-sur-Sure
 :Vaux-sur-Sure rdf:type owl:NamedIndividual ,
-                        :Ville ;
+                        :Town ;
                :partOf :Luxembourg .
 
 
@@ -1585,43 +1585,43 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Verlaine
 :Verlaine rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Verviers
 :Verviers rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Vielslam
 :Vielslam rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Villers-la-Ville
 :Villers-la-Ville rdf:type owl:NamedIndividual ,
-                           :Ville ;
+                           :Town ;
                   :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Villers-le-Bouillet
 :Villers-le-Bouillet rdf:type owl:NamedIndividual ,
-                              :Ville ;
+                              :Town ;
                      :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Viroinval
 :Viroinval rdf:type owl:NamedIndividual ,
-                    :Ville ;
+                    :Town ;
            :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Virton
 :Virton rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Luxembourg .
 
 
@@ -1638,25 +1638,25 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Visé
 :Visé rdf:type owl:NamedIndividual ,
-               :Ville ;
+               :Town ;
       :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Vresse-sur-Semois
 :Vresse-sur-Semois rdf:type owl:NamedIndividual ,
-                            :Ville ;
+                            :Town ;
                    :partOf :Province_de_Namur .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Waimes
 :Waimes rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Walcourt
 :Walcourt rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Province_de_Namur .
 
 
@@ -1672,48 +1672,48 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wanze
 :Wanze rdf:type owl:NamedIndividual ,
-                :Ville ;
+                :Town ;
        :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Waremme
 :Waremme rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wasseiges
 :Wasseiges rdf:type owl:NamedIndividual ,
-                    :Ville ;
+                    :Town ;
            :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Waterloo
 :Waterloo rdf:type owl:NamedIndividual ,
-                   :Ville ;
+                   :Town ;
           :partOf :Brabant_wallon .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wavre
 :Wavre rdf:type owl:NamedIndividual ,
-                :Ville .
+                :Town .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Welkenraedt
 :Welkenraedt rdf:type owl:NamedIndividual ,
-                      :Ville ;
+                      :Town ;
              :partOf :Province_de_Liege .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wellin
 :Wellin rdf:type owl:NamedIndividual ,
-                 :Ville ;
+                 :Town ;
         :partOf :Luxembourg .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Yvoir
 :Yvoir rdf:type owl:NamedIndividual ,
-                :Ville .
+                :Town .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#laura
@@ -1729,7 +1729,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#walhain
 :walhain rdf:type owl:NamedIndividual ,
-                  :Ville ;
+                  :Town ;
          :partOf :Brabant_wallon .
 
 
@@ -1755,7 +1755,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braine-l'Alleud
 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braine-l'Alleud> rdf:type owl:NamedIndividual ,
-                                                                                                       :Ville ;
+                                                                                                       :Town ;
                                                                                               :partOf :Brabant_wallon .
 
 
@@ -1788,7 +1788,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fontaine-l'Eveque
 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fontaine-l'Eveque> rdf:type owl:NamedIndividual ,
-                                                                                                         :Ville ;
+                                                                                                         :Town ;
                                                                                                 :partOf :Hainaut .
 
 
