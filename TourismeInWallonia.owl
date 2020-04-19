@@ -15,7 +15,7 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#SaleIn
 :SaleIn rdf:type owl:ObjectProperty ;
         rdfs:domain :Poeple ;
-        rdfs:range :Brocante .
+        rdfs:range :fleaMarket .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#goTo
@@ -132,23 +132,18 @@
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Balade_et_visite_guidée
-:Balade_et_visite_guidée rdf:type owl:Class ;
-                         rdfs:subClassOf :Event .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brocante
-:Brocante rdf:type owl:Class ;
-          rdfs:subClassOf :Event .
-
-
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Camping
 :Camping rdf:type owl:Class ;
          rdfs:subClassOf :Housing .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Compétition
-:Compétition rdf:type owl:Class ;
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#ChristmasMarket
+:ChristmasMarket rdf:type owl:Class ;
+                 rdfs:subClassOf :Event .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Competition
+:Competition rdf:type owl:Class ;
              rdfs:subClassOf :Event .
 
 
@@ -157,9 +152,9 @@
          rdfs:subClassOf :Event .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Croisière
-:Croisière rdf:type owl:Class ;
-           rdfs:subClassOf :Event .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cruise
+:Cruise rdf:type owl:Class ;
+        rdfs:subClassOf :Event .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Customer
@@ -185,24 +180,19 @@
           rdfs:subClassOf :Event .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Foire_et_salon
-:Foire_et_salon rdf:type owl:Class ;
-                rdfs:subClassOf :Event .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#GuestHouse
+:GuestHouse rdf:type owl:Class ;
+            rdfs:subClassOf :Housing .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Folklore_et_tradition
-:Folklore_et_tradition rdf:type owl:Class ;
-                       rdfs:subClassOf :Event .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#HolidayVillage
+:HolidayVillage rdf:type owl:Class ;
+                rdfs:subClassOf :Housing .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Gites_et_maisons_de_vacances
-:Gites_et_maisons_de_vacances rdf:type owl:Class ;
-                              rdfs:subClassOf :Housing .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hotel
-:Hotel rdf:type owl:Class ;
-       rdfs:subClassOf :Housing .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hostel
+:Hostel rdf:type owl:Class ;
+        rdfs:subClassOf :Housing .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Housing
@@ -213,13 +203,8 @@
                          ] .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Marche_de_noel
-:Marche_de_noel rdf:type owl:Class ;
-                rdfs:subClassOf :Event .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Marché
-:Marché rdf:type owl:Class ;
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Market
+:Market rdf:type owl:Class ;
         rdfs:subClassOf :Event .
 
 
@@ -251,8 +236,8 @@
        rdfs:subClassOf :Event .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Théatre
-:Théatre rdf:type owl:Class ;
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Theater
+:Theater rdf:type owl:Class ;
          rdfs:subClassOf :Event .
 
 
@@ -264,19 +249,34 @@
                       ] .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Village_de_vacances
-:Village_de_vacances rdf:type owl:Class ;
-                     rdfs:subClassOf :Housing .
-
-
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Visitor
 :Visitor rdf:type owl:Class ;
          rdfs:subClassOf :Poeple .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Maison_d'hotes
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Maison_d'hotes> rdf:type owl:Class ;
-                                                                                             rdfs:subClassOf :Housing .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#fleaMarket
+:fleaMarket rdf:type owl:Class ;
+            rdfs:subClassOf :Event .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cottages&CountryHouse
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cottages&CountryHouse> rdf:type owl:Class ;
+                                                                                                    rdfs:subClassOf :Housing .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fair&TradeShow
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fair&TradeShow> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf :Event .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Folklore&Tradition
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Folklore&Tradition> rdf:type owl:Class ;
+                                                                                                 rdfs:subClassOf :Event .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll&guidedTour
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll&guidedTour> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf :Event .
 
 
 #################################################################
@@ -568,7 +568,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ciney_Puces_et_Antiquités
 :Ciney_Puces_et_Antiquités rdf:type owl:NamedIndividual ,
-                                    :Brocante ;
+                                    :fleaMarket ;
                            :isLocated :Ciney ;
                            :cost "21.0"^^xsd:double ;
                            :endDate "2020-05-24T18:00:00+01:00"^^xsd:dateTime ;
@@ -730,7 +730,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Festival_Théatre_au_Vert_de_Thoricourt
 :Festival_Théatre_au_Vert_de_Thoricourt rdf:type owl:NamedIndividual ,
-                                                 :Théatre ;
+                                                 :Theater ;
                                         :isLocated :Silly ;
                                         :needEquipment "false"^^xsd:boolean ;
                                         :startDate "2020-08-01T18:00:00+01:00"^^xsd:dateTime .
@@ -837,7 +837,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Gîte_rural_Les_Tilleuls_Coté_Vallée_à_Rochehaut
 :Gîte_rural_Les_Tilleuls_Coté_Vallée_à_Rochehaut rdf:type owl:NamedIndividual ,
-                                                          :Gites_et_maisons_de_vacances ;
+                                                          <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cottages&CountryHouse> ;
                                                  :isLocated :Boullion .
 
 
@@ -1017,7 +1017,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#La_caravane_du_court
 :La_caravane_du_court rdf:type owl:NamedIndividual ,
-                               :Théatre ;
+                               :Theater ;
                       :isLocated :Liege ,
                                  :Namur ,
                                  :Virton ;
@@ -1031,16 +1031,16 @@
        :partOf :Brabant_wallon .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#LeValDePoix
+:LeValDePoix rdf:type owl:NamedIndividual ,
+                      :Hostel ;
+             :isLocated :Saint_Hubert .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Le_Roeulx
 :Le_Roeulx rdf:type owl:NamedIndividual ,
                     :Town ;
            :partOf :Hainaut .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Le_val_de_Poix_à_Saint_Hubaert
-:Le_val_de_Poix_à_Saint_Hubaert rdf:type owl:NamedIndividual ,
-                                         :Hotel ;
-                                :isLocated :Saint_Hubert .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lessines
@@ -1316,7 +1316,7 @@
 :Pierre rdf:type owl:NamedIndividual ,
                  :Owner ;
         :liveIn :Wavre ;
-        :owns :Le_val_de_Poix_à_Saint_Hubaert ,
+        :owns :LeValDePoix ,
               <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chambre_d'hôtes_le_Pré_de_Caroline_à_Huy> .
 
 
@@ -1627,7 +1627,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Visites_nocturnes_aux_flambeaux
 :Visites_nocturnes_aux_flambeaux rdf:type owl:NamedIndividual ,
-                                          :Balade_et_visite_guidée ;
+                                          <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll&guidedTour> ;
                                  :hasParticipant :laura ;
                                  :isLocated :Boullion ;
                                  :cost "11.0"^^xsd:double ;
@@ -1662,7 +1662,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wallonie_Equestre_Event
 :Wallonie_Equestre_Event rdf:type owl:NamedIndividual ,
-                                  :Foire_et_salon ;
+                                  <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fair&TradeShow> ;
                          :hasParticipant :Louis ;
                          :isLocated :Libramont-Chevigné ;
                          :cost "25.0"^^xsd:double ;
@@ -1724,7 +1724,7 @@
        :SaleIn :Ciney_Puces_et_Antiquités ;
        :goTo :Visites_nocturnes_aux_flambeaux ;
        :liveIn :Boullion ;
-       :sleepIn :Le_val_de_Poix_à_Saint_Hubaert .
+       :sleepIn :LeValDePoix .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#walhain
@@ -1745,7 +1745,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#ANtica_Namur,_Salon_d'antiquités_de_Namur
 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#ANtica_Namur,_Salon_d'antiquités_de_Namur> rdf:type owl:NamedIndividual ,
-                                                                                                                                 :Brocante ;
+                                                                                                                                 :fleaMarket ;
                                                                                                                         :isLocated :Namur ;
                                                                                                                         :cost "21.5"^^xsd:double ;
                                                                                                                         :endDate "2020-11-22T19:00:00+01:00"^^xsd:dateTime ;
@@ -1761,7 +1761,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chambre_d'hôtes_le_Pré_de_Caroline_à_Huy
 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chambre_d'hôtes_le_Pré_de_Caroline_à_Huy> rdf:type owl:NamedIndividual ,
-                                                                                                                                <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Maison_d'hotes> ;
+                                                                                                                                :GuestHouse ;
                                                                                                                        :isLocated :Huy ;
                                                                                                                        :cost "46.0"^^xsd:double ;
                                                                                                                        :hasNumbersOfRooms "4"^^xsd:int .
@@ -1769,7 +1769,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Croisières_gourmandes_d'été_à_bord_du_bateau_Pays_de_Liège
 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Croisières_gourmandes_d'été_à_bord_du_bateau_Pays_de_Liège> rdf:type owl:NamedIndividual ,
-                                                                                                                                                  :Croisière ;
+                                                                                                                                                  :Cruise ;
                                                                                                                                          :isLocated :Liege ;
                                                                                                                                          :cost "58.0"^^xsd:double ;
                                                                                                                                          :endDate "2020-06-27T23:59:00+01:00"^^xsd:dateTime ;
@@ -1792,9 +1792,15 @@
                                                                                                 :partOf :Hainaut .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#HolidayVillage_DomaineDuVald'Adrimont
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#HolidayVillage_DomaineDuVald'Adrimont> rdf:type owl:NamedIndividual ,
+                                                                                                                             :HolidayVillage ;
+                                                                                                                    :isLocated :Malmedy .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_Tilleuleries:_Festival_des_Arts_de_la_Rue
 :Les_Tilleuleries:_Festival_des_Arts_de_la_Rue rdf:type owl:NamedIndividual ,
-                                                        :Théatre ;
+                                                        :Theater ;
                                                :hasParticipant :Florent ;
                                                :isLocated :Nassogne ;
                                                :cost "10.0"^^xsd:double ;
@@ -1804,7 +1810,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_journée_wollonnes_de_l'eau
 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_journée_wollonnes_de_l'eau> rdf:type owl:NamedIndividual ,
-                                                                                                                      :Balade_et_visite_guidée ;
+                                                                                                                      <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll&guidedTour> ;
                                                                                                              :isLocated :Libramont-Chevigné .
 
 
@@ -1823,41 +1829,35 @@
                                                                                                                                                  :isLocated :Pepinster .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Village_de_vacances_Domaine_du_Val_d'Adrimont_à_Malmedy
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Village_de_vacances_Domaine_du_Val_d'Adrimont_à_Malmedy> rdf:type owl:NamedIndividual ,
-                                                                                                                                               :Village_de_vacances ;
-                                                                                                                                      :isLocated :Malmedy .
-
-
 #################################################################
 #    General axioms
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Balade_et_visite_guidée
-                :Brocante
-                :Compétition
-                :Concert
-                :Croisière
-                :Exposition
-                :Festival
-                :Foire_et_salon
-                :Folklore_et_tradition
-                :Marche_de_noel
-                :Marché
-                :Spectacle
-                :Sport
-                :Théatre
+  owl:members ( :Camping
+                :GuestHouse
+                :HolidayVillage
+                :Hostel
+                <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cottages&CountryHouse>
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Camping
-                :Gites_et_maisons_de_vacances
-                :Hotel
-                :Village_de_vacances
-                <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Maison_d'hotes>
+  owl:members ( :ChristmasMarket
+                :Competition
+                :Concert
+                :Cruise
+                :Exposition
+                :Festival
+                :Market
+                :Spectacle
+                :Sport
+                :Theater
+                :fleaMarket
+                <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fair&TradeShow>
+                <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Folklore&Tradition>
+                <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll&guidedTour>
               )
 ] .
 
@@ -1985,8 +1985,8 @@
                         :La_bruyère
                         :La_caravane_du_court
                         :Lasne
+                        :LeValDePoix
                         :Le_Roeulx
-                        :Le_val_de_Poix_à_Saint_Hubaert
                         :Lessines
                         :Leuze-en-Hainaut
                         :Libin
@@ -2106,11 +2106,11 @@
                         <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Croisières_gourmandes_d'été_à_bord_du_bateau_Pays_de_Liège>
                         <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Expo_Jean-Claude_Servais,_au-delà_du_trait>
                         <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fontaine-l'Eveque>
+                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#HolidayVillage_DomaineDuVald'Adrimont>
                         :Les_Tilleuleries:_Festival_des_Arts_de_la_Rue
                         <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_journée_wollonnes_de_l'eau>
                         <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_nuits_du_Cirques_à_l'Abbaye_de_Villers-la-Ville>
                         <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Soiron_sur_Scène:_La_fête_dans_l'un_des_beaux_villages_de_wallonie>
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Village_de_vacances_Domaine_du_Val_d'Adrimont_à_Malmedy>
                       )
 ] .
 
