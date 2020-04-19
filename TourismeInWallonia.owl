@@ -142,14 +142,9 @@
           rdfs:subClassOf :Event .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Camping_et_camping-car
-:Camping_et_camping-car rdf:type owl:Class ;
-                        rdfs:subClassOf :Housing .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Client
-:Client rdf:type owl:Class ;
-        rdfs:subClassOf :Poeple .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Camping
+:Camping rdf:type owl:Class ;
+         rdfs:subClassOf :Housing .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Compétition
@@ -167,11 +162,16 @@
            rdfs:subClassOf :Event .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Customer
+:Customer rdf:type owl:Class ;
+          rdfs:subClassOf :Poeple .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event
 :Event rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
                          owl:onProperty :hasParticipant ;
-                         owl:someValuesFrom :Visiteur
+                         owl:someValuesFrom :Visitor
                        ] .
 
 
@@ -209,7 +209,7 @@
 :Housing rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty :isProposedBy ;
-                           owl:someValuesFrom :Propriétaire
+                           owl:someValuesFrom :Owner
                          ] .
 
 
@@ -223,17 +223,22 @@
         rdfs:subClassOf :Event .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Owner
+:Owner rdf:type owl:Class ;
+       rdfs:subClassOf :Poeple .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Poeple
 :Poeple rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Propriétaire
-:Propriétaire rdf:type owl:Class ;
-              rdfs:subClassOf :Poeple .
-
-
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province
 :Province rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Seller
+:Seller rdf:type owl:Class ;
+        rdfs:subClassOf :Poeple .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Spectacle
@@ -259,19 +264,14 @@
                       ] .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Vendeur
-:Vendeur rdf:type owl:Class ;
-         rdfs:subClassOf :Poeple .
-
-
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Village_de_vacances
 :Village_de_vacances rdf:type owl:Class ;
                      rdfs:subClassOf :Housing .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Visiteur
-:Visiteur rdf:type owl:Class ;
-          rdfs:subClassOf :Poeple .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Visitor
+:Visitor rdf:type owl:Class ;
+         rdfs:subClassOf :Poeple .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Maison_d'hotes
@@ -506,7 +506,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Camping_Eden_à_Aywaille
 :Camping_Eden_à_Aywaille rdf:type owl:NamedIndividual ,
-                                  :Camping_et_camping-car ;
+                                  :Camping ;
                          :isLocated :Aywaille ;
                          :cost "15.0"^^xsd:double ;
                          :hasNumbersOfRooms "78"^^xsd:int .
@@ -763,7 +763,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Florent
 :Florent rdf:type owl:NamedIndividual ,
-                  :Visiteur ;
+                  :Visitor ;
          :goTo :Ombre_et_Lumières_du_Moyen_Age ,
                :Les_Tilleuleries:_Festival_des_Arts_de_la_Rue ;
          :liveIn :Wavre .
@@ -956,7 +956,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jacques
 :Jacques rdf:type owl:NamedIndividual ,
-                  :Propriétaire ;
+                  :Owner ;
          :liveIn :Houyet ;
          :owns :Camping_Eden_à_Aywaille .
 
@@ -1099,7 +1099,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Louis
 :Louis rdf:type owl:NamedIndividual ,
-                :Visiteur ;
+                :Visitor ;
        :goTo :Wallonie_Equestre_Event ;
        :liveIn :Mons .
 
@@ -1289,7 +1289,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Paul
 :Paul rdf:type owl:NamedIndividual ,
-               :Propriétaire ;
+               :Owner ;
       :liveIn :Libramont-Chevigné ;
       :owns :Gîte_rural_Les_Tilleuls_Coté_Vallée_à_Rochehaut .
 
@@ -1314,7 +1314,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Pierre
 :Pierre rdf:type owl:NamedIndividual ,
-                 :Propriétaire ;
+                 :Owner ;
         :liveIn :Wavre ;
         :owns :Le_val_de_Poix_à_Saint_Hubaert ,
               <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chambre_d'hôtes_le_Pré_de_Caroline_à_Huy> .
@@ -1718,9 +1718,9 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#laura
 :laura rdf:type owl:NamedIndividual ,
-                :Client ,
-                :Vendeur ,
-                :Visiteur ;
+                :Customer ,
+                :Seller ,
+                :Visitor ;
        :SaleIn :Ciney_Puces_et_Antiquités ;
        :goTo :Visites_nocturnes_aux_flambeaux ;
        :liveIn :Boullion ;
@@ -1853,7 +1853,7 @@
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Camping_et_camping-car
+  owl:members ( :Camping
                 :Gites_et_maisons_de_vacances
                 :Hotel
                 :Village_de_vacances
