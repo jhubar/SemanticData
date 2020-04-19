@@ -14,67 +14,69 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#SaleIn
 :SaleIn rdf:type owl:ObjectProperty ;
+        rdfs:domain :Personne ;
         rdfs:range :Brocante .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#WeCanDo
-:WeCanDo rdf:type owl:ObjectProperty ;
-         rdfs:domain :Logement ;
-         rdfs:range :Evenement ;
-         rdfs:comment "Ce logemnt vous permet de faire une activité" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#goTo
 :goTo rdf:type owl:ObjectProperty ;
-      rdfs:domain :Visiteur ;
+      rdfs:domain :Personne ;
       rdfs:range :Evenement ;
       rdfs:comment "Client-Touriste-Visiteur goToAnEvent Evenement" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#hasParticipant
 :hasParticipant rdf:type owl:ObjectProperty ;
-                rdfs:domain :Personne ;
-                rdfs:range :Evenement .
+                rdfs:domain :Evenement ;
+                rdfs:range :Personne .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#isHostOf
 :isHostOf rdf:type owl:ObjectProperty ;
-          rdfs:domain :Visiteur ;
+          rdfs:domain :Ville ;
+          rdfs:range :Evenement ;
           rdfs:comment "Client-Touriste-Visiteur isHostOf Vendeur-Propriétaire" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#isLocated
 :isLocated rdf:type owl:ObjectProperty ;
-           rdfs:domain :Evenement ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Evenement
+                                       :Logement
+                                     )
+                       ] ;
+           rdfs:range :Ville ;
            rdfs:comment "An event is in a province" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#isProposedBy
 :isProposedBy rdf:type owl:ObjectProperty ;
               rdfs:domain :Logement ;
+              rdfs:range :Personne ;
               rdfs:comment "Logement isProposedBy Vendeur-Propriétaire" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#liveIn
 :liveIn rdf:type owl:ObjectProperty ;
-        rdfs:domain [ rdf:type owl:Restriction ;
-                      owl:onProperty :liveIn ;
-                      owl:allValuesFrom :Ville
-                    ] .
+        rdfs:domain :Personne ;
+        rdfs:range :Ville .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#owns
 :owns rdf:type owl:ObjectProperty ;
+      rdfs:domain :Personne ;
       rdfs:range :Logement .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#partOf
 :partOf rdf:type owl:ObjectProperty ;
-        rdfs:domain :Province .
+        rdfs:domain :Ville ;
+        rdfs:range :Province .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#sleepIn
 :sleepIn rdf:type owl:ObjectProperty ;
+         rdfs:domain :Personne ;
          rdfs:range :Logement .
 
 
@@ -84,8 +86,11 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#cost
 :cost rdf:type owl:DatatypeProperty ;
-      rdfs:domain :Evenement ,
-                  :Logement ;
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :Evenement
+                                  :Logement
+                                )
+                  ] ;
       rdfs:range xsd:double ;
       rdfs:comment "Total cost of event" .
 
@@ -111,8 +116,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#needEquipment
 :needEquipment rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Evenement ,
-                           :Logement ;
+               rdfs:domain :Evenement ;
                rdfs:range xsd:boolean ;
                rdfs:comment "Is equipment necessary for the activity" .
 
@@ -1034,9 +1038,7 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Le_val_de_Poix_à_Saint_Hubaert
 :Le_val_de_Poix_à_Saint_Hubaert rdf:type owl:NamedIndividual ,
                                          :Hotel ;
-                                :WeCanDo :Velo ;
-                                :isLocated :Saint_Hubert ;
-                                :owns <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Village_de_vacances_Domaine_du_Val_d'Adrimont_à_Malmedy> .
+                                :isLocated :Saint_Hubert .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lessines
