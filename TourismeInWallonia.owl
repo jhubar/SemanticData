@@ -283,6 +283,16 @@
 #    Individuals
 #################################################################
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#ANtica
+:ANtica rdf:type owl:NamedIndividual ,
+                 :fleaMarket ;
+        :isLocated :Namur ;
+        :cost "21.5"^^xsd:double ;
+        :endDate "2020-11-22T19:00:00+01:00"^^xsd:dateTime ;
+        :needEquipment "false"^^xsd:boolean ;
+        :startDate "2020-11-14T11:00:00+01:00"^^xsd:dateTime .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Amay
 :Amay rdf:type owl:NamedIndividual ,
                :Town ;
@@ -433,6 +443,12 @@
               :partOf :Province_de_Liege .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bike
+:Bike rdf:type owl:NamedIndividual ,
+               :Sport ;
+      :needEquipment "true"^^xsd:boolean .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Binche
 :Binche rdf:type owl:NamedIndividual ,
                  :Town ;
@@ -504,12 +520,12 @@
            :partOf :Province_de_Liege .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Camping_Eden_à_Aywaille
-:Camping_Eden_à_Aywaille rdf:type owl:NamedIndividual ,
-                                  :Camping ;
-                         :isLocated :Aywaille ;
-                         :cost "15.0"^^xsd:double ;
-                         :hasNumbersOfRooms "78"^^xsd:int .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#CampingEden
+:CampingEden rdf:type owl:NamedIndividual ,
+                      :Camping ;
+             :isLocated :Aywaille ;
+             :cost "15.0"^^xsd:double ;
+             :hasNumbersOfRooms "78"^^xsd:int .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cerfontaine
@@ -566,22 +582,13 @@
        :partOf :Province_de_Namur .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ciney_Puces_et_Antiquités
-:Ciney_Puces_et_Antiquités rdf:type owl:NamedIndividual ,
-                                    :fleaMarket ;
-                           :isLocated :Ciney ;
-                           :cost "21.0"^^xsd:double ;
-                           :endDate "2020-05-24T18:00:00+01:00"^^xsd:dateTime ;
-                           :startDate "2020-05-22T10:00:00+01:00"^^xsd:dateTime .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cité_de_la_Bière
-:Cité_de_la_Bière rdf:type owl:NamedIndividual ,
-                           :Festival ;
-                  :isLocated :Liege ;
-                  :cost "6.0"^^xsd:double ;
-                  :endDate "2020-04-19T19:00:00+01:00"^^xsd:dateTime ;
-                  :startDate "2020-04-17T16:00:00+01:00"^^xsd:dateTime .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#CitéDeLaBière
+:CitéDeLaBière rdf:type owl:NamedIndividual ,
+                        :Festival ;
+               :isLocated :Liege ;
+               :cost "6.0"^^xsd:double ;
+               :endDate "2020-04-19T19:00:00+01:00"^^xsd:dateTime ;
+               :startDate "2020-04-17T16:00:00+01:00"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Clavier
@@ -618,6 +625,15 @@
 :Crisnée rdf:type owl:NamedIndividual ,
                   :Town ;
          :partOf :Province_de_Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#CroisièresGourmandes
+:CroisièresGourmandes rdf:type owl:NamedIndividual ,
+                               :Cruise ;
+                      :isLocated :Liege ;
+                      :cost "58.0"^^xsd:double ;
+                      :endDate "2020-06-27T23:59:00+01:00"^^xsd:dateTime ;
+                      :startDate "2020-06-27T19:30:00+01:00"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Dalhem
@@ -728,19 +744,14 @@
            :partOf :Province_de_Liege .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Festival_Théatre_au_Vert_de_Thoricourt
-:Festival_Théatre_au_Vert_de_Thoricourt rdf:type owl:NamedIndividual ,
-                                                 :Theater ;
-                                        :isLocated :Silly ;
-                                        :needEquipment "false"^^xsd:boolean ;
-                                        :startDate "2020-08-01T18:00:00+01:00"^^xsd:dateTime .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Festival_Universatil_Théatre_et_art_de_la_scène_a_LLN
-:Festival_Universatil_Théatre_et_art_de_la_scène_a_LLN rdf:type owl:NamedIndividual ,
-                                                                :Festival ;
-                                                       :isLocated :Ottignies-Louvian-la-Neuve ;
-                                                       :needEquipment "false"^^xsd:boolean .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FestivalDesArtsDeLaRue
+:FestivalDesArtsDeLaRue rdf:type owl:NamedIndividual ,
+                                 :Theater ;
+                        :hasParticipant :Florent ;
+                        :isLocated :Nassogne ;
+                        :cost "10.0"^^xsd:double ;
+                        :endDate "2020-07-12T20:00:00+01:00"^^xsd:dateTime ;
+                        :startDate "2020-07-12T11:30:00+01:00"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fexhe-le-Haut-Clocher
@@ -764,8 +775,8 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Florent
 :Florent rdf:type owl:NamedIndividual ,
                   :Visitor ;
-         :goTo :Ombre_et_Lumières_du_Moyen_Age ,
-               :Les_Tilleuleries:_Festival_des_Arts_de_la_Rue ;
+         :goTo :FestivalDesArtsDeLaRue ,
+               :OmbreEtLumières_duMoyenAge ;
          :liveIn :Wavre .
 
 
@@ -835,10 +846,10 @@
                 :partOf :Province_de_Liege .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Gîte_rural_Les_Tilleuls_Coté_Vallée_à_Rochehaut
-:Gîte_rural_Les_Tilleuls_Coté_Vallée_à_Rochehaut rdf:type owl:NamedIndividual ,
-                                                          <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cottages&CountryHouse> ;
-                                                 :isLocated :Boullion .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#GîteRural_LesTilleulsCotéVallée
+:GîteRural_LesTilleulsCotéVallée rdf:type owl:NamedIndividual ,
+                                          <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cottages&CountryHouse> ;
+                                 :isLocated :Boullion .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Habay
@@ -852,10 +863,10 @@
                   :Province .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Halloween_à_Pairi_Daiza
-:Halloween_à_Pairi_Daiza rdf:type owl:NamedIndividual ,
-                                  :Spectacle ;
-                         :isLocated :Ath .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Halloween_PairiDaiza
+:Halloween_PairiDaiza rdf:type owl:NamedIndividual ,
+                               :Spectacle ;
+                      :isLocated :Ath .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hamoir
@@ -958,13 +969,23 @@
 :Jacques rdf:type owl:NamedIndividual ,
                   :Owner ;
          :liveIn :Houyet ;
-         :owns :Camping_Eden_à_Aywaille .
+         :owns :CampingEden .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jalhay
 :Jalhay rdf:type owl:NamedIndividual ,
                  :Town ;
         :partOf :Province_de_Liege .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jean-ClaudeServais_au-delàDuTrait
+:Jean-ClaudeServais_au-delàDuTrait rdf:type owl:NamedIndividual ,
+                                            :Exposition ;
+                                   :isLocated :Bastogne ;
+                                   :cost "6.0"^^xsd:double ;
+                                   :endDate "2020-09-27T18:00:00+01:00"^^xsd:dateTime ;
+                                   :needEquipment "false"^^xsd:boolean ;
+                                   :startDate "2019-10-12T10:00:00+01:00"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jemeppe-sur-Sambre
@@ -991,6 +1012,16 @@
         :partOf :Province_de_Liege .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#LaCaravaneDuCourt
+:LaCaravaneDuCourt rdf:type owl:NamedIndividual ,
+                            :Theater ;
+                   :isLocated :Liege ,
+                              :Namur ,
+                              :Virton ;
+                   :endDate "2020-03-20T23:00:00+01:00"^^xsd:dateTime ;
+                   :startDate "2020-03-09T13:00:00+01:00"^^xsd:dateTime .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#La_Hulpe
 :La_Hulpe rdf:type owl:NamedIndividual ,
                    :Town ;
@@ -1015,20 +1046,29 @@
             :partOf :Province_de_Namur .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#La_caravane_du_court
-:La_caravane_du_court rdf:type owl:NamedIndividual ,
-                               :Theater ;
-                      :isLocated :Liege ,
-                                 :Namur ,
-                                 :Virton ;
-                      :endDate "2020-03-20T23:00:00+01:00"^^xsd:dateTime ;
-                      :startDate "2020-03-09T13:00:00+01:00"^^xsd:dateTime .
-
-
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lasne
 :Lasne rdf:type owl:NamedIndividual ,
                 :Town ;
        :partOf :Brabant_wallon .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Laura
+:Laura rdf:type owl:NamedIndividual ,
+                :Customer ,
+                :Seller ,
+                :Visitor ;
+       :SaleIn :PucesEtAntiquités ;
+       :goTo :VisitesNocturnesAuxFlambeaux ;
+       :liveIn :Boullion ;
+       :sleepIn :LeValDePoix .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#LePréDeCaroline
+:LePréDeCaroline rdf:type owl:NamedIndividual ,
+                          :GuestHouse ;
+                 :isLocated :Huy ;
+                 :cost "46.0"^^xsd:double ;
+                 :hasNumbersOfRooms "4"^^xsd:int .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#LeValDePoix
@@ -1100,7 +1140,7 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Louis
 :Louis rdf:type owl:NamedIndividual ,
                 :Visitor ;
-       :goTo :Wallonie_Equestre_Event ;
+       :goTo :Wallonie_EquestreEvent ;
        :liveIn :Mons .
 
 
@@ -1181,10 +1221,10 @@
         :partOf :Luxembourg .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Mystery_Forest
-:Mystery_Forest rdf:type owl:NamedIndividual ,
-                         :Spectacle ;
-                :isLocated :Durbuy .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#MysteryForest
+:MysteryForest rdf:type owl:NamedIndividual ,
+                        :Spectacle ;
+               :isLocated :Durbuy .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Namur
@@ -1223,6 +1263,15 @@
           :partOf :Brabant_wallon .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#NuitsDuCirques
+:NuitsDuCirques rdf:type owl:NamedIndividual ,
+                         :Spectacle ;
+                :isLocated :Villers-la-Ville ;
+                :cost "29.0"^^xsd:double ;
+                :endDate "2020-05-30T23:00:00+01:00"^^xsd:dateTime ;
+                :startDate "2020-05-30T16:00:00+01:00"^^xsd:dateTime .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ohey
 :Ohey rdf:type owl:NamedIndividual ,
                :Town ;
@@ -1235,14 +1284,14 @@
       :partOf :Province_de_Liege .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ombre_et_Lumières_du_Moyen_Age
-:Ombre_et_Lumières_du_Moyen_Age rdf:type owl:NamedIndividual ,
-                                         :Spectacle ;
-                                :hasParticipant :Florent ;
-                                :isLocated :Villers-la-Ville ;
-                                :cost "15.0"^^xsd:double ;
-                                :endDate "2020-09-20T18:00:00+01:00"^^xsd:dateTime ;
-                                :startDate "2020-09-18T17:30:00+01:00"^^xsd:dateTime .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#OmbreEtLumières_duMoyenAge
+:OmbreEtLumières_duMoyenAge rdf:type owl:NamedIndividual ,
+                                     :Spectacle ;
+                            :hasParticipant :Florent ;
+                            :isLocated :Villers-la-Ville ;
+                            :cost "15.0"^^xsd:double ;
+                            :endDate "2020-09-20T18:00:00+01:00"^^xsd:dateTime ;
+                            :startDate "2020-09-18T17:30:00+01:00"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Onhaye
@@ -1291,7 +1340,7 @@
 :Paul rdf:type owl:NamedIndividual ,
                :Owner ;
       :liveIn :Libramont-Chevigné ;
-      :owns :Gîte_rural_Les_Tilleuls_Coté_Vallée_à_Rochehaut .
+      :owns :GîteRural_LesTilleulsCotéVallée .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Pepinster
@@ -1316,8 +1365,8 @@
 :Pierre rdf:type owl:NamedIndividual ,
                  :Owner ;
         :liveIn :Wavre ;
-        :owns :LeValDePoix ,
-              <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chambre_d'hôtes_le_Pré_de_Caroline_à_Huy> .
+        :owns :LePréDeCaroline ,
+              :LeValDePoix .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Plombières
@@ -1341,6 +1390,15 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur
 :Province_de_Namur rdf:type owl:NamedIndividual ,
                             :Province .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#PucesEtAntiquités
+:PucesEtAntiquités rdf:type owl:NamedIndividual ,
+                            :fleaMarket ;
+                   :isLocated :Ciney ;
+                   :cost "21.0"^^xsd:double ;
+                   :endDate "2020-05-24T18:00:00+01:00"^^xsd:dateTime ;
+                   :startDate "2020-05-22T10:00:00+01:00"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Péruwelz
@@ -1463,6 +1521,12 @@
           :partOf :Hainaut .
 
 
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#SoironSurScène
+:SoironSurScène rdf:type owl:NamedIndividual ,
+                         :Spectacle ;
+                :isLocated :Pepinster .
+
+
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sombreville
 :Sombreville rdf:type owl:NamedIndividual ,
                       :Town ;
@@ -1515,6 +1579,14 @@
 :Tenneville rdf:type owl:NamedIndividual ,
                      :Town ;
             :partOf :Luxembourg .
+
+
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#TheaterFestival_AuVertDeThoricourt
+:TheaterFestival_AuVertDeThoricourt rdf:type owl:NamedIndividual ,
+                                             :Theater ;
+                                    :isLocated :Silly ;
+                                    :needEquipment "false"^^xsd:boolean ;
+                                    :startDate "2020-08-01T18:00:00+01:00"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Theux
@@ -1577,12 +1649,6 @@
                :partOf :Luxembourg .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Velo
-:Velo rdf:type owl:NamedIndividual ,
-               :Sport ;
-      :needEquipment "true"^^xsd:boolean .
-
-
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Verlaine
 :Verlaine rdf:type owl:NamedIndividual ,
                    :Town ;
@@ -1625,15 +1691,15 @@
         :partOf :Luxembourg .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Visites_nocturnes_aux_flambeaux
-:Visites_nocturnes_aux_flambeaux rdf:type owl:NamedIndividual ,
-                                          <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll&guidedTour> ;
-                                 :hasParticipant :laura ;
-                                 :isLocated :Boullion ;
-                                 :cost "11.0"^^xsd:double ;
-                                 :endDate "2020-11-07T20:30:00+01:00"^^xsd:dateTime ;
-                                 :needEquipment "false"^^xsd:boolean ;
-                                 :startDate "2020-11-06T18:30:00+01:00"^^xsd:dateTime .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#VisitesNocturnesAuxFlambeaux
+:VisitesNocturnesAuxFlambeaux rdf:type owl:NamedIndividual ,
+                                       <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll&guidedTour> ;
+                              :hasParticipant :Laura ;
+                              :isLocated :Boullion ;
+                              :cost "11.0"^^xsd:double ;
+                              :endDate "2020-11-07T20:30:00+01:00"^^xsd:dateTime ;
+                              :needEquipment "false"^^xsd:boolean ;
+                              :startDate "2020-11-06T18:30:00+01:00"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Visé
@@ -1660,14 +1726,14 @@
           :partOf :Province_de_Namur .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wallonie_Equestre_Event
-:Wallonie_Equestre_Event rdf:type owl:NamedIndividual ,
-                                  <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fair&TradeShow> ;
-                         :hasParticipant :Louis ;
-                         :isLocated :Libramont-Chevigné ;
-                         :cost "25.0"^^xsd:double ;
-                         :endDate "2020-11-15T18:30:00+01:00"^^xsd:dateTime ;
-                         :startDate "2020-11-13T10:00:00+01:00"^^xsd:dateTime .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wallonie_EquestreEvent
+:Wallonie_EquestreEvent rdf:type owl:NamedIndividual ,
+                                 <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fair&TradeShow> ;
+                        :hasParticipant :Louis ;
+                        :isLocated :Libramont-Chevigné ;
+                        :cost "25.0"^^xsd:double ;
+                        :endDate "2020-11-15T18:30:00+01:00"^^xsd:dateTime ;
+                        :startDate "2020-11-13T10:00:00+01:00"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wanze
@@ -1716,41 +1782,20 @@
                 :Town .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#laura
-:laura rdf:type owl:NamedIndividual ,
-                :Customer ,
-                :Seller ,
-                :Visitor ;
-       :SaleIn :Ciney_Puces_et_Antiquités ;
-       :goTo :Visites_nocturnes_aux_flambeaux ;
-       :liveIn :Boullion ;
-       :sleepIn :LeValDePoix .
-
-
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#walhain
 :walhain rdf:type owl:NamedIndividual ,
                   :Town ;
          :partOf :Brabant_wallon .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#20e_nuit_des_Choeurs
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#20e_nuit_des_Choeurs> rdf:type owl:NamedIndividual ,
-                                                                                                            :Concert ;
-                                                                                                   :isLocated :Villers-la-Ville ;
-                                                                                                   :cost "31.0"^^xsd:double ;
-                                                                                                   :endDate "2020-04-29T23:59:00+01:00"^^xsd:dateTime ;
-                                                                                                   :needEquipment "false"^^xsd:boolean ;
-                                                                                                   :startDate "2020-04-28T18:30:00+01:00"^^xsd:dateTime .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#ANtica_Namur,_Salon_d'antiquités_de_Namur
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#ANtica_Namur,_Salon_d'antiquités_de_Namur> rdf:type owl:NamedIndividual ,
-                                                                                                                                 :fleaMarket ;
-                                                                                                                        :isLocated :Namur ;
-                                                                                                                        :cost "21.5"^^xsd:double ;
-                                                                                                                        :endDate "2020-11-22T19:00:00+01:00"^^xsd:dateTime ;
-                                                                                                                        :needEquipment "false"^^xsd:boolean ;
-                                                                                                                        :startDate "2020-11-14T11:00:00+01:00"^^xsd:dateTime .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#20e_NuitDesChoeurs
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#20e_NuitDesChoeurs> rdf:type owl:NamedIndividual ,
+                                                                                                          :Concert ;
+                                                                                                 :isLocated :Villers-la-Ville ;
+                                                                                                 :cost "31.0"^^xsd:double ;
+                                                                                                 :endDate "2020-04-29T23:59:00+01:00"^^xsd:dateTime ;
+                                                                                                 :needEquipment "false"^^xsd:boolean ;
+                                                                                                 :startDate "2020-04-28T18:30:00+01:00"^^xsd:dateTime .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braine-l'Alleud
@@ -1759,31 +1804,11 @@
                                                                                               :partOf :Brabant_wallon .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chambre_d'hôtes_le_Pré_de_Caroline_à_Huy
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chambre_d'hôtes_le_Pré_de_Caroline_à_Huy> rdf:type owl:NamedIndividual ,
-                                                                                                                                :GuestHouse ;
-                                                                                                                       :isLocated :Huy ;
-                                                                                                                       :cost "46.0"^^xsd:double ;
-                                                                                                                       :hasNumbersOfRooms "4"^^xsd:int .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Croisières_gourmandes_d'été_à_bord_du_bateau_Pays_de_Liège
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Croisières_gourmandes_d'été_à_bord_du_bateau_Pays_de_Liège> rdf:type owl:NamedIndividual ,
-                                                                                                                                                  :Cruise ;
-                                                                                                                                         :isLocated :Liege ;
-                                                                                                                                         :cost "58.0"^^xsd:double ;
-                                                                                                                                         :endDate "2020-06-27T23:59:00+01:00"^^xsd:dateTime ;
-                                                                                                                                         :startDate "2020-06-27T19:30:00+01:00"^^xsd:dateTime .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Expo_Jean-Claude_Servais,_au-delà_du_trait
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Expo_Jean-Claude_Servais,_au-delà_du_trait> rdf:type owl:NamedIndividual ,
-                                                                                                                                  :Exposition ;
-                                                                                                                         :isLocated :Bastogne ;
-                                                                                                                         :cost "6.0"^^xsd:double ;
-                                                                                                                         :endDate "2020-09-27T18:00:00+01:00"^^xsd:dateTime ;
-                                                                                                                         :needEquipment "false"^^xsd:boolean ;
-                                                                                                                         :startDate "2019-10-12T10:00:00+01:00"^^xsd:dateTime .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FestivalUniversatilThéatre&ArtDeLaScène
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FestivalUniversatilThéatre&ArtDeLaScène> rdf:type owl:NamedIndividual ,
+                                                                                                                               :Festival ;
+                                                                                                                      :isLocated :Ottignies-Louvian-la-Neuve ;
+                                                                                                                      :needEquipment "false"^^xsd:boolean .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fontaine-l'Eveque
@@ -1798,35 +1823,10 @@
                                                                                                                     :isLocated :Malmedy .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_Tilleuleries:_Festival_des_Arts_de_la_Rue
-:Les_Tilleuleries:_Festival_des_Arts_de_la_Rue rdf:type owl:NamedIndividual ,
-                                                        :Theater ;
-                                               :hasParticipant :Florent ;
-                                               :isLocated :Nassogne ;
-                                               :cost "10.0"^^xsd:double ;
-                                               :endDate "2020-07-12T20:00:00+01:00"^^xsd:dateTime ;
-                                               :startDate "2020-07-12T11:30:00+01:00"^^xsd:dateTime .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_journée_wollonnes_de_l'eau
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_journée_wollonnes_de_l'eau> rdf:type owl:NamedIndividual ,
-                                                                                                                      <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll&guidedTour> ;
-                                                                                                             :isLocated :Libramont-Chevigné .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_nuits_du_Cirques_à_l'Abbaye_de_Villers-la-Ville
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_nuits_du_Cirques_à_l'Abbaye_de_Villers-la-Ville> rdf:type owl:NamedIndividual ,
-                                                                                                                                           :Spectacle ;
-                                                                                                                                  :isLocated :Villers-la-Ville ;
-                                                                                                                                  :cost "29.0"^^xsd:double ;
-                                                                                                                                  :endDate "2020-05-30T23:00:00+01:00"^^xsd:dateTime ;
-                                                                                                                                  :startDate "2020-05-30T16:00:00+01:00"^^xsd:dateTime .
-
-
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Soiron_sur_Scène:_La_fête_dans_l'un_des_beaux_villages_de_wallonie
-<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Soiron_sur_Scène:_La_fête_dans_l'un_des_beaux_villages_de_wallonie> rdf:type owl:NamedIndividual ,
-                                                                                                                                                          :Spectacle ;
-                                                                                                                                                 :isLocated :Pepinster .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#JournéeWallonnesDel'eau
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#JournéeWallonnesDel'eau> rdf:type owl:NamedIndividual ,
+                                                                                                               <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll&guidedTour> ;
+                                                                                                      :isLocated :Libramont-Chevigné .
 
 
 #################################################################
@@ -1863,7 +1863,8 @@
 
 
 [ rdf:type owl:AllDifferent ;
-  owl:distinctMembers ( :Amay
+  owl:distinctMembers ( :ANtica
+                        :Amay
                         :Amel
                         :Andenne
                         :Anhée
@@ -1888,6 +1889,7 @@
                         :Bertogne
                         :Bertrix
                         :Beyne-Heusay
+                        :Bike
                         :Binche
                         :Bièvre
                         :Blegny
@@ -1900,7 +1902,7 @@
                         :Burg-Reuland
                         :Butgenbach
                         :Büllingen
-                        :Camping_Eden_à_Aywaille
+                        :CampingEden
                         :Cerfontaine
                         :Charleroi
                         :Chastre
@@ -1910,14 +1912,14 @@
                         :Chièvres
                         :Châtelet
                         :Ciney
-                        :Ciney_Puces_et_Antiquités
-                        :Cité_de_la_Bière
+                        :CitéDeLaBière
                         :Clavier
                         :Comblain-au-Pont
                         :Comines-Warneton
                         :Court-Saint-Etienne
                         :Couvin
                         :Crisnée
+                        :CroisièresGourmandes
                         :Dalhem
                         :Daverdisse
                         :Dinant
@@ -1936,8 +1938,7 @@
                         :Fauvillers
                         :Fernelmont
                         :Ferrières
-                        :Festival_Théatre_au_Vert_de_Thoricourt
-                        :Festival_Universatil_Théatre_et_art_de_la_scène_a_LLN
+                        :FestivalDesArtsDeLaRue
                         :Fexhe-le-Haut-Clocher
                         :Fleurus
                         :Florennes
@@ -1953,10 +1954,10 @@
                         :Gouvy
                         :Grez-Doiceau
                         :Grâce-Hollogne
-                        :Gîte_rural_Les_Tilleuls_Coté_Vallée_à_Rochehaut
+                        :GîteRural_LesTilleulsCotéVallée
                         :Habay
                         :Hainaut
-                        :Halloween_à_Pairi_Daiza
+                        :Halloween_PairiDaiza
                         :Hamoir
                         :Hamois
                         :Hannut
@@ -1975,16 +1976,19 @@
                         :Ittre
                         :Jacques
                         :Jalhay
+                        :Jean-ClaudeServais_au-delàDuTrait
                         :Jemeppe-sur-Sambre
                         :Jodoigne
                         :Juprelle
                         :Kelmis
+                        :LaCaravaneDuCourt
                         :La_Hulpe
                         :La_Louvière
                         :La_Roche-en-Ardenne
                         :La_bruyère
-                        :La_caravane_du_court
                         :Lasne
+                        :Laura
+                        :LePréDeCaroline
                         :LeValDePoix
                         :Le_Roeulx
                         :Lessines
@@ -2010,16 +2014,17 @@
                         :Mont-Saint-Guibert
                         :Mouscron
                         :Musson
-                        :Mystery_Forest
+                        :MysteryForest
                         :Namur
                         :Nandrin
                         :Nassogne
                         :Neufchateau
                         :Neupré
                         :Nivelles
+                        :NuitsDuCirques
                         :Ohey
                         :Olne
-                        :Ombre_et_Lumières_du_Moyen_Age
+                        :OmbreEtLumières_duMoyenAge
                         :Onhaye
                         :Oreye
                         :Orp-Jauche
@@ -2036,6 +2041,7 @@
                         :Pronfondeville
                         :Province_de_Liege
                         :Province_de_Namur
+                        :PucesEtAntiquités
                         :Péruwelz
                         :Raeren
                         :Ramilles
@@ -2056,6 +2062,7 @@
                         :Seraing
                         :Silly
                         :Soignies
+                        :SoironSurScène
                         :Sombreville
                         :Somme-Leuze
                         :Soumagne
@@ -2065,6 +2072,7 @@
                         :Stoumont
                         :Tellin
                         :Tenneville
+                        :TheaterFestival_AuVertDeThoricourt
                         :Theux
                         :Thimister-Clermont
                         :Thuin
@@ -2075,7 +2083,6 @@
                         :Trooz
                         :Tubize
                         :Vaux-sur-Sure
-                        :Velo
                         :Verlaine
                         :Verviers
                         :Vielslam
@@ -2083,12 +2090,12 @@
                         :Villers-le-Bouillet
                         :Viroinval
                         :Virton
-                        :Visites_nocturnes_aux_flambeaux
+                        :VisitesNocturnesAuxFlambeaux
                         :Visé
                         :Vresse-sur-Semois
                         :Waimes
                         :Walcourt
-                        :Wallonie_Equestre_Event
+                        :Wallonie_EquestreEvent
                         :Wanze
                         :Waremme
                         :Wasseiges
@@ -2097,20 +2104,13 @@
                         :Welkenraedt
                         :Wellin
                         :Yvoir
-                        :laura
                         :walhain
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#20e_nuit_des_Choeurs>
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#ANtica_Namur,_Salon_d'antiquités_de_Namur>
+                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#20e_NuitDesChoeurs>
                         <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braine-l'Alleud>
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chambre_d'hôtes_le_Pré_de_Caroline_à_Huy>
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Croisières_gourmandes_d'été_à_bord_du_bateau_Pays_de_Liège>
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Expo_Jean-Claude_Servais,_au-delà_du_trait>
+                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FestivalUniversatilThéatre&ArtDeLaScène>
                         <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fontaine-l'Eveque>
                         <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#HolidayVillage_DomaineDuVald'Adrimont>
-                        :Les_Tilleuleries:_Festival_des_Arts_de_la_Rue
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_journée_wollonnes_de_l'eau>
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Les_nuits_du_Cirques_à_l'Abbaye_de_Villers-la-Ville>
-                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Soiron_sur_Scène:_La_fête_dans_l'un_des_beaux_villages_de_wallonie>
+                        <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#JournéeWallonnesDel'eau>
                       )
 ] .
 
