@@ -14,13 +14,13 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#SaleIn
 :SaleIn rdf:type owl:ObjectProperty ;
-        rdfs:domain :Poeple ;
+        rdfs:domain :People ;
         rdfs:range :fleaMarket .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#goTo
 :goTo rdf:type owl:ObjectProperty ;
-      rdfs:domain :Poeple ;
+      rdfs:domain :People ;
       rdfs:range :Event ;
       rdfs:comment "Client-Touriste-Visiteur goToAnEvent Evenement" .
 
@@ -28,7 +28,7 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#hasParticipant
 :hasParticipant rdf:type owl:ObjectProperty ;
                 rdfs:domain :Event ;
-                rdfs:range :Poeple .
+                rdfs:range :People .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#isHostOf
@@ -52,19 +52,19 @@
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#isProposedBy
 :isProposedBy rdf:type owl:ObjectProperty ;
               rdfs:domain :Housing ;
-              rdfs:range :Poeple ;
+              rdfs:range :People ;
               rdfs:comment "Logement isProposedBy Vendeur-Propriétaire" .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#liveIn
 :liveIn rdf:type owl:ObjectProperty ;
-        rdfs:domain :Poeple ;
+        rdfs:domain :People ;
         rdfs:range :Town .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#owns
 :owns rdf:type owl:ObjectProperty ;
-      rdfs:domain :Poeple ;
+      rdfs:domain :People ;
       rdfs:range :Housing .
 
 
@@ -76,7 +76,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#sleepIn
 :sleepIn rdf:type owl:ObjectProperty ;
-         rdfs:domain :Poeple ;
+         rdfs:domain :People ;
          rdfs:range :Housing .
 
 
@@ -159,7 +159,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Customer
 :Customer rdf:type owl:Class ;
-          rdfs:subClassOf :Poeple .
+          rdfs:subClassOf :People .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event
@@ -210,11 +210,11 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Owner
 :Owner rdf:type owl:Class ;
-       rdfs:subClassOf :Poeple .
+       rdfs:subClassOf :People .
 
 
-###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Poeple
-:Poeple rdf:type owl:Class .
+###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#People
+:People rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province
@@ -223,7 +223,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Seller
 :Seller rdf:type owl:Class ;
-        rdfs:subClassOf :Poeple .
+        rdfs:subClassOf :People .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Spectacle
@@ -251,7 +251,7 @@
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Visitor
 :Visitor rdf:type owl:Class ;
-         rdfs:subClassOf :Poeple .
+         rdfs:subClassOf :People .
 
 
 ###  http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#fleaMarket
