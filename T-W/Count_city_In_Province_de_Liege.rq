@@ -7,6 +7,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT (COUNT(?name) AS ?names) WHERE
 {
 
-?name t:partOf t:Province_de_Namur .
+?name t:partOf t:Province_de_Liege .
 
 }

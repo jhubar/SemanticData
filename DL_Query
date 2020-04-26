@@ -1,0 +1,6 @@
+What event there are in Liege
+(Event that ( isLocated some (partOf some ({Province_de_Liege}))))
+
+Quel logement propose jacques
+
+(Housing that ( isProposedBy some ( {Jacques} )))
