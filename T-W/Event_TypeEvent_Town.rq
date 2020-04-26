@@ -6,6 +6,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?housing ?event ?town WHERE
 {
+
  ?housing rdf:type ?typeHousing .
  ?typeHousing rdfs:subClassOf t:Housing .
  ?event rdf:type ?typeEvent .
@@ -14,6 +15,5 @@ SELECT ?housing ?event ?town WHERE
 
  ?town rdf:type t:Town .
  ?town t:partOf t:Province_de_Liege .
-
 
 }
