@@ -527,7 +527,8 @@ _:genid9 a owl:Restriction;
 :CampingEden a :Camping, owl:NamedIndividual;
   :cost 1.5E1;
   :hasNumbersOfRooms "78"^^xsd:int;
-  :isLocated :Aywaille .
+  :isLocated :Aywaille;
+  :isProposedBy :Jacques .
 # 
 # http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cerfontaine
 
@@ -799,7 +800,8 @@ _:genid9 a owl:Restriction;
 
 :GîteRural_LesTilleulsCotéVallée a <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cottages&CountryHouse>,
     owl:NamedIndividual;
-  :isLocated :Boullion .
+  :isLocated :Boullion;
+  :isProposedBy :Paul .
 # 
 # http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Habay
 
@@ -973,6 +975,7 @@ _:genid9 a owl:Restriction;
   :SaleIn :PucesEtAntiquités;
   :goTo :VisitesNocturnesAuxFlambeaux;
   :liveIn :Boullion;
+  :owns <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#HolidayVillage_DomaineDuVald'Adrimont>;
   :sleepIn :LeValDePoix .
 # 
 # http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#LePréDeCaroline
@@ -980,12 +983,14 @@ _:genid9 a owl:Restriction;
 :LePréDeCaroline a :GuestHouse, owl:NamedIndividual;
   :cost 4.6E1;
   :hasNumbersOfRooms "4"^^xsd:int;
-  :isLocated :Huy .
+  :isLocated :Huy;
+  :isProposedBy :Pierre .
 # 
 # http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#LeValDePoix
 
 :LeValDePoix a :Hostel, owl:NamedIndividual;
-  :isLocated :Saint_Hubert .
+  :isLocated :Saint_Hubert;
+  :isProposedBy :Pierre .
 # 
 # http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Le_Roeulx
 
