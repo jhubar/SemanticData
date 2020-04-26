@@ -9,10 +9,8 @@ SELECT * WHERE
  ?housing rdf:type ?typeHousing .
  ?typeHousing rdfs:subClassOf t:Housing .
  ?event t:isLocated ?town .
- ?logement t:isLocated ?town .
+ ?Housing t:isLocated ?town .
 
  ?town rdf:type t:Town .
  ?town t:partOf t:Province_de_Liege .
-
-
 }

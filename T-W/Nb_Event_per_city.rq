@@ -10,6 +10,4 @@ SELECT ?town (Count(?event) AS ?events) WHERE
  ?town rdf:type t:Town .
  ?event t:isLocated ?town .
 
-
-
 } GROUP BY ?town

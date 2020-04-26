@@ -8,7 +8,6 @@ SELECT * WHERE
 {
 
  ?town rdf:type t:Town .
- ?event t:isLocated ?town  .
-
+ ?event t:isLocated ?town .
 
 }
