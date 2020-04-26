@@ -1,0 +1,3725 @@
+@prefix : <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie> a owl:Ontology .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#SaleIn
+
+:SaleIn a owl:ObjectProperty;
+  rdfs:domain :People;
+  rdfs:range :fleaMarket .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#goTo
+
+:goTo a owl:ObjectProperty;
+  rdfs:comment "Client-Touriste-Visiteur goToAnEvent Evenement";
+  rdfs:domain :People;
+  rdfs:range :Event .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#hasParticipant
+
+:hasParticipant a owl:ObjectProperty;
+  rdfs:domain :Event;
+  rdfs:range :People .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#isHostOf
+
+:isHostOf a owl:ObjectProperty;
+  rdfs:comment "Client-Touriste-Visiteur isHostOf Vendeur-Propriétaire";
+  rdfs:domain :Town;
+  rdfs:range :Event .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#isLocated
+
+:isLocated a owl:ObjectProperty;
+  rdfs:comment "An event is in a province";
+  rdfs:domain _:genid1 .
+
+_:genid1 a owl:Class;
+  owl:unionOf _:genid3 .
+
+_:genid3 a rdf:List;
+  rdf:first :Event;
+  rdf:rest _:genid2 .
+
+_:genid2 a rdf:List;
+  rdf:first :Housing;
+  rdf:rest rdf:nil .
+
+:isLocated rdfs:range :Town .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#isProposedBy
+
+:isProposedBy a owl:ObjectProperty;
+  rdfs:comment "Logement isProposedBy Vendeur-Propriétaire";
+  rdfs:domain :Housing;
+  rdfs:range :People .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#liveIn
+
+:liveIn a owl:ObjectProperty;
+  rdfs:domain :People;
+  rdfs:range :Town .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#owns
+
+:owns a owl:ObjectProperty;
+  rdfs:domain :People;
+  rdfs:range :Housing .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#partOf
+
+:partOf a owl:ObjectProperty;
+  rdfs:domain :Town;
+  rdfs:range :Province .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#sleepIn
+
+:sleepIn a owl:ObjectProperty;
+  rdfs:domain :People;
+  rdfs:range :Housing .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#cost
+
+:cost a owl:DatatypeProperty;
+  rdfs:comment "Total cost of event";
+  rdfs:domain _:genid4 .
+
+_:genid4 a owl:Class;
+  owl:unionOf _:genid6 .
+
+_:genid6 a rdf:List;
+  rdf:first :Event;
+  rdf:rest _:genid5 .
+
+_:genid5 a rdf:List;
+  rdf:first :Housing;
+  rdf:rest rdf:nil .
+
+:cost rdfs:range xsd:double .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#endDate
+
+:endDate a owl:DatatypeProperty;
+  rdfs:comment "Ending date of event";
+  rdfs:domain :Event;
+  rdfs:range xsd:dateTime .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#hasNumberOfVisitors
+
+:hasNumberOfVisitors a owl:DatatypeProperty;
+  rdfs:domain :Event;
+  rdfs:range xsd:int .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#hasNumbersOfRooms
+
+:hasNumbersOfRooms a owl:DatatypeProperty;
+  rdfs:domain :Housing;
+  rdfs:range xsd:int .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#needEquipment
+
+:needEquipment a owl:DatatypeProperty;
+  rdfs:comment "Is equipment necessary for the activity";
+  rdfs:domain :Event;
+  rdfs:range xsd:boolean .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#startDate
+
+:startDate a owl:DatatypeProperty;
+  rdfs:comment "starting date of event";
+  rdfs:domain :Event;
+  rdfs:range xsd:dateTime .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Camping
+
+:Camping a owl:Class;
+  rdfs:subClassOf :Housing .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#ChristmasMarket
+
+:ChristmasMarket a owl:Class;
+  rdfs:subClassOf :Event .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Competition
+
+:Competition a owl:Class;
+  rdfs:subClassOf :Event .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Concert
+
+:Concert a owl:Class;
+  rdfs:subClassOf :Event .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cruise
+
+:Cruise a owl:Class;
+  rdfs:subClassOf :Event .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Customer
+
+:Customer a owl:Class;
+  rdfs:subClassOf :People .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event
+
+:Event a owl:Class;
+  rdfs:subClassOf _:genid7 .
+
+_:genid7 a owl:Restriction;
+  owl:onProperty :hasParticipant;
+  owl:someValuesFrom :Visitor .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Exposition
+
+:Exposition a owl:Class;
+  rdfs:subClassOf :Event .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Festival
+
+:Festival a owl:Class;
+  rdfs:subClassOf :Event .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#GuestHouse
+
+:GuestHouse a owl:Class;
+  rdfs:subClassOf :Housing .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#HolidayVillage
+
+:HolidayVillage a owl:Class;
+  rdfs:subClassOf :Housing .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hostel
+
+:Hostel a owl:Class;
+  rdfs:subClassOf :Housing .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Housing
+
+:Housing a owl:Class;
+  rdfs:subClassOf _:genid8 .
+
+_:genid8 a owl:Restriction;
+  owl:onProperty :isProposedBy;
+  owl:someValuesFrom :Owner .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Market
+
+:Market a owl:Class;
+  rdfs:subClassOf :Event .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Owner
+
+:Owner a owl:Class;
+  rdfs:subClassOf :People .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#People
+
+:People a owl:Class .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province
+
+:Province a owl:Class .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Seller
+
+:Seller a owl:Class;
+  rdfs:subClassOf :People .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Spectacle
+
+:Spectacle a owl:Class;
+  rdfs:subClassOf :Event .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sport
+
+:Sport a owl:Class;
+  rdfs:subClassOf :Event .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Theater
+
+:Theater a owl:Class;
+  rdfs:subClassOf :Event .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town
+
+:Town a owl:Class;
+  rdfs:subClassOf _:genid9 .
+
+_:genid9 a owl:Restriction;
+  owl:onProperty :partOf;
+  owl:someValuesFrom :Province .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Visitor
+
+:Visitor a owl:Class;
+  rdfs:subClassOf :People .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#fleaMarket
+
+:fleaMarket a owl:Class;
+  rdfs:subClassOf :Event .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cottages&CountryHouse
+
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cottages&CountryHouse>
+  a owl:Class;
+  rdfs:subClassOf :Housing .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fair&TradeShow
+
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fair&TradeShow>
+  a owl:Class;
+  rdfs:subClassOf :Event .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Folklore&Tradition
+
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Folklore&Tradition>
+  a owl:Class;
+  rdfs:subClassOf :Event .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll&guidedTour
+
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll&guidedTour>
+  a owl:Class;
+  rdfs:subClassOf :Event .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#ANtica
+
+:ANtica a :fleaMarket, owl:NamedIndividual;
+  :cost 2.15E1;
+  :endDate "2020-11-22T19:00:00+01:00"^^xsd:dateTime;
+  :isLocated :Namur;
+  :needEquipment false;
+  :startDate "2020-11-14T11:00:00+01:00"^^xsd:dateTime .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Amay
+
+:Amay a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Amel
+
+:Amel a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Andenne
+
+:Andenne a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Anhée
+
+:Anhée a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ans
+
+:Ans a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Anthisnes
+
+:Anthisnes a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Antoing
+
+:Antoing a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Arlon
+
+:Arlon a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Assesse
+
+:Assesse a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ath
+
+:Ath a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Attert
+
+:Attert a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Aubange
+
+:Aubange a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Aubel
+
+:Aubel a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Awans
+
+:Awans a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Aywaille
+
+:Aywaille a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Baelen
+
+:Baelen a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bassenge
+
+:Bassenge a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bastogne
+
+:Bastogne a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Beaumont
+
+:Beaumont a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Beauraing
+
+:Beauraing a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Beauvechain
+
+:Beauvechain a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Berloz
+
+:Berloz a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bertogne
+
+:Bertogne a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bertrix
+
+:Bertrix a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Beyne-Heusay
+
+:Beyne-Heusay a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bike
+
+:Bike a :Sport, owl:NamedIndividual;
+  :needEquipment true .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Binche
+
+:Binche a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bièvre
+
+:Bièvre a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Blegny
+
+:Blegny a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Boullion
+
+:Boullion a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon
+
+:Brabant_wallon a :Province, owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braine-le-Château
+
+:Braine-le-Château a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braine-le-Comte
+
+:Braine-le-Comte a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braives
+
+:Braives a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Burdinne
+
+:Burdinne a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Burg-Reuland
+
+:Burg-Reuland a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Butgenbach
+
+:Butgenbach a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Büllingen
+
+:Büllingen a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#CampingEden
+
+:CampingEden a :Camping, owl:NamedIndividual;
+  :cost 1.5E1;
+  :hasNumbersOfRooms "78"^^xsd:int;
+  :isLocated :Aywaille .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cerfontaine
+
+:Cerfontaine a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Charleroi
+
+:Charleroi a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chastre
+
+:Chastre a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chaumont-Gistoux
+
+:Chaumont-Gistoux a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chimay
+
+:Chimay a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chiny
+
+:Chiny a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chièvres
+
+:Chièvres a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Châtelet
+
+:Châtelet a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ciney
+
+:Ciney a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#CitéDeLaBière
+
+:CitéDeLaBière a :Festival, owl:NamedIndividual;
+  :cost 6.0E0;
+  :endDate "2020-04-19T19:00:00+01:00"^^xsd:dateTime;
+  :isLocated :Liege;
+  :startDate "2020-04-17T16:00:00+01:00"^^xsd:dateTime .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Clavier
+
+:Clavier a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Comblain-au-Pont
+
+:Comblain-au-Pont a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Comines-Warneton
+
+:Comines-Warneton a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Court-Saint-Etienne
+
+:Court-Saint-Etienne a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Couvin
+
+:Couvin a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Crisnée
+
+:Crisnée a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#CroisièresGourmandes
+
+:CroisièresGourmandes a :Cruise, owl:NamedIndividual;
+  :cost 5.8E1;
+  :endDate "2020-06-27T23:59:00+01:00"^^xsd:dateTime;
+  :isLocated :Liege;
+  :startDate "2020-06-27T19:30:00+01:00"^^xsd:dateTime .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Dalhem
+
+:Dalhem a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Daverdisse
+
+:Daverdisse a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Dinant
+
+:Dinant a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Dison
+
+:Dison a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Doische
+
+:Doische a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Donceel
+
+:Donceel a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Durbuy
+
+:Durbuy a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Eghezée
+
+:Eghezée a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Enghien
+
+:Enghien a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Engis
+
+:Engis a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Erezee
+
+:Erezee a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Esneux
+
+:Esneux a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Etalle
+
+:Etalle a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Eupen
+
+:Eupen a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Faimes
+
+:Faimes a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fauvillers
+
+:Fauvillers a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fernelmont
+
+:Fernelmont a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ferrières
+
+:Ferrières a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FestivalDesArtsDeLaRue
+
+:FestivalDesArtsDeLaRue a :Theater, owl:NamedIndividual;
+  :cost 1.0E1;
+  :endDate "2020-07-12T20:00:00+01:00"^^xsd:dateTime;
+  :hasParticipant :Florent;
+  :isLocated :Nassogne;
+  :startDate "2020-07-12T11:30:00+01:00"^^xsd:dateTime .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fexhe-le-Haut-Clocher
+
+:Fexhe-le-Haut-Clocher a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fleurus
+
+:Fleurus a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Florennes
+
+:Florennes a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Florent
+
+:Florent a :Visitor, owl:NamedIndividual;
+  :goTo :FestivalDesArtsDeLaRue, :OmbreEtLumières_duMoyenAge;
+  :liveIn :Wavre .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Flémalle
+
+:Flémalle a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fléron
+
+:Fléron a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fosse-la-Ville
+
+:Fosse-la-Ville a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Gedinne
+
+:Gedinne a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Geer
+
+:Geer a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Gembloux
+
+:Gembloux a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Genappe
+
+:Genappe a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Gesves
+
+:Gesves a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Gouvy
+
+:Gouvy a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Grez-Doiceau
+
+:Grez-Doiceau a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Grâce-Hollogne
+
+:Grâce-Hollogne a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#GîteRural_LesTilleulsCotéVallée
+
+:GîteRural_LesTilleulsCotéVallée a <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cottages&CountryHouse>,
+    owl:NamedIndividual;
+  :isLocated :Boullion .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Habay
+
+:Habay a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut
+
+:Hainaut a :Province, owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Halloween_PairiDaiza
+
+:Halloween_PairiDaiza a :Spectacle, owl:NamedIndividual;
+  :isLocated :Ath .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hamoir
+
+:Hamoir a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hamois
+
+:Hamois a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hannut
+
+:Hannut a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hastière
+
+:Hastière a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hatton
+
+:Hatton a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Havelange
+
+:Havelange a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Herbeumont
+
+:Herbeumont a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Herstal
+
+:Herstal a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Herve
+
+:Herve a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Houffalize
+
+:Houffalize a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Houyet
+
+:Houyet a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Huy
+
+:Huy a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hélécine
+
+:Hélécine a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Héron
+
+:Héron a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Incourt
+
+:Incourt a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ittre
+
+:Ittre a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jacques
+
+:Jacques a :Owner, owl:NamedIndividual;
+  :liveIn :Houyet;
+  :owns :CampingEden .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jalhay
+
+:Jalhay a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jean-ClaudeServais_au-delàDuTrait
+
+:Jean-ClaudeServais_au-delàDuTrait a :Exposition, owl:NamedIndividual;
+  :cost 6.0E0;
+  :endDate "2020-09-27T18:00:00+01:00"^^xsd:dateTime;
+  :isLocated :Bastogne;
+  :needEquipment false;
+  :startDate "2019-10-12T10:00:00+01:00"^^xsd:dateTime .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jemeppe-sur-Sambre
+
+:Jemeppe-sur-Sambre a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jodoigne
+
+:Jodoigne a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Juprelle
+
+:Juprelle a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Kelmis
+
+:Kelmis a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#LaCaravaneDuCourt
+
+:LaCaravaneDuCourt a :Theater, owl:NamedIndividual;
+  :endDate "2020-03-20T23:00:00+01:00"^^xsd:dateTime;
+  :isLocated :Liege, :Namur, :Virton;
+  :startDate "2020-03-09T13:00:00+01:00"^^xsd:dateTime .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#La_Hulpe
+
+:La_Hulpe a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#La_Louvière
+
+:La_Louvière a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#La_Roche-en-Ardenne
+
+:La_Roche-en-Ardenne a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#La_bruyère
+
+:La_bruyère a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lasne
+
+:Lasne a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Laura
+
+:Laura a :Customer, :Seller, :Visitor, owl:NamedIndividual;
+  :SaleIn :PucesEtAntiquités;
+  :goTo :VisitesNocturnesAuxFlambeaux;
+  :liveIn :Boullion;
+  :sleepIn :LeValDePoix .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#LePréDeCaroline
+
+:LePréDeCaroline a :GuestHouse, owl:NamedIndividual;
+  :cost 4.6E1;
+  :hasNumbersOfRooms "4"^^xsd:int;
+  :isLocated :Huy .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#LeValDePoix
+
+:LeValDePoix a :Hostel, owl:NamedIndividual;
+  :isLocated :Saint_Hubert .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Le_Roeulx
+
+:Le_Roeulx a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lessines
+
+:Lessines a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Leuze-en-Hainaut
+
+:Leuze-en-Hainaut a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Libin
+
+:Libin a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Libramont-Chevigné
+
+:Libramont-Chevigné a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Liege
+
+:Liege a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lierneux
+
+:Lierneux a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Limbourg
+
+:Limbourg a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lincent
+
+:Lincent a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lontzen
+
+:Lontzen a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Louis
+
+:Louis a :Visitor, owl:NamedIndividual;
+  :goTo :Wallonie_EquestreEvent;
+  :liveIn :Mons .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg
+
+:Luxembourg a :Province, owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Léglise
+
+:Léglise a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Malmedy
+
+:Malmedy a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Manhay
+
+:Manhay a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Marche-en-Famenne
+
+:Marche-en-Famenne a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Marche_de_Noel_Liege
+
+:Marche_de_Noel_Liege a :ChristmasMarket, owl:NamedIndividual;
+  :cost 0.0E0;
+  :endDate "2021-01-04T20:00:00+01:00"^^xsd:dateTime;
+  :isLocated :Liege;
+  :startDate "2020-11-27T11:00:00+01:00"^^xsd:dateTime .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Marchin
+
+:Marchin a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Martelange
+
+:Martelange a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Mattet
+
+:Mattet a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Modave
+
+:Modave a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Mons
+
+:Mons a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Mont-Saint-Guibert
+
+:Mont-Saint-Guibert a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Mouscron
+
+:Mouscron a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Musson
+
+:Musson a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#MysteryForest
+
+:MysteryForest a :Spectacle, owl:NamedIndividual;
+  :isLocated :Durbuy .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Namur
+
+:Namur a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Nandrin
+
+:Nandrin a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Nassogne
+
+:Nassogne a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Neufchateau
+
+:Neufchateau a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Neupré
+
+:Neupré a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Nivelles
+
+:Nivelles a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#NuitsDuCirques
+
+:NuitsDuCirques a :Spectacle, owl:NamedIndividual;
+  :cost 2.9E1;
+  :endDate "2020-05-30T23:00:00+01:00"^^xsd:dateTime;
+  :isLocated :Villers-la-Ville;
+  :startDate "2020-05-30T16:00:00+01:00"^^xsd:dateTime .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ohey
+
+:Ohey a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Olne
+
+:Olne a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#OmbreEtLumières_duMoyenAge
+
+:OmbreEtLumières_duMoyenAge a :Spectacle, owl:NamedIndividual;
+  :cost 1.5E1;
+  :endDate "2020-09-20T18:00:00+01:00"^^xsd:dateTime;
+  :hasParticipant :Florent;
+  :isLocated :Villers-la-Ville;
+  :startDate "2020-09-18T17:30:00+01:00"^^xsd:dateTime .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Onhaye
+
+:Onhaye a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Oreye
+
+:Oreye a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Orp-Jauche
+
+:Orp-Jauche a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ottignies-Louvian-la-Neuve
+
+:Ottignies-Louvian-la-Neuve a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ouffet
+
+:Ouffet a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Oupeye
+
+:Oupeye a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Paliseul
+
+:Paliseul a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Paul
+
+:Paul a :Owner, owl:NamedIndividual;
+  :liveIn :Libramont-Chevigné;
+  :owns :GîteRural_LesTilleulsCotéVallée .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Pepinster
+
+:Pepinster a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Perwez
+
+:Perwez a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Philippeville
+
+:Philippeville a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Pierre
+
+:Pierre a :Owner, owl:NamedIndividual;
+  :liveIn :Wavre;
+  :owns :LePréDeCaroline, :LeValDePoix .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Plombières
+
+:Plombières a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Pronfondeville
+
+:Pronfondeville a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege
+
+:Province_de_Liege a :Province, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur
+
+:Province_de_Namur a :Province, owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#PucesEtAntiquités
+
+:PucesEtAntiquités a :fleaMarket, owl:NamedIndividual;
+  :cost 2.1E1;
+  :endDate "2020-05-24T18:00:00+01:00"^^xsd:dateTime;
+  :isLocated :Ciney;
+  :startDate "2020-05-22T10:00:00+01:00"^^xsd:dateTime .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Péruwelz
+
+:Péruwelz a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Raeren
+
+:Raeren a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ramilles
+
+:Ramilles a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Rebecq
+
+:Rebecq a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Remicourt
+
+:Remicourt a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Rendeux
+
+:Rendeux a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Riwensart
+
+:Riwensart a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Rochefort
+
+:Rochefort a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Rouvroy
+
+:Rouvroy a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint-Georges-sur-Meuse
+
+:Saint-Georges-sur-Meuse a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint-Ghislain
+
+:Saint-Ghislain a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint-Léger
+
+:Saint-Léger a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint-Nicolas
+
+:Saint-Nicolas a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint-Ode
+
+:Saint-Ode a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint_Hubert
+
+:Saint_Hubert a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sambreville
+
+:Sambreville a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sankt-Vith
+
+:Sankt-Vith a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Seraing
+
+:Seraing a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Silly
+
+:Silly a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Soignies
+
+:Soignies a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#SoironSurScène
+
+:SoironSurScène a :Spectacle, owl:NamedIndividual;
+  :isLocated :Pepinster .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sombreville
+
+:Sombreville a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Somme-Leuze
+
+:Somme-Leuze a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Soumagne
+
+:Soumagne a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Spa
+
+:Spa a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sprimont
+
+:Sprimont a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stavelot
+
+:Stavelot a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stoumont
+
+:Stoumont a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tellin
+
+:Tellin a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tenneville
+
+:Tenneville a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#TheaterFestival_AuVertDeThoricourt
+
+:TheaterFestival_AuVertDeThoricourt a :Theater, owl:NamedIndividual;
+  :isLocated :Silly;
+  :needEquipment false;
+  :startDate "2020-08-01T18:00:00+01:00"^^xsd:dateTime .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Theux
+
+:Theux a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Thimister-Clermont
+
+:Thimister-Clermont a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Thuin
+
+:Thuin a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tinlot
+
+:Tinlot a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tintigny
+
+:Tintigny a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tournai
+
+:Tournai a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Trois-Ponts
+
+:Trois-Ponts a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Trooz
+
+:Trooz a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tubize
+
+:Tubize a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Vaux-sur-Sure
+
+:Vaux-sur-Sure a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Verlaine
+
+:Verlaine a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Verviers
+
+:Verviers a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Vielslam
+
+:Vielslam a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Villers-la-Ville
+
+:Villers-la-Ville a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Villers-le-Bouillet
+
+:Villers-le-Bouillet a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Viroinval
+
+:Viroinval a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Virton
+
+:Virton a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#VisitesNocturnesAuxFlambeaux
+
+:VisitesNocturnesAuxFlambeaux a <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll&guidedTour>,
+    owl:NamedIndividual;
+  :cost 1.1E1;
+  :endDate "2020-11-07T20:30:00+01:00"^^xsd:dateTime;
+  :hasParticipant :Laura;
+  :isLocated :Boullion;
+  :needEquipment false;
+  :startDate "2020-11-06T18:30:00+01:00"^^xsd:dateTime .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Visé
+
+:Visé a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Vresse-sur-Semois
+
+:Vresse-sur-Semois a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Waimes
+
+:Waimes a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Walcourt
+
+:Walcourt a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Namur .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wallonie_EquestreEvent
+
+:Wallonie_EquestreEvent a <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fair&TradeShow>,
+    owl:NamedIndividual;
+  :cost 2.5E1;
+  :endDate "2020-11-15T18:30:00+01:00"^^xsd:dateTime;
+  :hasParticipant :Louis;
+  :isLocated :Libramont-Chevigné;
+  :startDate "2020-11-13T10:00:00+01:00"^^xsd:dateTime .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wanze
+
+:Wanze a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Waremme
+
+:Waremme a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wasseiges
+
+:Wasseiges a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Waterloo
+
+:Waterloo a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wavre
+
+:Wavre a :Town, owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Welkenraedt
+
+:Welkenraedt a :Town, owl:NamedIndividual;
+  :partOf :Province_de_Liege .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wellin
+
+:Wellin a :Town, owl:NamedIndividual;
+  :partOf :Luxembourg .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Yvoir
+
+:Yvoir a :Town, owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#walhain
+
+:walhain a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#20e_NuitDesChoeurs
+
+:20e_NuitDesChoeurs a :Concert, owl:NamedIndividual;
+  :cost 3.1E1;
+  :endDate "2020-04-29T23:59:00+01:00"^^xsd:dateTime;
+  :isLocated :Villers-la-Ville;
+  :needEquipment false;
+  :startDate "2020-04-28T18:30:00+01:00"^^xsd:dateTime .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braine-l'Alleud
+
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braine-l'Alleud>
+  a :Town, owl:NamedIndividual;
+  :partOf :Brabant_wallon .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FestivalUniversatilThéatre&ArtDeLaScène
+
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FestivalUniversatilThéatre&ArtDeLaScène>
+  a :Festival, owl:NamedIndividual;
+  :isLocated :Ottignies-Louvian-la-Neuve;
+  :needEquipment false .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fontaine-l'Eveque
+
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fontaine-l'Eveque>
+  a :Town, owl:NamedIndividual;
+  :partOf :Hainaut .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#HolidayVillage_DomaineDuVald'Adrimont
+
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#HolidayVillage_DomaineDuVald'Adrimont>
+  a :HolidayVillage, owl:NamedIndividual;
+  :isLocated :Malmedy .
+# 
+# http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#JournéeWallonnesDel'eau
+
+<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#JournéeWallonnesDel'eau>
+  a <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll&guidedTour>,
+    owl:NamedIndividual;
+  :isLocated :Libramont-Chevigné .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+
+_:genid10 a owl:AllDisjointClasses;
+  owl:members _:genid15 .
+
+_:genid15 a rdf:List;
+  rdf:first :Camping;
+  rdf:rest _:genid14 .
+
+_:genid14 a rdf:List;
+  rdf:first :GuestHouse;
+  rdf:rest _:genid13 .
+
+_:genid13 a rdf:List;
+  rdf:first :HolidayVillage;
+  rdf:rest _:genid12 .
+
+_:genid12 a rdf:List;
+  rdf:first :Hostel;
+  rdf:rest _:genid11 .
+
+_:genid11 a rdf:List;
+  rdf:first <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cottages&CountryHouse>;
+  rdf:rest rdf:nil .
+# 
+
+_:genid16 a owl:AllDisjointClasses;
+  owl:members _:genid30 .
+
+_:genid30 a rdf:List;
+  rdf:first :ChristmasMarket;
+  rdf:rest _:genid29 .
+
+_:genid29 a rdf:List;
+  rdf:first :Competition;
+  rdf:rest _:genid28 .
+
+_:genid28 a rdf:List;
+  rdf:first :Concert;
+  rdf:rest _:genid27 .
+
+_:genid27 a rdf:List;
+  rdf:first :Cruise;
+  rdf:rest _:genid26 .
+
+_:genid26 a rdf:List;
+  rdf:first :Exposition;
+  rdf:rest _:genid25 .
+
+_:genid25 a rdf:List;
+  rdf:first :Festival;
+  rdf:rest _:genid24 .
+
+_:genid24 a rdf:List;
+  rdf:first :Market;
+  rdf:rest _:genid23 .
+
+_:genid23 a rdf:List;
+  rdf:first :Spectacle;
+  rdf:rest _:genid22 .
+
+_:genid22 a rdf:List;
+  rdf:first :Sport;
+  rdf:rest _:genid21 .
+
+_:genid21 a rdf:List;
+  rdf:first :Theater;
+  rdf:rest _:genid20 .
+
+_:genid20 a rdf:List;
+  rdf:first :fleaMarket;
+  rdf:rest _:genid19 .
+
+_:genid19 a rdf:List;
+  rdf:first <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fair&TradeShow>;
+  rdf:rest _:genid18 .
+
+_:genid18 a rdf:List;
+  rdf:first <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Folklore&Tradition>;
+  rdf:rest _:genid17 .
+
+_:genid17 a rdf:List;
+  rdf:first <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll&guidedTour>;
+  rdf:rest rdf:nil .
+# 
+
+_:genid31 a owl:AllDifferent;
+  owl:distinctMembers _:genid280 .
+
+_:genid280 a rdf:List;
+  rdf:first :ANtica;
+  rdf:rest _:genid279 .
+
+_:genid279 a rdf:List;
+  rdf:first :Amay;
+  rdf:rest _:genid278 .
+
+_:genid278 a rdf:List;
+  rdf:first :Amel;
+  rdf:rest _:genid277 .
+
+_:genid277 a rdf:List;
+  rdf:first :Andenne;
+  rdf:rest _:genid276 .
+
+_:genid276 a rdf:List;
+  rdf:first :Anhée;
+  rdf:rest _:genid275 .
+
+_:genid275 a rdf:List;
+  rdf:first :Ans;
+  rdf:rest _:genid274 .
+
+_:genid274 a rdf:List;
+  rdf:first :Anthisnes;
+  rdf:rest _:genid273 .
+
+_:genid273 a rdf:List;
+  rdf:first :Antoing;
+  rdf:rest _:genid272 .
+
+_:genid272 a rdf:List;
+  rdf:first :Arlon;
+  rdf:rest _:genid271 .
+
+_:genid271 a rdf:List;
+  rdf:first :Assesse;
+  rdf:rest _:genid270 .
+
+_:genid270 a rdf:List;
+  rdf:first :Ath;
+  rdf:rest _:genid269 .
+
+_:genid269 a rdf:List;
+  rdf:first :Attert;
+  rdf:rest _:genid268 .
+
+_:genid268 a rdf:List;
+  rdf:first :Aubange;
+  rdf:rest _:genid267 .
+
+_:genid267 a rdf:List;
+  rdf:first :Aubel;
+  rdf:rest _:genid266 .
+
+_:genid266 a rdf:List;
+  rdf:first :Awans;
+  rdf:rest _:genid265 .
+
+_:genid265 a rdf:List;
+  rdf:first :Aywaille;
+  rdf:rest _:genid264 .
+
+_:genid264 a rdf:List;
+  rdf:first :Baelen;
+  rdf:rest _:genid263 .
+
+_:genid263 a rdf:List;
+  rdf:first :Bassenge;
+  rdf:rest _:genid262 .
+
+_:genid262 a rdf:List;
+  rdf:first :Bastogne;
+  rdf:rest _:genid261 .
+
+_:genid261 a rdf:List;
+  rdf:first :Beaumont;
+  rdf:rest _:genid260 .
+
+_:genid260 a rdf:List;
+  rdf:first :Beauraing;
+  rdf:rest _:genid259 .
+
+_:genid259 a rdf:List;
+  rdf:first :Beauvechain;
+  rdf:rest _:genid258 .
+
+_:genid258 a rdf:List;
+  rdf:first :Berloz;
+  rdf:rest _:genid257 .
+
+_:genid257 a rdf:List;
+  rdf:first :Bertogne;
+  rdf:rest _:genid256 .
+
+_:genid256 a rdf:List;
+  rdf:first :Bertrix;
+  rdf:rest _:genid255 .
+
+_:genid255 a rdf:List;
+  rdf:first :Beyne-Heusay;
+  rdf:rest _:genid254 .
+
+_:genid254 a rdf:List;
+  rdf:first :Bike;
+  rdf:rest _:genid253 .
+
+_:genid253 a rdf:List;
+  rdf:first :Binche;
+  rdf:rest _:genid252 .
+
+_:genid252 a rdf:List;
+  rdf:first :Bièvre;
+  rdf:rest _:genid251 .
+
+_:genid251 a rdf:List;
+  rdf:first :Blegny;
+  rdf:rest _:genid250 .
+
+_:genid250 a rdf:List;
+  rdf:first :Boullion;
+  rdf:rest _:genid249 .
+
+_:genid249 a rdf:List;
+  rdf:first :Brabant_wallon;
+  rdf:rest _:genid248 .
+
+_:genid248 a rdf:List;
+  rdf:first :Braine-le-Château;
+  rdf:rest _:genid247 .
+
+_:genid247 a rdf:List;
+  rdf:first :Braine-le-Comte;
+  rdf:rest _:genid246 .
+
+_:genid246 a rdf:List;
+  rdf:first :Braives;
+  rdf:rest _:genid245 .
+
+_:genid245 a rdf:List;
+  rdf:first :Burdinne;
+  rdf:rest _:genid244 .
+
+_:genid244 a rdf:List;
+  rdf:first :Burg-Reuland;
+  rdf:rest _:genid243 .
+
+_:genid243 a rdf:List;
+  rdf:first :Butgenbach;
+  rdf:rest _:genid242 .
+
+_:genid242 a rdf:List;
+  rdf:first :Büllingen;
+  rdf:rest _:genid241 .
+
+_:genid241 a rdf:List;
+  rdf:first :CampingEden;
+  rdf:rest _:genid240 .
+
+_:genid240 a rdf:List;
+  rdf:first :Cerfontaine;
+  rdf:rest _:genid239 .
+
+_:genid239 a rdf:List;
+  rdf:first :Charleroi;
+  rdf:rest _:genid238 .
+
+_:genid238 a rdf:List;
+  rdf:first :Chastre;
+  rdf:rest _:genid237 .
+
+_:genid237 a rdf:List;
+  rdf:first :Chaumont-Gistoux;
+  rdf:rest _:genid236 .
+
+_:genid236 a rdf:List;
+  rdf:first :Chimay;
+  rdf:rest _:genid235 .
+
+_:genid235 a rdf:List;
+  rdf:first :Chiny;
+  rdf:rest _:genid234 .
+
+_:genid234 a rdf:List;
+  rdf:first :Chièvres;
+  rdf:rest _:genid233 .
+
+_:genid233 a rdf:List;
+  rdf:first :Châtelet;
+  rdf:rest _:genid232 .
+
+_:genid232 a rdf:List;
+  rdf:first :Ciney;
+  rdf:rest _:genid231 .
+
+_:genid231 a rdf:List;
+  rdf:first :CitéDeLaBière;
+  rdf:rest _:genid230 .
+
+_:genid230 a rdf:List;
+  rdf:first :Clavier;
+  rdf:rest _:genid229 .
+
+_:genid229 a rdf:List;
+  rdf:first :Comblain-au-Pont;
+  rdf:rest _:genid228 .
+
+_:genid228 a rdf:List;
+  rdf:first :Comines-Warneton;
+  rdf:rest _:genid227 .
+
+_:genid227 a rdf:List;
+  rdf:first :Court-Saint-Etienne;
+  rdf:rest _:genid226 .
+
+_:genid226 a rdf:List;
+  rdf:first :Couvin;
+  rdf:rest _:genid225 .
+
+_:genid225 a rdf:List;
+  rdf:first :Crisnée;
+  rdf:rest _:genid224 .
+
+_:genid224 a rdf:List;
+  rdf:first :CroisièresGourmandes;
+  rdf:rest _:genid223 .
+
+_:genid223 a rdf:List;
+  rdf:first :Dalhem;
+  rdf:rest _:genid222 .
+
+_:genid222 a rdf:List;
+  rdf:first :Daverdisse;
+  rdf:rest _:genid221 .
+
+_:genid221 a rdf:List;
+  rdf:first :Dinant;
+  rdf:rest _:genid220 .
+
+_:genid220 a rdf:List;
+  rdf:first :Dison;
+  rdf:rest _:genid219 .
+
+_:genid219 a rdf:List;
+  rdf:first :Doische;
+  rdf:rest _:genid218 .
+
+_:genid218 a rdf:List;
+  rdf:first :Donceel;
+  rdf:rest _:genid217 .
+
+_:genid217 a rdf:List;
+  rdf:first :Durbuy;
+  rdf:rest _:genid216 .
+
+_:genid216 a rdf:List;
+  rdf:first :Eghezée;
+  rdf:rest _:genid215 .
+
+_:genid215 a rdf:List;
+  rdf:first :Enghien;
+  rdf:rest _:genid214 .
+
+_:genid214 a rdf:List;
+  rdf:first :Engis;
+  rdf:rest _:genid213 .
+
+_:genid213 a rdf:List;
+  rdf:first :Erezee;
+  rdf:rest _:genid212 .
+
+_:genid212 a rdf:List;
+  rdf:first :Esneux;
+  rdf:rest _:genid211 .
+
+_:genid211 a rdf:List;
+  rdf:first :Etalle;
+  rdf:rest _:genid210 .
+
+_:genid210 a rdf:List;
+  rdf:first :Eupen;
+  rdf:rest _:genid209 .
+
+_:genid209 a rdf:List;
+  rdf:first :Faimes;
+  rdf:rest _:genid208 .
+
+_:genid208 a rdf:List;
+  rdf:first :Fauvillers;
+  rdf:rest _:genid207 .
+
+_:genid207 a rdf:List;
+  rdf:first :Fernelmont;
+  rdf:rest _:genid206 .
+
+_:genid206 a rdf:List;
+  rdf:first :Ferrières;
+  rdf:rest _:genid205 .
+
+_:genid205 a rdf:List;
+  rdf:first :FestivalDesArtsDeLaRue;
+  rdf:rest _:genid204 .
+
+_:genid204 a rdf:List;
+  rdf:first :Fexhe-le-Haut-Clocher;
+  rdf:rest _:genid203 .
+
+_:genid203 a rdf:List;
+  rdf:first :Fleurus;
+  rdf:rest _:genid202 .
+
+_:genid202 a rdf:List;
+  rdf:first :Florennes;
+  rdf:rest _:genid201 .
+
+_:genid201 a rdf:List;
+  rdf:first :Florent;
+  rdf:rest _:genid200 .
+
+_:genid200 a rdf:List;
+  rdf:first :Flémalle;
+  rdf:rest _:genid199 .
+
+_:genid199 a rdf:List;
+  rdf:first :Fléron;
+  rdf:rest _:genid198 .
+
+_:genid198 a rdf:List;
+  rdf:first :Fosse-la-Ville;
+  rdf:rest _:genid197 .
+
+_:genid197 a rdf:List;
+  rdf:first :Gedinne;
+  rdf:rest _:genid196 .
+
+_:genid196 a rdf:List;
+  rdf:first :Geer;
+  rdf:rest _:genid195 .
+
+_:genid195 a rdf:List;
+  rdf:first :Gembloux;
+  rdf:rest _:genid194 .
+
+_:genid194 a rdf:List;
+  rdf:first :Genappe;
+  rdf:rest _:genid193 .
+
+_:genid193 a rdf:List;
+  rdf:first :Gesves;
+  rdf:rest _:genid192 .
+
+_:genid192 a rdf:List;
+  rdf:first :Gouvy;
+  rdf:rest _:genid191 .
+
+_:genid191 a rdf:List;
+  rdf:first :Grez-Doiceau;
+  rdf:rest _:genid190 .
+
+_:genid190 a rdf:List;
+  rdf:first :Grâce-Hollogne;
+  rdf:rest _:genid189 .
+
+_:genid189 a rdf:List;
+  rdf:first :GîteRural_LesTilleulsCotéVallée;
+  rdf:rest _:genid188 .
+
+_:genid188 a rdf:List;
+  rdf:first :Habay;
+  rdf:rest _:genid187 .
+
+_:genid187 a rdf:List;
+  rdf:first :Hainaut;
+  rdf:rest _:genid186 .
+
+_:genid186 a rdf:List;
+  rdf:first :Halloween_PairiDaiza;
+  rdf:rest _:genid185 .
+
+_:genid185 a rdf:List;
+  rdf:first :Hamoir;
+  rdf:rest _:genid184 .
+
+_:genid184 a rdf:List;
+  rdf:first :Hamois;
+  rdf:rest _:genid183 .
+
+_:genid183 a rdf:List;
+  rdf:first :Hannut;
+  rdf:rest _:genid182 .
+
+_:genid182 a rdf:List;
+  rdf:first :Hastière;
+  rdf:rest _:genid181 .
+
+_:genid181 a rdf:List;
+  rdf:first :Hatton;
+  rdf:rest _:genid180 .
+
+_:genid180 a rdf:List;
+  rdf:first :Havelange;
+  rdf:rest _:genid179 .
+
+_:genid179 a rdf:List;
+  rdf:first :Herbeumont;
+  rdf:rest _:genid178 .
+
+_:genid178 a rdf:List;
+  rdf:first :Herstal;
+  rdf:rest _:genid177 .
+
+_:genid177 a rdf:List;
+  rdf:first :Herve;
+  rdf:rest _:genid176 .
+
+_:genid176 a rdf:List;
+  rdf:first :Houffalize;
+  rdf:rest _:genid175 .
+
+_:genid175 a rdf:List;
+  rdf:first :Houyet;
+  rdf:rest _:genid174 .
+
+_:genid174 a rdf:List;
+  rdf:first :Huy;
+  rdf:rest _:genid173 .
+
+_:genid173 a rdf:List;
+  rdf:first :Hélécine;
+  rdf:rest _:genid172 .
+
+_:genid172 a rdf:List;
+  rdf:first :Héron;
+  rdf:rest _:genid171 .
+
+_:genid171 a rdf:List;
+  rdf:first :Incourt;
+  rdf:rest _:genid170 .
+
+_:genid170 a rdf:List;
+  rdf:first :Ittre;
+  rdf:rest _:genid169 .
+
+_:genid169 a rdf:List;
+  rdf:first :Jacques;
+  rdf:rest _:genid168 .
+
+_:genid168 a rdf:List;
+  rdf:first :Jalhay;
+  rdf:rest _:genid167 .
+
+_:genid167 a rdf:List;
+  rdf:first :Jean-ClaudeServais_au-delàDuTrait;
+  rdf:rest _:genid166 .
+
+_:genid166 a rdf:List;
+  rdf:first :Jemeppe-sur-Sambre;
+  rdf:rest _:genid165 .
+
+_:genid165 a rdf:List;
+  rdf:first :Jodoigne;
+  rdf:rest _:genid164 .
+
+_:genid164 a rdf:List;
+  rdf:first :Juprelle;
+  rdf:rest _:genid163 .
+
+_:genid163 a rdf:List;
+  rdf:first :Kelmis;
+  rdf:rest _:genid162 .
+
+_:genid162 a rdf:List;
+  rdf:first :LaCaravaneDuCourt;
+  rdf:rest _:genid161 .
+
+_:genid161 a rdf:List;
+  rdf:first :La_Hulpe;
+  rdf:rest _:genid160 .
+
+_:genid160 a rdf:List;
+  rdf:first :La_Louvière;
+  rdf:rest _:genid159 .
+
+_:genid159 a rdf:List;
+  rdf:first :La_Roche-en-Ardenne;
+  rdf:rest _:genid158 .
+
+_:genid158 a rdf:List;
+  rdf:first :La_bruyère;
+  rdf:rest _:genid157 .
+
+_:genid157 a rdf:List;
+  rdf:first :Lasne;
+  rdf:rest _:genid156 .
+
+_:genid156 a rdf:List;
+  rdf:first :Laura;
+  rdf:rest _:genid155 .
+
+_:genid155 a rdf:List;
+  rdf:first :LePréDeCaroline;
+  rdf:rest _:genid154 .
+
+_:genid154 a rdf:List;
+  rdf:first :LeValDePoix;
+  rdf:rest _:genid153 .
+
+_:genid153 a rdf:List;
+  rdf:first :Le_Roeulx;
+  rdf:rest _:genid152 .
+
+_:genid152 a rdf:List;
+  rdf:first :Lessines;
+  rdf:rest _:genid151 .
+
+_:genid151 a rdf:List;
+  rdf:first :Leuze-en-Hainaut;
+  rdf:rest _:genid150 .
+
+_:genid150 a rdf:List;
+  rdf:first :Libin;
+  rdf:rest _:genid149 .
+
+_:genid149 a rdf:List;
+  rdf:first :Libramont-Chevigné;
+  rdf:rest _:genid148 .
+
+_:genid148 a rdf:List;
+  rdf:first :Liege;
+  rdf:rest _:genid147 .
+
+_:genid147 a rdf:List;
+  rdf:first :Lierneux;
+  rdf:rest _:genid146 .
+
+_:genid146 a rdf:List;
+  rdf:first :Limbourg;
+  rdf:rest _:genid145 .
+
+_:genid145 a rdf:List;
+  rdf:first :Lincent;
+  rdf:rest _:genid144 .
+
+_:genid144 a rdf:List;
+  rdf:first :Lontzen;
+  rdf:rest _:genid143 .
+
+_:genid143 a rdf:List;
+  rdf:first :Louis;
+  rdf:rest _:genid142 .
+
+_:genid142 a rdf:List;
+  rdf:first :Luxembourg;
+  rdf:rest _:genid141 .
+
+_:genid141 a rdf:List;
+  rdf:first :Léglise;
+  rdf:rest _:genid140 .
+
+_:genid140 a rdf:List;
+  rdf:first :Malmedy;
+  rdf:rest _:genid139 .
+
+_:genid139 a rdf:List;
+  rdf:first :Manhay;
+  rdf:rest _:genid138 .
+
+_:genid138 a rdf:List;
+  rdf:first :Marche-en-Famenne;
+  rdf:rest _:genid137 .
+
+_:genid137 a rdf:List;
+  rdf:first :Marche_de_Noel_Liege;
+  rdf:rest _:genid136 .
+
+_:genid136 a rdf:List;
+  rdf:first :Marchin;
+  rdf:rest _:genid135 .
+
+_:genid135 a rdf:List;
+  rdf:first :Martelange;
+  rdf:rest _:genid134 .
+
+_:genid134 a rdf:List;
+  rdf:first :Mattet;
+  rdf:rest _:genid133 .
+
+_:genid133 a rdf:List;
+  rdf:first :Modave;
+  rdf:rest _:genid132 .
+
+_:genid132 a rdf:List;
+  rdf:first :Mons;
+  rdf:rest _:genid131 .
+
+_:genid131 a rdf:List;
+  rdf:first :Mont-Saint-Guibert;
+  rdf:rest _:genid130 .
+
+_:genid130 a rdf:List;
+  rdf:first :Mouscron;
+  rdf:rest _:genid129 .
+
+_:genid129 a rdf:List;
+  rdf:first :Musson;
+  rdf:rest _:genid128 .
+
+_:genid128 a rdf:List;
+  rdf:first :MysteryForest;
+  rdf:rest _:genid127 .
+
+_:genid127 a rdf:List;
+  rdf:first :Namur;
+  rdf:rest _:genid126 .
+
+_:genid126 a rdf:List;
+  rdf:first :Nandrin;
+  rdf:rest _:genid125 .
+
+_:genid125 a rdf:List;
+  rdf:first :Nassogne;
+  rdf:rest _:genid124 .
+
+_:genid124 a rdf:List;
+  rdf:first :Neufchateau;
+  rdf:rest _:genid123 .
+
+_:genid123 a rdf:List;
+  rdf:first :Neupré;
+  rdf:rest _:genid122 .
+
+_:genid122 a rdf:List;
+  rdf:first :Nivelles;
+  rdf:rest _:genid121 .
+
+_:genid121 a rdf:List;
+  rdf:first :NuitsDuCirques;
+  rdf:rest _:genid120 .
+
+_:genid120 a rdf:List;
+  rdf:first :Ohey;
+  rdf:rest _:genid119 .
+
+_:genid119 a rdf:List;
+  rdf:first :Olne;
+  rdf:rest _:genid118 .
+
+_:genid118 a rdf:List;
+  rdf:first :OmbreEtLumières_duMoyenAge;
+  rdf:rest _:genid117 .
+
+_:genid117 a rdf:List;
+  rdf:first :Onhaye;
+  rdf:rest _:genid116 .
+
+_:genid116 a rdf:List;
+  rdf:first :Oreye;
+  rdf:rest _:genid115 .
+
+_:genid115 a rdf:List;
+  rdf:first :Orp-Jauche;
+  rdf:rest _:genid114 .
+
+_:genid114 a rdf:List;
+  rdf:first :Ottignies-Louvian-la-Neuve;
+  rdf:rest _:genid113 .
+
+_:genid113 a rdf:List;
+  rdf:first :Ouffet;
+  rdf:rest _:genid112 .
+
+_:genid112 a rdf:List;
+  rdf:first :Oupeye;
+  rdf:rest _:genid111 .
+
+_:genid111 a rdf:List;
+  rdf:first :Paliseul;
+  rdf:rest _:genid110 .
+
+_:genid110 a rdf:List;
+  rdf:first :Paul;
+  rdf:rest _:genid109 .
+
+_:genid109 a rdf:List;
+  rdf:first :Pepinster;
+  rdf:rest _:genid108 .
+
+_:genid108 a rdf:List;
+  rdf:first :Perwez;
+  rdf:rest _:genid107 .
+
+_:genid107 a rdf:List;
+  rdf:first :Philippeville;
+  rdf:rest _:genid106 .
+
+_:genid106 a rdf:List;
+  rdf:first :Pierre;
+  rdf:rest _:genid105 .
+
+_:genid105 a rdf:List;
+  rdf:first :Plombières;
+  rdf:rest _:genid104 .
+
+_:genid104 a rdf:List;
+  rdf:first :Pronfondeville;
+  rdf:rest _:genid103 .
+
+_:genid103 a rdf:List;
+  rdf:first :Province_de_Liege;
+  rdf:rest _:genid102 .
+
+_:genid102 a rdf:List;
+  rdf:first :Province_de_Namur;
+  rdf:rest _:genid101 .
+
+_:genid101 a rdf:List;
+  rdf:first :PucesEtAntiquités;
+  rdf:rest _:genid100 .
+
+_:genid100 a rdf:List;
+  rdf:first :Péruwelz;
+  rdf:rest _:genid99 .
+
+_:genid99 a rdf:List;
+  rdf:first :Raeren;
+  rdf:rest _:genid98 .
+
+_:genid98 a rdf:List;
+  rdf:first :Ramilles;
+  rdf:rest _:genid97 .
+
+_:genid97 a rdf:List;
+  rdf:first :Rebecq;
+  rdf:rest _:genid96 .
+
+_:genid96 a rdf:List;
+  rdf:first :Remicourt;
+  rdf:rest _:genid95 .
+
+_:genid95 a rdf:List;
+  rdf:first :Rendeux;
+  rdf:rest _:genid94 .
+
+_:genid94 a rdf:List;
+  rdf:first :Riwensart;
+  rdf:rest _:genid93 .
+
+_:genid93 a rdf:List;
+  rdf:first :Rochefort;
+  rdf:rest _:genid92 .
+
+_:genid92 a rdf:List;
+  rdf:first :Rouvroy;
+  rdf:rest _:genid91 .
+
+_:genid91 a rdf:List;
+  rdf:first :Saint-Georges-sur-Meuse;
+  rdf:rest _:genid90 .
+
+_:genid90 a rdf:List;
+  rdf:first :Saint-Ghislain;
+  rdf:rest _:genid89 .
+
+_:genid89 a rdf:List;
+  rdf:first :Saint-Léger;
+  rdf:rest _:genid88 .
+
+_:genid88 a rdf:List;
+  rdf:first :Saint-Nicolas;
+  rdf:rest _:genid87 .
+
+_:genid87 a rdf:List;
+  rdf:first :Saint-Ode;
+  rdf:rest _:genid86 .
+
+_:genid86 a rdf:List;
+  rdf:first :Saint_Hubert;
+  rdf:rest _:genid85 .
+
+_:genid85 a rdf:List;
+  rdf:first :Sambreville;
+  rdf:rest _:genid84 .
+
+_:genid84 a rdf:List;
+  rdf:first :Sankt-Vith;
+  rdf:rest _:genid83 .
+
+_:genid83 a rdf:List;
+  rdf:first :Seraing;
+  rdf:rest _:genid82 .
+
+_:genid82 a rdf:List;
+  rdf:first :Silly;
+  rdf:rest _:genid81 .
+
+_:genid81 a rdf:List;
+  rdf:first :Soignies;
+  rdf:rest _:genid80 .
+
+_:genid80 a rdf:List;
+  rdf:first :SoironSurScène;
+  rdf:rest _:genid79 .
+
+_:genid79 a rdf:List;
+  rdf:first :Sombreville;
+  rdf:rest _:genid78 .
+
+_:genid78 a rdf:List;
+  rdf:first :Somme-Leuze;
+  rdf:rest _:genid77 .
+
+_:genid77 a rdf:List;
+  rdf:first :Soumagne;
+  rdf:rest _:genid76 .
+
+_:genid76 a rdf:List;
+  rdf:first :Spa;
+  rdf:rest _:genid75 .
+
+_:genid75 a rdf:List;
+  rdf:first :Sprimont;
+  rdf:rest _:genid74 .
+
+_:genid74 a rdf:List;
+  rdf:first :Stavelot;
+  rdf:rest _:genid73 .
+
+_:genid73 a rdf:List;
+  rdf:first :Stoumont;
+  rdf:rest _:genid72 .
+
+_:genid72 a rdf:List;
+  rdf:first :Tellin;
+  rdf:rest _:genid71 .
+
+_:genid71 a rdf:List;
+  rdf:first :Tenneville;
+  rdf:rest _:genid70 .
+
+_:genid70 a rdf:List;
+  rdf:first :TheaterFestival_AuVertDeThoricourt;
+  rdf:rest _:genid69 .
+
+_:genid69 a rdf:List;
+  rdf:first :Theux;
+  rdf:rest _:genid68 .
+
+_:genid68 a rdf:List;
+  rdf:first :Thimister-Clermont;
+  rdf:rest _:genid67 .
+
+_:genid67 a rdf:List;
+  rdf:first :Thuin;
+  rdf:rest _:genid66 .
+
+_:genid66 a rdf:List;
+  rdf:first :Tinlot;
+  rdf:rest _:genid65 .
+
+_:genid65 a rdf:List;
+  rdf:first :Tintigny;
+  rdf:rest _:genid64 .
+
+_:genid64 a rdf:List;
+  rdf:first :Tournai;
+  rdf:rest _:genid63 .
+
+_:genid63 a rdf:List;
+  rdf:first :Trois-Ponts;
+  rdf:rest _:genid62 .
+
+_:genid62 a rdf:List;
+  rdf:first :Trooz;
+  rdf:rest _:genid61 .
+
+_:genid61 a rdf:List;
+  rdf:first :Tubize;
+  rdf:rest _:genid60 .
+
+_:genid60 a rdf:List;
+  rdf:first :Vaux-sur-Sure;
+  rdf:rest _:genid59 .
+
+_:genid59 a rdf:List;
+  rdf:first :Verlaine;
+  rdf:rest _:genid58 .
+
+_:genid58 a rdf:List;
+  rdf:first :Verviers;
+  rdf:rest _:genid57 .
+
+_:genid57 a rdf:List;
+  rdf:first :Vielslam;
+  rdf:rest _:genid56 .
+
+_:genid56 a rdf:List;
+  rdf:first :Villers-la-Ville;
+  rdf:rest _:genid55 .
+
+_:genid55 a rdf:List;
+  rdf:first :Villers-le-Bouillet;
+  rdf:rest _:genid54 .
+
+_:genid54 a rdf:List;
+  rdf:first :Viroinval;
+  rdf:rest _:genid53 .
+
+_:genid53 a rdf:List;
+  rdf:first :Virton;
+  rdf:rest _:genid52 .
+
+_:genid52 a rdf:List;
+  rdf:first :VisitesNocturnesAuxFlambeaux;
+  rdf:rest _:genid51 .
+
+_:genid51 a rdf:List;
+  rdf:first :Visé;
+  rdf:rest _:genid50 .
+
+_:genid50 a rdf:List;
+  rdf:first :Vresse-sur-Semois;
+  rdf:rest _:genid49 .
+
+_:genid49 a rdf:List;
+  rdf:first :Waimes;
+  rdf:rest _:genid48 .
+
+_:genid48 a rdf:List;
+  rdf:first :Walcourt;
+  rdf:rest _:genid47 .
+
+_:genid47 a rdf:List;
+  rdf:first :Wallonie_EquestreEvent;
+  rdf:rest _:genid46 .
+
+_:genid46 a rdf:List;
+  rdf:first :Wanze;
+  rdf:rest _:genid45 .
+
+_:genid45 a rdf:List;
+  rdf:first :Waremme;
+  rdf:rest _:genid44 .
+
+_:genid44 a rdf:List;
+  rdf:first :Wasseiges;
+  rdf:rest _:genid43 .
+
+_:genid43 a rdf:List;
+  rdf:first :Waterloo;
+  rdf:rest _:genid42 .
+
+_:genid42 a rdf:List;
+  rdf:first :Wavre;
+  rdf:rest _:genid41 .
+
+_:genid41 a rdf:List;
+  rdf:first :Welkenraedt;
+  rdf:rest _:genid40 .
+
+_:genid40 a rdf:List;
+  rdf:first :Wellin;
+  rdf:rest _:genid39 .
+
+_:genid39 a rdf:List;
+  rdf:first :Yvoir;
+  rdf:rest _:genid38 .
+
+_:genid38 a rdf:List;
+  rdf:first :walhain;
+  rdf:rest _:genid37 .
+
+_:genid37 a rdf:List;
+  rdf:first :20e_NuitDesChoeurs;
+  rdf:rest _:genid36 .
+
+_:genid36 a rdf:List;
+  rdf:first <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braine-l'Alleud>;
+  rdf:rest _:genid35 .
+
+_:genid35 a rdf:List;
+  rdf:first <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FestivalUniversatilThéatre&ArtDeLaScène>;
+  rdf:rest _:genid34 .
+
+_:genid34 a rdf:List;
+  rdf:first <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fontaine-l'Eveque>;
+  rdf:rest _:genid33 .
+
+_:genid33 a rdf:List;
+  rdf:first <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#HolidayVillage_DomaineDuVald'Adrimont>;
+  rdf:rest _:genid32 .
+
+_:genid32 a rdf:List;
+  rdf:first <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#JournéeWallonnesDel'eau>;
+  rdf:rest rdf:nil .
+# 
+
+_:genid281 a owl:AllDifferent;
+  owl:distinctMembers _:genid529 .
+
+_:genid529 a rdf:List;
+  rdf:first :ANtica;
+  rdf:rest _:genid528 .
+
+_:genid528 a rdf:List;
+  rdf:first :Amay;
+  rdf:rest _:genid527 .
+
+_:genid527 a rdf:List;
+  rdf:first :Amel;
+  rdf:rest _:genid526 .
+
+_:genid526 a rdf:List;
+  rdf:first :Andenne;
+  rdf:rest _:genid525 .
+
+_:genid525 a rdf:List;
+  rdf:first :Anhée;
+  rdf:rest _:genid524 .
+
+_:genid524 a rdf:List;
+  rdf:first :Ans;
+  rdf:rest _:genid523 .
+
+_:genid523 a rdf:List;
+  rdf:first :Anthisnes;
+  rdf:rest _:genid522 .
+
+_:genid522 a rdf:List;
+  rdf:first :Antoing;
+  rdf:rest _:genid521 .
+
+_:genid521 a rdf:List;
+  rdf:first :Arlon;
+  rdf:rest _:genid520 .
+
+_:genid520 a rdf:List;
+  rdf:first :Assesse;
+  rdf:rest _:genid519 .
+
+_:genid519 a rdf:List;
+  rdf:first :Ath;
+  rdf:rest _:genid518 .
+
+_:genid518 a rdf:List;
+  rdf:first :Attert;
+  rdf:rest _:genid517 .
+
+_:genid517 a rdf:List;
+  rdf:first :Aubange;
+  rdf:rest _:genid516 .
+
+_:genid516 a rdf:List;
+  rdf:first :Aubel;
+  rdf:rest _:genid515 .
+
+_:genid515 a rdf:List;
+  rdf:first :Awans;
+  rdf:rest _:genid514 .
+
+_:genid514 a rdf:List;
+  rdf:first :Aywaille;
+  rdf:rest _:genid513 .
+
+_:genid513 a rdf:List;
+  rdf:first :Baelen;
+  rdf:rest _:genid512 .
+
+_:genid512 a rdf:List;
+  rdf:first :Bassenge;
+  rdf:rest _:genid511 .
+
+_:genid511 a rdf:List;
+  rdf:first :Bastogne;
+  rdf:rest _:genid510 .
+
+_:genid510 a rdf:List;
+  rdf:first :Beaumont;
+  rdf:rest _:genid509 .
+
+_:genid509 a rdf:List;
+  rdf:first :Beauraing;
+  rdf:rest _:genid508 .
+
+_:genid508 a rdf:List;
+  rdf:first :Beauvechain;
+  rdf:rest _:genid507 .
+
+_:genid507 a rdf:List;
+  rdf:first :Berloz;
+  rdf:rest _:genid506 .
+
+_:genid506 a rdf:List;
+  rdf:first :Bertogne;
+  rdf:rest _:genid505 .
+
+_:genid505 a rdf:List;
+  rdf:first :Bertrix;
+  rdf:rest _:genid504 .
+
+_:genid504 a rdf:List;
+  rdf:first :Beyne-Heusay;
+  rdf:rest _:genid503 .
+
+_:genid503 a rdf:List;
+  rdf:first :Bike;
+  rdf:rest _:genid502 .
+
+_:genid502 a rdf:List;
+  rdf:first :Binche;
+  rdf:rest _:genid501 .
+
+_:genid501 a rdf:List;
+  rdf:first :Bièvre;
+  rdf:rest _:genid500 .
+
+_:genid500 a rdf:List;
+  rdf:first :Blegny;
+  rdf:rest _:genid499 .
+
+_:genid499 a rdf:List;
+  rdf:first :Boullion;
+  rdf:rest _:genid498 .
+
+_:genid498 a rdf:List;
+  rdf:first :Brabant_wallon;
+  rdf:rest _:genid497 .
+
+_:genid497 a rdf:List;
+  rdf:first :Braine-le-Château;
+  rdf:rest _:genid496 .
+
+_:genid496 a rdf:List;
+  rdf:first :Braine-le-Comte;
+  rdf:rest _:genid495 .
+
+_:genid495 a rdf:List;
+  rdf:first :Braives;
+  rdf:rest _:genid494 .
+
+_:genid494 a rdf:List;
+  rdf:first :Burdinne;
+  rdf:rest _:genid493 .
+
+_:genid493 a rdf:List;
+  rdf:first :Burg-Reuland;
+  rdf:rest _:genid492 .
+
+_:genid492 a rdf:List;
+  rdf:first :Butgenbach;
+  rdf:rest _:genid491 .
+
+_:genid491 a rdf:List;
+  rdf:first :Büllingen;
+  rdf:rest _:genid490 .
+
+_:genid490 a rdf:List;
+  rdf:first :CampingEden;
+  rdf:rest _:genid489 .
+
+_:genid489 a rdf:List;
+  rdf:first :Cerfontaine;
+  rdf:rest _:genid488 .
+
+_:genid488 a rdf:List;
+  rdf:first :Charleroi;
+  rdf:rest _:genid487 .
+
+_:genid487 a rdf:List;
+  rdf:first :Chastre;
+  rdf:rest _:genid486 .
+
+_:genid486 a rdf:List;
+  rdf:first :Chaumont-Gistoux;
+  rdf:rest _:genid485 .
+
+_:genid485 a rdf:List;
+  rdf:first :Chimay;
+  rdf:rest _:genid484 .
+
+_:genid484 a rdf:List;
+  rdf:first :Chiny;
+  rdf:rest _:genid483 .
+
+_:genid483 a rdf:List;
+  rdf:first :Chièvres;
+  rdf:rest _:genid482 .
+
+_:genid482 a rdf:List;
+  rdf:first :Châtelet;
+  rdf:rest _:genid481 .
+
+_:genid481 a rdf:List;
+  rdf:first :Ciney;
+  rdf:rest _:genid480 .
+
+_:genid480 a rdf:List;
+  rdf:first :CitéDeLaBière;
+  rdf:rest _:genid479 .
+
+_:genid479 a rdf:List;
+  rdf:first :Clavier;
+  rdf:rest _:genid478 .
+
+_:genid478 a rdf:List;
+  rdf:first :Comblain-au-Pont;
+  rdf:rest _:genid477 .
+
+_:genid477 a rdf:List;
+  rdf:first :Comines-Warneton;
+  rdf:rest _:genid476 .
+
+_:genid476 a rdf:List;
+  rdf:first :Court-Saint-Etienne;
+  rdf:rest _:genid475 .
+
+_:genid475 a rdf:List;
+  rdf:first :Couvin;
+  rdf:rest _:genid474 .
+
+_:genid474 a rdf:List;
+  rdf:first :Crisnée;
+  rdf:rest _:genid473 .
+
+_:genid473 a rdf:List;
+  rdf:first :CroisièresGourmandes;
+  rdf:rest _:genid472 .
+
+_:genid472 a rdf:List;
+  rdf:first :Dalhem;
+  rdf:rest _:genid471 .
+
+_:genid471 a rdf:List;
+  rdf:first :Daverdisse;
+  rdf:rest _:genid470 .
+
+_:genid470 a rdf:List;
+  rdf:first :Dinant;
+  rdf:rest _:genid469 .
+
+_:genid469 a rdf:List;
+  rdf:first :Dison;
+  rdf:rest _:genid468 .
+
+_:genid468 a rdf:List;
+  rdf:first :Doische;
+  rdf:rest _:genid467 .
+
+_:genid467 a rdf:List;
+  rdf:first :Donceel;
+  rdf:rest _:genid466 .
+
+_:genid466 a rdf:List;
+  rdf:first :Durbuy;
+  rdf:rest _:genid465 .
+
+_:genid465 a rdf:List;
+  rdf:first :Eghezée;
+  rdf:rest _:genid464 .
+
+_:genid464 a rdf:List;
+  rdf:first :Enghien;
+  rdf:rest _:genid463 .
+
+_:genid463 a rdf:List;
+  rdf:first :Engis;
+  rdf:rest _:genid462 .
+
+_:genid462 a rdf:List;
+  rdf:first :Erezee;
+  rdf:rest _:genid461 .
+
+_:genid461 a rdf:List;
+  rdf:first :Esneux;
+  rdf:rest _:genid460 .
+
+_:genid460 a rdf:List;
+  rdf:first :Etalle;
+  rdf:rest _:genid459 .
+
+_:genid459 a rdf:List;
+  rdf:first :Eupen;
+  rdf:rest _:genid458 .
+
+_:genid458 a rdf:List;
+  rdf:first :Faimes;
+  rdf:rest _:genid457 .
+
+_:genid457 a rdf:List;
+  rdf:first :Fauvillers;
+  rdf:rest _:genid456 .
+
+_:genid456 a rdf:List;
+  rdf:first :Fernelmont;
+  rdf:rest _:genid455 .
+
+_:genid455 a rdf:List;
+  rdf:first :Ferrières;
+  rdf:rest _:genid454 .
+
+_:genid454 a rdf:List;
+  rdf:first :FestivalDesArtsDeLaRue;
+  rdf:rest _:genid453 .
+
+_:genid453 a rdf:List;
+  rdf:first :Fexhe-le-Haut-Clocher;
+  rdf:rest _:genid452 .
+
+_:genid452 a rdf:List;
+  rdf:first :Fleurus;
+  rdf:rest _:genid451 .
+
+_:genid451 a rdf:List;
+  rdf:first :Florennes;
+  rdf:rest _:genid450 .
+
+_:genid450 a rdf:List;
+  rdf:first :Florent;
+  rdf:rest _:genid449 .
+
+_:genid449 a rdf:List;
+  rdf:first :Flémalle;
+  rdf:rest _:genid448 .
+
+_:genid448 a rdf:List;
+  rdf:first :Fléron;
+  rdf:rest _:genid447 .
+
+_:genid447 a rdf:List;
+  rdf:first :Fosse-la-Ville;
+  rdf:rest _:genid446 .
+
+_:genid446 a rdf:List;
+  rdf:first :Gedinne;
+  rdf:rest _:genid445 .
+
+_:genid445 a rdf:List;
+  rdf:first :Geer;
+  rdf:rest _:genid444 .
+
+_:genid444 a rdf:List;
+  rdf:first :Gembloux;
+  rdf:rest _:genid443 .
+
+_:genid443 a rdf:List;
+  rdf:first :Genappe;
+  rdf:rest _:genid442 .
+
+_:genid442 a rdf:List;
+  rdf:first :Gesves;
+  rdf:rest _:genid441 .
+
+_:genid441 a rdf:List;
+  rdf:first :Gouvy;
+  rdf:rest _:genid440 .
+
+_:genid440 a rdf:List;
+  rdf:first :Grez-Doiceau;
+  rdf:rest _:genid439 .
+
+_:genid439 a rdf:List;
+  rdf:first :Grâce-Hollogne;
+  rdf:rest _:genid438 .
+
+_:genid438 a rdf:List;
+  rdf:first :GîteRural_LesTilleulsCotéVallée;
+  rdf:rest _:genid437 .
+
+_:genid437 a rdf:List;
+  rdf:first :Habay;
+  rdf:rest _:genid436 .
+
+_:genid436 a rdf:List;
+  rdf:first :Hainaut;
+  rdf:rest _:genid435 .
+
+_:genid435 a rdf:List;
+  rdf:first :Halloween_PairiDaiza;
+  rdf:rest _:genid434 .
+
+_:genid434 a rdf:List;
+  rdf:first :Hamoir;
+  rdf:rest _:genid433 .
+
+_:genid433 a rdf:List;
+  rdf:first :Hamois;
+  rdf:rest _:genid432 .
+
+_:genid432 a rdf:List;
+  rdf:first :Hannut;
+  rdf:rest _:genid431 .
+
+_:genid431 a rdf:List;
+  rdf:first :Hastière;
+  rdf:rest _:genid430 .
+
+_:genid430 a rdf:List;
+  rdf:first :Hatton;
+  rdf:rest _:genid429 .
+
+_:genid429 a rdf:List;
+  rdf:first :Havelange;
+  rdf:rest _:genid428 .
+
+_:genid428 a rdf:List;
+  rdf:first :Herbeumont;
+  rdf:rest _:genid427 .
+
+_:genid427 a rdf:List;
+  rdf:first :Herstal;
+  rdf:rest _:genid426 .
+
+_:genid426 a rdf:List;
+  rdf:first :Herve;
+  rdf:rest _:genid425 .
+
+_:genid425 a rdf:List;
+  rdf:first :Houffalize;
+  rdf:rest _:genid424 .
+
+_:genid424 a rdf:List;
+  rdf:first :Houyet;
+  rdf:rest _:genid423 .
+
+_:genid423 a rdf:List;
+  rdf:first :Huy;
+  rdf:rest _:genid422 .
+
+_:genid422 a rdf:List;
+  rdf:first :Hélécine;
+  rdf:rest _:genid421 .
+
+_:genid421 a rdf:List;
+  rdf:first :Héron;
+  rdf:rest _:genid420 .
+
+_:genid420 a rdf:List;
+  rdf:first :Incourt;
+  rdf:rest _:genid419 .
+
+_:genid419 a rdf:List;
+  rdf:first :Ittre;
+  rdf:rest _:genid418 .
+
+_:genid418 a rdf:List;
+  rdf:first :Jacques;
+  rdf:rest _:genid417 .
+
+_:genid417 a rdf:List;
+  rdf:first :Jalhay;
+  rdf:rest _:genid416 .
+
+_:genid416 a rdf:List;
+  rdf:first :Jean-ClaudeServais_au-delàDuTrait;
+  rdf:rest _:genid415 .
+
+_:genid415 a rdf:List;
+  rdf:first :Jemeppe-sur-Sambre;
+  rdf:rest _:genid414 .
+
+_:genid414 a rdf:List;
+  rdf:first :Jodoigne;
+  rdf:rest _:genid413 .
+
+_:genid413 a rdf:List;
+  rdf:first :Juprelle;
+  rdf:rest _:genid412 .
+
+_:genid412 a rdf:List;
+  rdf:first :Kelmis;
+  rdf:rest _:genid411 .
+
+_:genid411 a rdf:List;
+  rdf:first :LaCaravaneDuCourt;
+  rdf:rest _:genid410 .
+
+_:genid410 a rdf:List;
+  rdf:first :La_Hulpe;
+  rdf:rest _:genid409 .
+
+_:genid409 a rdf:List;
+  rdf:first :La_Louvière;
+  rdf:rest _:genid408 .
+
+_:genid408 a rdf:List;
+  rdf:first :La_Roche-en-Ardenne;
+  rdf:rest _:genid407 .
+
+_:genid407 a rdf:List;
+  rdf:first :La_bruyère;
+  rdf:rest _:genid406 .
+
+_:genid406 a rdf:List;
+  rdf:first :Lasne;
+  rdf:rest _:genid405 .
+
+_:genid405 a rdf:List;
+  rdf:first :Laura;
+  rdf:rest _:genid404 .
+
+_:genid404 a rdf:List;
+  rdf:first :LePréDeCaroline;
+  rdf:rest _:genid403 .
+
+_:genid403 a rdf:List;
+  rdf:first :LeValDePoix;
+  rdf:rest _:genid402 .
+
+_:genid402 a rdf:List;
+  rdf:first :Le_Roeulx;
+  rdf:rest _:genid401 .
+
+_:genid401 a rdf:List;
+  rdf:first :Lessines;
+  rdf:rest _:genid400 .
+
+_:genid400 a rdf:List;
+  rdf:first :Leuze-en-Hainaut;
+  rdf:rest _:genid399 .
+
+_:genid399 a rdf:List;
+  rdf:first :Libin;
+  rdf:rest _:genid398 .
+
+_:genid398 a rdf:List;
+  rdf:first :Libramont-Chevigné;
+  rdf:rest _:genid397 .
+
+_:genid397 a rdf:List;
+  rdf:first :Liege;
+  rdf:rest _:genid396 .
+
+_:genid396 a rdf:List;
+  rdf:first :Lierneux;
+  rdf:rest _:genid395 .
+
+_:genid395 a rdf:List;
+  rdf:first :Limbourg;
+  rdf:rest _:genid394 .
+
+_:genid394 a rdf:List;
+  rdf:first :Lincent;
+  rdf:rest _:genid393 .
+
+_:genid393 a rdf:List;
+  rdf:first :Lontzen;
+  rdf:rest _:genid392 .
+
+_:genid392 a rdf:List;
+  rdf:first :Louis;
+  rdf:rest _:genid391 .
+
+_:genid391 a rdf:List;
+  rdf:first :Luxembourg;
+  rdf:rest _:genid390 .
+
+_:genid390 a rdf:List;
+  rdf:first :Léglise;
+  rdf:rest _:genid389 .
+
+_:genid389 a rdf:List;
+  rdf:first :Malmedy;
+  rdf:rest _:genid388 .
+
+_:genid388 a rdf:List;
+  rdf:first :Manhay;
+  rdf:rest _:genid387 .
+
+_:genid387 a rdf:List;
+  rdf:first :Marche-en-Famenne;
+  rdf:rest _:genid386 .
+
+_:genid386 a rdf:List;
+  rdf:first :Marchin;
+  rdf:rest _:genid385 .
+
+_:genid385 a rdf:List;
+  rdf:first :Martelange;
+  rdf:rest _:genid384 .
+
+_:genid384 a rdf:List;
+  rdf:first :Mattet;
+  rdf:rest _:genid383 .
+
+_:genid383 a rdf:List;
+  rdf:first :Modave;
+  rdf:rest _:genid382 .
+
+_:genid382 a rdf:List;
+  rdf:first :Mons;
+  rdf:rest _:genid381 .
+
+_:genid381 a rdf:List;
+  rdf:first :Mont-Saint-Guibert;
+  rdf:rest _:genid380 .
+
+_:genid380 a rdf:List;
+  rdf:first :Mouscron;
+  rdf:rest _:genid379 .
+
+_:genid379 a rdf:List;
+  rdf:first :Musson;
+  rdf:rest _:genid378 .
+
+_:genid378 a rdf:List;
+  rdf:first :MysteryForest;
+  rdf:rest _:genid377 .
+
+_:genid377 a rdf:List;
+  rdf:first :Namur;
+  rdf:rest _:genid376 .
+
+_:genid376 a rdf:List;
+  rdf:first :Nandrin;
+  rdf:rest _:genid375 .
+
+_:genid375 a rdf:List;
+  rdf:first :Nassogne;
+  rdf:rest _:genid374 .
+
+_:genid374 a rdf:List;
+  rdf:first :Neufchateau;
+  rdf:rest _:genid373 .
+
+_:genid373 a rdf:List;
+  rdf:first :Neupré;
+  rdf:rest _:genid372 .
+
+_:genid372 a rdf:List;
+  rdf:first :Nivelles;
+  rdf:rest _:genid371 .
+
+_:genid371 a rdf:List;
+  rdf:first :NuitsDuCirques;
+  rdf:rest _:genid370 .
+
+_:genid370 a rdf:List;
+  rdf:first :Ohey;
+  rdf:rest _:genid369 .
+
+_:genid369 a rdf:List;
+  rdf:first :Olne;
+  rdf:rest _:genid368 .
+
+_:genid368 a rdf:List;
+  rdf:first :OmbreEtLumières_duMoyenAge;
+  rdf:rest _:genid367 .
+
+_:genid367 a rdf:List;
+  rdf:first :Onhaye;
+  rdf:rest _:genid366 .
+
+_:genid366 a rdf:List;
+  rdf:first :Oreye;
+  rdf:rest _:genid365 .
+
+_:genid365 a rdf:List;
+  rdf:first :Orp-Jauche;
+  rdf:rest _:genid364 .
+
+_:genid364 a rdf:List;
+  rdf:first :Ottignies-Louvian-la-Neuve;
+  rdf:rest _:genid363 .
+
+_:genid363 a rdf:List;
+  rdf:first :Ouffet;
+  rdf:rest _:genid362 .
+
+_:genid362 a rdf:List;
+  rdf:first :Oupeye;
+  rdf:rest _:genid361 .
+
+_:genid361 a rdf:List;
+  rdf:first :Paliseul;
+  rdf:rest _:genid360 .
+
+_:genid360 a rdf:List;
+  rdf:first :Paul;
+  rdf:rest _:genid359 .
+
+_:genid359 a rdf:List;
+  rdf:first :Pepinster;
+  rdf:rest _:genid358 .
+
+_:genid358 a rdf:List;
+  rdf:first :Perwez;
+  rdf:rest _:genid357 .
+
+_:genid357 a rdf:List;
+  rdf:first :Philippeville;
+  rdf:rest _:genid356 .
+
+_:genid356 a rdf:List;
+  rdf:first :Pierre;
+  rdf:rest _:genid355 .
+
+_:genid355 a rdf:List;
+  rdf:first :Plombières;
+  rdf:rest _:genid354 .
+
+_:genid354 a rdf:List;
+  rdf:first :Pronfondeville;
+  rdf:rest _:genid353 .
+
+_:genid353 a rdf:List;
+  rdf:first :Province_de_Liege;
+  rdf:rest _:genid352 .
+
+_:genid352 a rdf:List;
+  rdf:first :Province_de_Namur;
+  rdf:rest _:genid351 .
+
+_:genid351 a rdf:List;
+  rdf:first :PucesEtAntiquités;
+  rdf:rest _:genid350 .
+
+_:genid350 a rdf:List;
+  rdf:first :Péruwelz;
+  rdf:rest _:genid349 .
+
+_:genid349 a rdf:List;
+  rdf:first :Raeren;
+  rdf:rest _:genid348 .
+
+_:genid348 a rdf:List;
+  rdf:first :Ramilles;
+  rdf:rest _:genid347 .
+
+_:genid347 a rdf:List;
+  rdf:first :Rebecq;
+  rdf:rest _:genid346 .
+
+_:genid346 a rdf:List;
+  rdf:first :Remicourt;
+  rdf:rest _:genid345 .
+
+_:genid345 a rdf:List;
+  rdf:first :Rendeux;
+  rdf:rest _:genid344 .
+
+_:genid344 a rdf:List;
+  rdf:first :Riwensart;
+  rdf:rest _:genid343 .
+
+_:genid343 a rdf:List;
+  rdf:first :Rochefort;
+  rdf:rest _:genid342 .
+
+_:genid342 a rdf:List;
+  rdf:first :Rouvroy;
+  rdf:rest _:genid341 .
+
+_:genid341 a rdf:List;
+  rdf:first :Saint-Georges-sur-Meuse;
+  rdf:rest _:genid340 .
+
+_:genid340 a rdf:List;
+  rdf:first :Saint-Ghislain;
+  rdf:rest _:genid339 .
+
+_:genid339 a rdf:List;
+  rdf:first :Saint-Léger;
+  rdf:rest _:genid338 .
+
+_:genid338 a rdf:List;
+  rdf:first :Saint-Nicolas;
+  rdf:rest _:genid337 .
+
+_:genid337 a rdf:List;
+  rdf:first :Saint-Ode;
+  rdf:rest _:genid336 .
+
+_:genid336 a rdf:List;
+  rdf:first :Saint_Hubert;
+  rdf:rest _:genid335 .
+
+_:genid335 a rdf:List;
+  rdf:first :Sambreville;
+  rdf:rest _:genid334 .
+
+_:genid334 a rdf:List;
+  rdf:first :Sankt-Vith;
+  rdf:rest _:genid333 .
+
+_:genid333 a rdf:List;
+  rdf:first :Seraing;
+  rdf:rest _:genid332 .
+
+_:genid332 a rdf:List;
+  rdf:first :Silly;
+  rdf:rest _:genid331 .
+
+_:genid331 a rdf:List;
+  rdf:first :Soignies;
+  rdf:rest _:genid330 .
+
+_:genid330 a rdf:List;
+  rdf:first :SoironSurScène;
+  rdf:rest _:genid329 .
+
+_:genid329 a rdf:List;
+  rdf:first :Sombreville;
+  rdf:rest _:genid328 .
+
+_:genid328 a rdf:List;
+  rdf:first :Somme-Leuze;
+  rdf:rest _:genid327 .
+
+_:genid327 a rdf:List;
+  rdf:first :Soumagne;
+  rdf:rest _:genid326 .
+
+_:genid326 a rdf:List;
+  rdf:first :Spa;
+  rdf:rest _:genid325 .
+
+_:genid325 a rdf:List;
+  rdf:first :Sprimont;
+  rdf:rest _:genid324 .
+
+_:genid324 a rdf:List;
+  rdf:first :Stavelot;
+  rdf:rest _:genid323 .
+
+_:genid323 a rdf:List;
+  rdf:first :Stoumont;
+  rdf:rest _:genid322 .
+
+_:genid322 a rdf:List;
+  rdf:first :Tellin;
+  rdf:rest _:genid321 .
+
+_:genid321 a rdf:List;
+  rdf:first :Tenneville;
+  rdf:rest _:genid320 .
+
+_:genid320 a rdf:List;
+  rdf:first :TheaterFestival_AuVertDeThoricourt;
+  rdf:rest _:genid319 .
+
+_:genid319 a rdf:List;
+  rdf:first :Theux;
+  rdf:rest _:genid318 .
+
+_:genid318 a rdf:List;
+  rdf:first :Thimister-Clermont;
+  rdf:rest _:genid317 .
+
+_:genid317 a rdf:List;
+  rdf:first :Thuin;
+  rdf:rest _:genid316 .
+
+_:genid316 a rdf:List;
+  rdf:first :Tinlot;
+  rdf:rest _:genid315 .
+
+_:genid315 a rdf:List;
+  rdf:first :Tintigny;
+  rdf:rest _:genid314 .
+
+_:genid314 a rdf:List;
+  rdf:first :Tournai;
+  rdf:rest _:genid313 .
+
+_:genid313 a rdf:List;
+  rdf:first :Trois-Ponts;
+  rdf:rest _:genid312 .
+
+_:genid312 a rdf:List;
+  rdf:first :Trooz;
+  rdf:rest _:genid311 .
+
+_:genid311 a rdf:List;
+  rdf:first :Tubize;
+  rdf:rest _:genid310 .
+
+_:genid310 a rdf:List;
+  rdf:first :Vaux-sur-Sure;
+  rdf:rest _:genid309 .
+
+_:genid309 a rdf:List;
+  rdf:first :Verlaine;
+  rdf:rest _:genid308 .
+
+_:genid308 a rdf:List;
+  rdf:first :Verviers;
+  rdf:rest _:genid307 .
+
+_:genid307 a rdf:List;
+  rdf:first :Vielslam;
+  rdf:rest _:genid306 .
+
+_:genid306 a rdf:List;
+  rdf:first :Villers-la-Ville;
+  rdf:rest _:genid305 .
+
+_:genid305 a rdf:List;
+  rdf:first :Villers-le-Bouillet;
+  rdf:rest _:genid304 .
+
+_:genid304 a rdf:List;
+  rdf:first :Viroinval;
+  rdf:rest _:genid303 .
+
+_:genid303 a rdf:List;
+  rdf:first :Virton;
+  rdf:rest _:genid302 .
+
+_:genid302 a rdf:List;
+  rdf:first :VisitesNocturnesAuxFlambeaux;
+  rdf:rest _:genid301 .
+
+_:genid301 a rdf:List;
+  rdf:first :Visé;
+  rdf:rest _:genid300 .
+
+_:genid300 a rdf:List;
+  rdf:first :Vresse-sur-Semois;
+  rdf:rest _:genid299 .
+
+_:genid299 a rdf:List;
+  rdf:first :Waimes;
+  rdf:rest _:genid298 .
+
+_:genid298 a rdf:List;
+  rdf:first :Walcourt;
+  rdf:rest _:genid297 .
+
+_:genid297 a rdf:List;
+  rdf:first :Wallonie_EquestreEvent;
+  rdf:rest _:genid296 .
+
+_:genid296 a rdf:List;
+  rdf:first :Wanze;
+  rdf:rest _:genid295 .
+
+_:genid295 a rdf:List;
+  rdf:first :Waremme;
+  rdf:rest _:genid294 .
+
+_:genid294 a rdf:List;
+  rdf:first :Wasseiges;
+  rdf:rest _:genid293 .
+
+_:genid293 a rdf:List;
+  rdf:first :Waterloo;
+  rdf:rest _:genid292 .
+
+_:genid292 a rdf:List;
+  rdf:first :Wavre;
+  rdf:rest _:genid291 .
+
+_:genid291 a rdf:List;
+  rdf:first :Welkenraedt;
+  rdf:rest _:genid290 .
+
+_:genid290 a rdf:List;
+  rdf:first :Wellin;
+  rdf:rest _:genid289 .
+
+_:genid289 a rdf:List;
+  rdf:first :Yvoir;
+  rdf:rest _:genid288 .
+
+_:genid288 a rdf:List;
+  rdf:first :walhain;
+  rdf:rest _:genid287 .
+
+_:genid287 a rdf:List;
+  rdf:first :20e_NuitDesChoeurs;
+  rdf:rest _:genid286 .
+
+_:genid286 a rdf:List;
+  rdf:first <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braine-l'Alleud>;
+  rdf:rest _:genid285 .
+
+_:genid285 a rdf:List;
+  rdf:first <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FestivalUniversatilThéatre&ArtDeLaScène>;
+  rdf:rest _:genid284 .
+
+_:genid284 a rdf:List;
+  rdf:first <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fontaine-l'Eveque>;
+  rdf:rest _:genid283 .
+
+_:genid283 a rdf:List;
+  rdf:first <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#HolidayVillage_DomaineDuVald'Adrimont>;
+  rdf:rest _:genid282 .
+
+_:genid282 a rdf:List;
+  rdf:first <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#JournéeWallonnesDel'eau>;
+  rdf:rest rdf:nil .
+# 
+# Generated by the OWL API (version 5.1.13.2020-01-27T22:08:36Z) https://github.com/owlcs/owlapi/
