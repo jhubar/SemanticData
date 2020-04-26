@@ -1,6 +1,5 @@
-package tiw;
+package tiw_owlapi;
 
-import java.awt.List;
 import java.io.File;
 import java.util.HashSet;
 import java.util.Set;
@@ -19,13 +18,12 @@ import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
-import org.semanticweb.owlapi.model.parameters.Imports;
 import org.semanticweb.owlapi.reasoner.InferenceType;
 import org.semanticweb.owlapi.reasoner.NodeSet;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.vocab.OWL2Datatype;
 
-public class OWLAPITuto {
+public class OWLAPI {
 	
 	private static void printInstances(OWLReasoner reasoner, OWLDataFactory dataFactory, IRI classIRI) {
 		NodeSet<OWLNamedIndividual> events = reasoner.getInstances(dataFactory.getOWLClass(classIRI), false);
