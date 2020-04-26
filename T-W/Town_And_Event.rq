@@ -7,9 +7,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT * WHERE
 {
 
- ?ville rdf:type t:Ville .
- ?event t:isLocated ?ville .
- ?event rdf:type ?typeEvent .
- ?typeEvent rdfs:subClassOf t:Evenement .
+ ?town rdf:type t:Town .
+ ?event t:isLocated ?town  .
+
 
 }

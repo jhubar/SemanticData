@@ -1,6 +1,0 @@
-PREFIX: <http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#> 
-
-SELECT ?hasCost WHERE
-{
- :Visites_nocturnes_aux_flambeaux :cost ?hasCost
-}

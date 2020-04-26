@@ -6,13 +6,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT * WHERE
 {
- ?logement rdf:type ?typelog .
- ?typelog rdfs:subClassOf t:Logement .
- ?event t:isLocated ?ville .
- ?logement t:isLocated ?ville .
+ ?housing rdf:type ?typeHousing .
+ ?typeHousing rdfs:subClassOf t:Housing .
+ ?event t:isLocated ?town .
+ ?logement t:isLocated ?town .
 
- ?ville rdf:type t:Ville .
- ?ville t:partOf t:Province_de_Liege .
+ ?town rdf:type t:Town .
+ ?town t:partOf t:Province_de_Liege .
 
 
-} 
+}

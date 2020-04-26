@@ -4,7 +4,11 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT (COUNT(?x) AS ?xs)  WHERE
+SELECT * WHERE
 {
- ?x rdf:type t:Ville
+?town rdf:type t:Town .
+?town t:partOf ?province .
+?town t:partOf t:Province_de_Namur .
+?province rdf:type t:Province .
+
 }

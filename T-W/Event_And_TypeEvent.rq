@@ -7,7 +7,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT * WHERE
 {
  ?event rdf:type ?typeEvent .
- ?typeEvent rdfs:subClassOf t:Evenement .
+ ?typeEvent rdfs:subClassOf t:Event .
 
 
 
