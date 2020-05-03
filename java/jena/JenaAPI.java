@@ -6,7 +6,10 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
+import org.apache.jena.datatypes.xsd.XSDDateTime;
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
@@ -14,8 +17,11 @@ import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.ResultSetFormatter;
 import org.apache.jena.query.Syntax;
+import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.vocabulary.RDF;
 
 public class JenaAPI {
 	
@@ -43,7 +49,11 @@ public class JenaAPI {
 		ResultSet results = exec.execSelect();
 		
 		// Outputs the results
+		String[] pathElements = queryPath.split("\\\\");
+		String queryName = pathElements[pathElements.length - 1];
+		System.out.println(queryName);
 		ResultSetFormatter.out(System.out, results, query);
+		System.out.println("\n");
 		
 		// Closes the QueryExecution
 		exec.close();
@@ -53,7 +63,7 @@ public class JenaAPI {
 		String ontologyPath = "D:\\Documents\\UNIVERSITE\\Bloc5\\Quadri 2\\SemanticData\\Project\\SemanticData\\TourismeInWallonia.owl";
 		String updatedOntologyPath = "D:\\Documents\\UNIVERSITE\\Bloc5\\Quadri 2\\SemanticData\\Project\\SemanticData\\TourismeInWallonia_Updated_J.owl";
 		
-		String queriesDirectory = "D:\\Documents\\UNIVERSITE\\Bloc5\\Quadri 2\\SemanticData\\Project\\SemanticData\\T-W";
+		String queriesDirectory = "D:\\Documents\\UNIVERSITE\\Bloc5\\Quadri 2\\SemanticData\\Project\\SemanticData\\T-W\\";
 		
 		String IRI = "http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#";
 		
@@ -80,6 +90,20 @@ public class JenaAPI {
 			} else {
 				System.err.println("ERROR: Cannot find queries.");
 			}
+			
+			queryModel(model, queriesDirectory + "Event_And_TypeEvent.rq");
+			
+			// Adds event
+			String eventName = IRI + "Marche_de_Noel_Liege";
+			String eventType = IRI + "ChristmasMarket";
+			String eventLocation = IRI + "Liege";
+			Calendar sd = GregorianCalendar.getInstance();
+			Literal startDate = model.createTypedLiteral("2020-11-27T11:00:00+01:00");
+			String endDate = "2021-01-04T20:00:00+01:00";
+			
+			Resource christmasMarketLiege = model.createResource();
+			
+			christmasMarketLiege.addProperty(RDF.type, model.getResource(eventType));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
