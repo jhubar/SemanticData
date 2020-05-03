@@ -1,4 +1,4 @@
-PREFIX t:<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#>
+PREFIX :<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -6,8 +6,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?event ?town
 WHERE
 {
-  ?event t:startDate ?date .
-  ?event t:isLocated ?town .
-  ?town rdf:type t:Town .
+  ?event :startDate ?date .
+  ?event :isLocated ?town .
+  ?town rdf:type :Town .
   FILTER (?date > "2020-08-31T10:20:13+05:30"^^xsd:dateTime)
 } order by ?date

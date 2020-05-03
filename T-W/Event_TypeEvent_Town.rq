@@ -1,4 +1,4 @@
-PREFIX t:<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#>
+PREFIX :<http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -8,12 +8,12 @@ SELECT ?housing ?event ?town WHERE
 {
 
  ?housing rdf:type ?typeHousing .
- ?typeHousing rdfs:subClassOf t:Housing .
+ ?typeHousing rdfs:subClassOf :Housing .
  ?event rdf:type ?typeEvent .
- ?typeEvent rdfs:subClassOf t:Event .
- ?housing t:isLocated ?town .
+ ?typeEvent rdfs:subClassOf :Event .
+ ?housing :isLocated ?town .
 
- ?town rdf:type t:Town .
- ?town t:partOf t:Province_de_Liege .
+ ?town rdf:type :Town .
+ ?town :partOf :Province_de_Liege .
 
 }

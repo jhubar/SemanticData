@@ -7,9 +7,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT * WHERE
 {
 
-?town rdf:type t:Town .
-?town t:partOf ?province .
-?town t:partOf t:Province_de_Namur .
-?province rdf:type t:Province .
+?town rdf:type :Town .
+?town :partOf ?province .
+?town :partOf :Province_de_Namur .
+?province rdf:type :Province .
 
 }
