@@ -31,6 +31,7 @@ import org.apache.jena.rdf.model.ModelFactory;
 //import be.me.pae.graphics.GraphPanel;
 //import be.me.pae.graphics.Legend;
 import be.tiw.gui.graphics.Button;
+import be.tiw.gui.graphics.QueryPanel;
 //import be.me.pae.graphics.SearchDialog;
 import be.tiw.gui.file.FileOpener;
 //import be.me.pae.graph.Graph;
@@ -230,31 +231,23 @@ public class GUI extends JFrame implements ActionListener
 			this.centerPanel.updateUI();
 			return;
 		}
-//		if(e.getSource()==view)
-//		{
-//			if(this.getTitle().length()<6)
-//			{
-//				JOptionPane.showMessageDialog(this, "Aucune base de donnée sélectionnée", "Erreur", JOptionPane.ERROR_MESSAGE);  
-//				return;
-//			}
-//			this.setGraphMenu();
-//			this.setLegend();
-//			this.centerPanel.removeAll();
-//			this.centerPanel.setLayout(new BorderLayout());
-//			JPanel pan=new JPanel();
-//			pan.setBackground(Color.WHITE);
-//			pan.add(back);
-//			this.centerPanel.add("South", pan);
-//			gp=new GraphPanel(CDB);
-//			gp.setBackground(Color.WHITE);
-//			scroll = new JScrollPane(gp);
-//			scroll.setBackground(Color.WHITE);
-//
-//			
-//			this.centerPanel.add("Center",scroll);
-//			this.centerPanel.updateUI();
-//			return;
-//		}
+		if(e.getSource()==request)
+		{
+			if(this.getTitle().length()<22)
+			{
+				JOptionPane.showMessageDialog(this, "No ontology selected", "Error", JOptionPane.ERROR_MESSAGE);  
+				return;
+			}
+			this.centerPanel.removeAll();
+			this.centerPanel.setLayout(new BorderLayout());
+			JPanel pan=new JPanel();
+			pan.setBackground(Color.WHITE);
+			pan.add(back);
+			this.centerPanel.add("South", pan);
+			this.centerPanel.add("Center",new QueryPanel(ontologyModel));
+			this.centerPanel.updateUI();
+			return;
+		}
 		if(e.getSource()==back)
 		{
 			this.centerPanel.removeAll();
