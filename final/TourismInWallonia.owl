@@ -7,10 +7,10 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -18,7 +18,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#SaleIn -->
@@ -27,7 +27,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#People"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FleaMarket"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#goTo -->
@@ -37,7 +37,7 @@
         <rdfs:range rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
         <rdfs:comment>Client-Touriste-Visiteur goToAnEvent Evenement</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#hasParticipant -->
@@ -46,7 +46,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#People"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#isHostOf -->
@@ -56,7 +56,7 @@
         <rdfs:range rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
         <rdfs:comment>Client-Touriste-Visiteur isHostOf Vendeur-Proprietaire</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#isLocated -->
@@ -73,7 +73,7 @@
         <rdfs:range rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <rdfs:comment>An event is in a province</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#isProposedBy -->
@@ -83,7 +83,7 @@
         <rdfs:range rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#People"/>
         <rdfs:comment>Logement isProposedBy Vendeur-Proprietaire</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#liveIn -->
@@ -92,7 +92,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#People"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#owns -->
@@ -101,7 +101,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#People"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Housing"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#partOf -->
@@ -110,7 +110,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#sleepIn -->
@@ -119,10 +119,10 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#People"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Housing"/>
     </owl:ObjectProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -130,7 +130,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#cost -->
@@ -147,7 +147,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:comment>Total cost of event</rdfs:comment>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#endDate -->
@@ -157,7 +157,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment>Ending date of event</rdfs:comment>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#hasNumberOfVisitors -->
@@ -166,7 +166,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#hasNumbersOfRooms -->
@@ -175,7 +175,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Housing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#needEquipment -->
@@ -185,7 +185,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment>Is equipment necessary for the activity</rdfs:comment>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#startDate -->
@@ -195,10 +195,10 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment>starting date of event</rdfs:comment>
     </owl:DatatypeProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -206,7 +206,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Camping -->
@@ -214,7 +214,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Camping">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Housing"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#ChristmasMarket -->
@@ -222,7 +222,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#ChristmasMarket">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Competition -->
@@ -230,7 +230,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Competition">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Concert -->
@@ -238,7 +238,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Concert">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cottages_and_CountryHouse -->
@@ -246,7 +246,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cottages_and_CountryHouse">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Housing"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cruise -->
@@ -254,7 +254,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cruise">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Customer -->
@@ -262,7 +262,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Customer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#People"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event -->
@@ -275,7 +275,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Exposition -->
@@ -283,7 +283,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Exposition">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fair_and_TradeShow -->
@@ -291,7 +291,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fair_and_TradeShow">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Festival -->
@@ -299,7 +299,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Festival">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FleaMarket -->
@@ -307,17 +307,15 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FleaMarket">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
     </owl:Class>
+    
 
-
-
-    <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Folklore_and_Tradition -->
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Folklore_and_Tradition -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Folklore_and_Tradition">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#GuestHouse -->
@@ -325,7 +323,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#GuestHouse">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Housing"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#HolidayVillage -->
@@ -333,7 +331,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#HolidayVillage">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Housing"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hostel -->
@@ -341,7 +339,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hostel">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Housing"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Housing -->
@@ -354,7 +352,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Market -->
@@ -362,7 +360,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Market">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Owner -->
@@ -370,19 +368,19 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Owner">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#People"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#People -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#People"/>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province"/>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Seller -->
@@ -390,7 +388,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Seller">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#People"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Spectacle -->
@@ -398,7 +396,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Spectacle">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sport -->
@@ -406,7 +404,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sport">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll_and_guidedTour -->
@@ -414,7 +412,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll_and_guidedTour">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Theater -->
@@ -422,7 +420,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Theater">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town -->
@@ -435,7 +433,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Visitor -->
@@ -443,10 +441,10 @@
     <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Visitor">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#People"/>
     </owl:Class>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -454,7 +452,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#ANtica -->
@@ -467,7 +465,7 @@
         <needEquipment rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</needEquipment>
         <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-14T11:00:00+01:00</startDate>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Amay -->
@@ -476,7 +474,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Amel -->
@@ -485,7 +483,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Andenne -->
@@ -494,7 +492,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Anhee -->
@@ -503,7 +501,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ans -->
@@ -512,7 +510,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Anthisnes -->
@@ -521,7 +519,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Antoing -->
@@ -530,7 +528,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Arlon -->
@@ -539,7 +537,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Assesse -->
@@ -548,7 +546,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ath -->
@@ -557,7 +555,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Attert -->
@@ -566,7 +564,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Aubange -->
@@ -575,7 +573,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Aubel -->
@@ -584,7 +582,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Awans -->
@@ -593,7 +591,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Aywaille -->
@@ -602,7 +600,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Baelen -->
@@ -611,7 +609,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bassenge -->
@@ -620,7 +618,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bastogne -->
@@ -629,7 +627,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Beaumont -->
@@ -638,7 +636,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Beauraing -->
@@ -647,7 +645,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Beauvechain -->
@@ -656,7 +654,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Berloz -->
@@ -665,7 +663,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bertogne -->
@@ -674,7 +672,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bertrix -->
@@ -683,7 +681,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Beyne-Heusay -->
@@ -692,7 +690,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bievre -->
@@ -701,7 +699,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bike -->
@@ -710,7 +708,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sport"/>
         <needEquipment rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</needEquipment>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Binche -->
@@ -719,7 +717,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Blegny -->
@@ -728,7 +726,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Boullion -->
@@ -737,7 +735,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon -->
@@ -745,7 +743,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon">
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braine-l_Alleud -->
@@ -754,7 +752,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braine-le-Chateau -->
@@ -763,7 +761,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braine-le-Comte -->
@@ -772,7 +770,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Braives -->
@@ -781,7 +779,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Bullingen -->
@@ -790,7 +788,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Burdinne -->
@@ -799,7 +797,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Burg-Reuland -->
@@ -808,7 +806,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Butgenbach -->
@@ -817,7 +815,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#CampingEden -->
@@ -829,7 +827,7 @@
         <cost rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15.0</cost>
         <hasNumbersOfRooms rdf:datatype="http://www.w3.org/2001/XMLSchema#int">78</hasNumbersOfRooms>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Cerfontaine -->
@@ -838,7 +836,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Charleroi -->
@@ -847,7 +845,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chastre -->
@@ -856,7 +854,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chatelet -->
@@ -865,7 +863,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chaumont-Gistoux -->
@@ -874,7 +872,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chievres -->
@@ -883,7 +881,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chimay -->
@@ -892,7 +890,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Chiny -->
@@ -901,7 +899,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ciney -->
@@ -910,7 +908,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#CiteDeLaBiere -->
@@ -922,7 +920,7 @@
         <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-19T19:00:00+01:00</endDate>
         <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-17T16:00:00+01:00</startDate>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Clavier -->
@@ -931,7 +929,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Comblain-au-Pont -->
@@ -940,7 +938,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Comines-Warneton -->
@@ -949,7 +947,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Court-Saint-Etienne -->
@@ -958,7 +956,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Couvin -->
@@ -967,7 +965,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Crisnee -->
@@ -976,7 +974,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#CroisieresGourmandes -->
@@ -988,7 +986,7 @@
         <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-27T23:59:00+01:00</endDate>
         <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-27T19:30:00+01:00</startDate>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Dalhem -->
@@ -997,7 +995,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Daverdisse -->
@@ -1006,7 +1004,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Dinant -->
@@ -1015,7 +1013,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Dison -->
@@ -1024,7 +1022,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Doische -->
@@ -1033,7 +1031,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#DomaineDuVald_Arimont -->
@@ -1042,7 +1040,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#HolidayVillage"/>
         <isLocated rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Malmedy"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Donceel -->
@@ -1051,7 +1049,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Durbuy -->
@@ -1060,7 +1058,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Eghezee -->
@@ -1069,7 +1067,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Enghien -->
@@ -1078,7 +1076,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Engis -->
@@ -1087,7 +1085,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Erezee -->
@@ -1096,7 +1094,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Esneux -->
@@ -1105,7 +1103,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Etalle -->
@@ -1114,7 +1112,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Eupen -->
@@ -1123,7 +1121,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Faimes -->
@@ -1132,7 +1130,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fauvillers -->
@@ -1141,7 +1139,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fernelmont -->
@@ -1150,7 +1148,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ferrieres -->
@@ -1159,7 +1157,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FestivalDesArtsDeLaRue -->
@@ -1172,7 +1170,7 @@
         <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-12T20:00:00+01:00</endDate>
         <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-12T11:30:00+01:00</startDate>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FestivalUniversatilTheatre_et_ArtDeLaScene -->
@@ -1182,7 +1180,7 @@
         <isLocated rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ottignies-Louvian-la-Neuve"/>
         <needEquipment rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</needEquipment>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fexhe-le-Haut-Clocher -->
@@ -1191,7 +1189,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Flemalle -->
@@ -1200,7 +1198,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fleron -->
@@ -1209,7 +1207,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fleurus -->
@@ -1218,7 +1216,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Florennes -->
@@ -1227,7 +1225,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Florent -->
@@ -1238,7 +1236,7 @@
         <goTo rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#OmbreEtLumieres_duMoyenAge"/>
         <liveIn rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wavre"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fontaine-l_Eveque -->
@@ -1247,7 +1245,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fosse-la-Ville -->
@@ -1256,7 +1254,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Gedinne -->
@@ -1265,7 +1263,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Geer -->
@@ -1274,7 +1272,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Gembloux -->
@@ -1283,7 +1281,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Genappe -->
@@ -1292,7 +1290,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Gesves -->
@@ -1301,7 +1299,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#GiteRural_LesTilleulsCoteVallee -->
@@ -1311,7 +1309,7 @@
         <isLocated rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Boullion"/>
         <isProposedBy rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Paul"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Gouvy -->
@@ -1320,7 +1318,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Grace-Hollogne -->
@@ -1329,7 +1327,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Grez-Doiceau -->
@@ -1338,7 +1336,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Habay -->
@@ -1347,7 +1345,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut -->
@@ -1355,7 +1353,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut">
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Halloween_PairiDaiza -->
@@ -1364,7 +1362,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Spectacle"/>
         <isLocated rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ath"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hamoir -->
@@ -1373,7 +1371,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hamois -->
@@ -1382,7 +1380,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hannut -->
@@ -1391,7 +1389,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hastiere -->
@@ -1400,7 +1398,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hatton -->
@@ -1409,7 +1407,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Havelange -->
@@ -1418,7 +1416,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Helecine -->
@@ -1427,7 +1425,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Herbeumont -->
@@ -1436,7 +1434,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Heron -->
@@ -1445,7 +1443,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Herstal -->
@@ -1454,7 +1452,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Herve -->
@@ -1463,7 +1461,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Houffalize -->
@@ -1472,7 +1470,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Houyet -->
@@ -1481,7 +1479,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Huy -->
@@ -1490,7 +1488,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Incourt -->
@@ -1499,7 +1497,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ittre -->
@@ -1508,7 +1506,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jacques -->
@@ -1518,7 +1516,7 @@
         <liveIn rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Houyet"/>
         <owns rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#CampingEden"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jalhay -->
@@ -1527,7 +1525,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jean-ClaudeServais_au-delaDuTrait -->
@@ -1540,7 +1538,7 @@
         <needEquipment rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</needEquipment>
         <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-12T10:00:00+01:00</startDate>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jemeppe-sur-Sambre -->
@@ -1549,7 +1547,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Jodoigne -->
@@ -1558,7 +1556,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#JourneeWallonnesDel_eau -->
@@ -1567,7 +1565,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll_and_guidedTour"/>
         <isLocated rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Libramont-Chevigne"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Juprelle -->
@@ -1576,7 +1574,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Kelmis -->
@@ -1585,7 +1583,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#LaCaravaneDuCourt -->
@@ -1598,7 +1596,7 @@
         <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-20T23:00:00+01:00</endDate>
         <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-09T13:00:00+01:00</startDate>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#La_Hulpe -->
@@ -1607,7 +1605,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#La_Louviere -->
@@ -1616,7 +1614,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#La_Roche-en-Ardenne -->
@@ -1625,7 +1623,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#La_bruyere -->
@@ -1634,7 +1632,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lasne -->
@@ -1643,7 +1641,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Laura -->
@@ -1658,7 +1656,7 @@
         <owns rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#DomaineDuVald_Arimont"/>
         <sleepIn rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#LeValDePoix"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#LePreDeCaroline -->
@@ -1670,7 +1668,7 @@
         <cost rdf:datatype="http://www.w3.org/2001/XMLSchema#double">46.0</cost>
         <hasNumbersOfRooms rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasNumbersOfRooms>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#LeValDePoix -->
@@ -1680,7 +1678,7 @@
         <isLocated rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint_Hubert"/>
         <isProposedBy rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Pierre"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Le_Roeulx -->
@@ -1689,7 +1687,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Leglise -->
@@ -1698,7 +1696,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lessines -->
@@ -1707,7 +1705,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Leuze-en-Hainaut -->
@@ -1716,7 +1714,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Libin -->
@@ -1725,7 +1723,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Libramont-Chevigne -->
@@ -1734,7 +1732,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Liege -->
@@ -1743,7 +1741,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lierneux -->
@@ -1752,7 +1750,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Limbourg -->
@@ -1761,7 +1759,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lincent -->
@@ -1770,7 +1768,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Lontzen -->
@@ -1779,7 +1777,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Louis -->
@@ -1789,7 +1787,7 @@
         <goTo rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wallonie_EquestreEvent"/>
         <liveIn rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Mons"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg -->
@@ -1797,7 +1795,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg">
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Malmedy -->
@@ -1806,7 +1804,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Manhay -->
@@ -1815,7 +1813,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Marche-en-Famenne -->
@@ -1824,7 +1822,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Marchin -->
@@ -1833,7 +1831,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Martelange -->
@@ -1842,7 +1840,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Mattet -->
@@ -1851,7 +1849,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Modave -->
@@ -1860,7 +1858,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Mons -->
@@ -1869,7 +1867,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Mont-Saint-Guibert -->
@@ -1878,7 +1876,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Mouscron -->
@@ -1887,7 +1885,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Musson -->
@@ -1896,7 +1894,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#MysteryForest -->
@@ -1905,7 +1903,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Spectacle"/>
         <isLocated rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Durbuy"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Namur -->
@@ -1914,7 +1912,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Nandrin -->
@@ -1923,7 +1921,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Nassogne -->
@@ -1932,7 +1930,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Neufchateau -->
@@ -1941,7 +1939,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Neupre -->
@@ -1950,7 +1948,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Nivelles -->
@@ -1959,7 +1957,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#NuitsDuCirques -->
@@ -1971,7 +1969,7 @@
         <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-30T23:00:00+01:00</endDate>
         <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-30T16:00:00+01:00</startDate>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ohey -->
@@ -1980,7 +1978,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Olne -->
@@ -1989,7 +1987,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#OmbreEtLumieres_duMoyenAge -->
@@ -2002,7 +2000,7 @@
         <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-20T18:00:00+01:00</endDate>
         <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-18T17:30:00+01:00</startDate>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Onhaye -->
@@ -2011,7 +2009,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Oreye -->
@@ -2020,7 +2018,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Orp-Jauche -->
@@ -2029,7 +2027,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ottignies-Louvian-la-Neuve -->
@@ -2038,7 +2036,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ouffet -->
@@ -2047,7 +2045,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Oupeye -->
@@ -2056,7 +2054,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Paliseul -->
@@ -2065,7 +2063,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Paul -->
@@ -2075,7 +2073,7 @@
         <liveIn rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Libramont-Chevigne"/>
         <owns rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#GiteRural_LesTilleulsCoteVallee"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Pepinster -->
@@ -2084,7 +2082,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Peruwelz -->
@@ -2093,7 +2091,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Perwez -->
@@ -2102,7 +2100,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Philippeville -->
@@ -2111,7 +2109,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Pierre -->
@@ -2122,7 +2120,7 @@
         <owns rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#LePreDeCaroline"/>
         <owns rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#LeValDePoix"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Plombieres -->
@@ -2131,7 +2129,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Pronfondeville -->
@@ -2140,7 +2138,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege -->
@@ -2149,7 +2147,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur -->
@@ -2157,7 +2155,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur">
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#PucesEtAntiquites -->
@@ -2169,7 +2167,7 @@
         <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-24T18:00:00+01:00</endDate>
         <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-22T10:00:00+01:00</startDate>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Raeren -->
@@ -2178,7 +2176,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ramilles -->
@@ -2187,7 +2185,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Rebecq -->
@@ -2196,7 +2194,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Remicourt -->
@@ -2205,7 +2203,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Rendeux -->
@@ -2214,7 +2212,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Riwensart -->
@@ -2223,7 +2221,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Rochefort -->
@@ -2232,7 +2230,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Rouvroy -->
@@ -2241,7 +2239,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint-Georges-sur-Meuse -->
@@ -2250,7 +2248,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint-Ghislain -->
@@ -2259,7 +2257,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint-Leger -->
@@ -2268,7 +2266,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint-Nicolas -->
@@ -2277,7 +2275,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint-Ode -->
@@ -2286,7 +2284,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Saint_Hubert -->
@@ -2295,7 +2293,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sambreville -->
@@ -2304,7 +2302,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sankt-Vith -->
@@ -2313,7 +2311,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Seraing -->
@@ -2322,7 +2320,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Silly -->
@@ -2331,7 +2329,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Soignies -->
@@ -2340,7 +2338,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#SoironSurScene -->
@@ -2349,7 +2347,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Spectacle"/>
         <isLocated rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Pepinster"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sombreville -->
@@ -2358,7 +2356,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Somme-Leuze -->
@@ -2367,7 +2365,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Soumagne -->
@@ -2376,7 +2374,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Spa -->
@@ -2385,7 +2383,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sprimont -->
@@ -2394,7 +2392,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stavelot -->
@@ -2403,7 +2401,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stoumont -->
@@ -2412,7 +2410,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tellin -->
@@ -2421,7 +2419,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tenneville -->
@@ -2430,7 +2428,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#TheaterFestival_AuVertDeThoricourt -->
@@ -2441,7 +2439,7 @@
         <needEquipment rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</needEquipment>
         <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-08-01T18:00:00+01:00</startDate>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Theux -->
@@ -2450,7 +2448,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Thimister-Clermont -->
@@ -2459,7 +2457,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Thuin -->
@@ -2468,7 +2466,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tinlot -->
@@ -2477,7 +2475,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tintigny -->
@@ -2486,7 +2484,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tournai -->
@@ -2495,7 +2493,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Hainaut"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Trois-Ponts -->
@@ -2504,7 +2502,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Trooz -->
@@ -2513,7 +2511,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Tubize -->
@@ -2522,7 +2520,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Vaux-sur-Sure -->
@@ -2531,7 +2529,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Verlaine -->
@@ -2540,7 +2538,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Verviers -->
@@ -2549,7 +2547,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Vielslam -->
@@ -2558,7 +2556,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Villers-la-Ville -->
@@ -2567,7 +2565,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Villers-le-Bouillet -->
@@ -2576,7 +2574,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Viroinval -->
@@ -2585,7 +2583,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Virton -->
@@ -2594,7 +2592,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Vise -->
@@ -2603,7 +2601,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#VisitesNocturnesAuxFlambeaux -->
@@ -2617,7 +2615,7 @@
         <needEquipment rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</needEquipment>
         <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-06T18:30:00+01:00</startDate>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Vresse-sur-Semois -->
@@ -2626,7 +2624,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Waimes -->
@@ -2635,7 +2633,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Walcourt -->
@@ -2644,7 +2642,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Namur"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wallonie_EquestreEvent -->
@@ -2657,7 +2655,7 @@
         <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-15T18:30:00+01:00</endDate>
         <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-13T10:00:00+01:00</startDate>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wanze -->
@@ -2666,7 +2664,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Waremme -->
@@ -2675,7 +2673,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wasseiges -->
@@ -2684,7 +2682,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Waterloo -->
@@ -2693,7 +2691,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wavre -->
@@ -2701,7 +2699,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wavre">
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Welkenraedt -->
@@ -2710,7 +2708,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Province_de_Liege"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Wellin -->
@@ -2719,7 +2717,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Luxembourg"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Yvoir -->
@@ -2727,7 +2725,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Yvoir">
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#walhain -->
@@ -2736,7 +2734,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Town"/>
         <partOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Brabant_wallon"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#20e_NuitDesChoeurs -->
@@ -2749,10 +2747,10 @@
         <needEquipment rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</needEquipment>
         <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-28T18:30:00+01:00</startDate>
     </owl:NamedIndividual>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // General axioms
