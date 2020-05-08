@@ -81,7 +81,7 @@ public class QueryPanel extends JPanel implements ActionListener
 		ResultSet results = exec.execSelect();
 		
 		// Format the results
-		String resultsString = ResultSetFormatter.asText(results);
+		String resultsString = ResultSetFormatter.asText(results, query);
 		
 		// Closes the QueryExecution
 		exec.close();

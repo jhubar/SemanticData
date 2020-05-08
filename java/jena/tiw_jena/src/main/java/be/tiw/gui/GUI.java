@@ -26,6 +26,7 @@ import javax.swing.UIManager;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 
+import be.tiw.gui.graphics.AddPanel;
 //import be.me.pae.database.CourseDatabase;
 //import be.me.pae.graphics.AddPanel;
 //import be.me.pae.graphics.GraphPanel;
@@ -72,7 +73,7 @@ public class GUI extends JFrame implements ActionListener
 		this.initMenu();
 		
 		ontologyModel = ModelFactory.createMemModelMaker().createModel("Model");
-		back=new Button("Retour");
+		back=new Button("Back");
 		back.addActionListener(this);
 		centerPanel = new JPanel();
 		centerPanel.setBackground(Color.WHITE);
@@ -227,7 +228,7 @@ public class GUI extends JFrame implements ActionListener
 			pan.setBackground(Color.WHITE);
 			pan.add(back);
 			this.centerPanel.add("South", pan);
-//			this.centerPanel.add("Center",new AddPanel(CDB));
+			this.centerPanel.add("Center",new AddPanel(ontologyModel));
 			this.centerPanel.updateUI();
 			return;
 		}

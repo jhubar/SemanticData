@@ -60,7 +60,7 @@ public class FileOpener
 	}
 	private static File pickFile()
 	{
-		JFileChooser chooser = new JFileChooser();
+		JFileChooser chooser = new JFileChooser("D:\\Documents\\UNIVERSITE\\Bloc5\\Quadri 2\\SemanticData\\Project\\SemanticData");
 		chooser.setFileFilter(new OntologyFileFilter());
 		
 		File selectedFile;
