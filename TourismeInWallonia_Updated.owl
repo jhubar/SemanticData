@@ -27,7 +27,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#SaleIn">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#People"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#fleaMarket"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FleaMarket"/>
     </owl:ObjectProperty>
     
 
@@ -332,6 +332,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FleaMarket -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FleaMarket">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Folklore_and_Tradition -->
 
 
@@ -482,15 +491,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#fleaMarket -->
-
-
-    <owl:Class rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#fleaMarket">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Event"/>
-    </owl:Class>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -507,7 +507,7 @@
 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#ANtica">
-        <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#fleaMarket"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FleaMarket"/>
         <isLocated rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Namur"/>
         <cost rdf:datatype="http://www.w3.org/2001/XMLSchema#double">21.5</cost>
         <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-22T19:00:00+01:00</endDate>
@@ -2407,7 +2407,7 @@
 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#PucesEtAntiquites">
-        <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#fleaMarket"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FleaMarket"/>
         <isLocated rdf:resource="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Ciney"/>
         <cost rdf:datatype="http://www.w3.org/2001/XMLSchema#double">21.0</cost>
         <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-24T18:00:00+01:00</endDate>
@@ -3088,13 +3088,13 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Exposition"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Fair_and_TradeShow"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Festival"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#FleaMarket"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Folklore_and_Tradition"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Market"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Spectacle"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Sport"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Stroll_and_guidedTour"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#Theater"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/julienhubar/ontologies/2020/2/TourismeEnWallonie#fleaMarket"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
