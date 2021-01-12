@@ -30,3 +30,6 @@ On a pas besoin de mettre tous les événements seulement quelques un pour montr
 # Info sur le projet 
 [Topics](http://www.montefiore.ulg.ac.be/~binot/INFO8005/Project/Semantic-data-project-topics.pdf)
 
+# Author 
+[Julien Hubar](https://jhubar.github.io)
+
